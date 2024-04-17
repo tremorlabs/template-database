@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/Footer";
 import { GlobalPresence } from "@/components/ui/GlobalPresence";
 import Hero from "@/components/ui/Hero";
 import LogoCloud from "@/components/ui/LogoCloud";
@@ -12,6 +13,7 @@ export default function Home() {
         <LogoCloud />
         <GlobalPresence />
       </main>
+      <Footer />
     </div>
   );
 }
