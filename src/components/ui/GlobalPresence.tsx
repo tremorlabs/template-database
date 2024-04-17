@@ -20,7 +20,7 @@ export const GlobalPresence: FunctionComponent = () => {
       mapBrightness: 3.5,
       mapBaseBrightness: 0.15,
       baseColor: [0.3, 0.3, 0.3],
-      glowColor: [0.1, 0.1, 0.1],
+      glowColor: [0.15, 0.15, 0.15],
       markerColor: [100, 100, 100],
       markers: [
         // { location: [37.7595, -122.4367], size: 0.03 }, // San Francisco
@@ -40,30 +40,52 @@ export const GlobalPresence: FunctionComponent = () => {
   }, []);
 
   return (
-    <section className="flex flex-col mt-40 justify-center items-center text-center bg-black overflow-hidden pt-24 rounded-3xl mx-3">
-      <h2 className="tracking-tighter text-8xl font-bold text-transparent bg-clip-text inline-block from-white to-gray-200 bg-gradient-to-b px-2" >
-        Global Presence
+    <section className="relative flex flex-col mt-40 justify-center items-center bg-gray-950 overflow-hidden pt-24 rounded-3xl mx-3">
+      <div className="absolute top-[20rem] bg-indigo-800 blur-3xl rounded-full size-[40rem]" />
+      <div className="inline-block px-3 uppercase border rounded-xl text-sm font-semibold py-1.5 border-indigo-400/20 bg-indigo-800/20 tracking-tight leading-4 z-10">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-300 to-indigo-500">
+          Made for the cloud
+        </span>
+      </div>
+      <h2 className="mt-6 tracking-tighter text-7xl md:text-8xl font-bold text-transparent bg-clip-text inline-block from-white to-indigo-100 bg-gradient-to-b px-2 z-10 text-center">
+        The global <br /> cloud database
       </h2>
-      <div className="relative h-[36rem] overflow-hidden -mt-36">
-        <div className="absolute bottom-0 bg-gradient-to-b from-transparent via-black/80 to-black w-full h-3/5" />
-        <div className="absolute backdrop-blur top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-x-20 px-10 py-6 rounded-lg bg-white/[4%] border border-white/5 shadow-xl">
-          <div className="flex flex-col gap-2">
-            <p className="text-indigo-500 font-bold text-3xl">15B</p>
-            <p className="whitespace-nowrap text-indigo-100">Reads per week</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-indigo-500 font-bold text-3xl">15B</p>
-            <p className="whitespace-nowrap text-indigo-100">Reads per week</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-indigo-500 font-bold text-3xl">15B</p>
-            <p className="whitespace-nowrap text-indigo-100">Reads per week</p>
+      <canvas
+        className="absolute top-[9.5rem] md:top-[12rem] size-full aspect-square max-w-fit z-20"
+        ref={canvasRef}
+        style={{ width: 1200, height: 1200 }}
+      />
+      <div className="w-full h-[36rem] overflow-hidden -mt-32 md:-mt-36 z-20">
+        <div className="absolute bottom-0 bg-gradient-to-b from-transparent via-gray-950/95 to-gray-950 w-full h-3/5" />
+        <div className="absolute bottom-12 md:top-2/3 max-w-3xl m-auto inset-x-6">
+          <div className="backdrop-blur grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6 px-6 md:px-10 py-6 rounded-lg bg-white/5 border border-white/5 shadow-xl">
+            <div className="flex flex-col gap-2">
+              <h3 className="whitespace-nowrap font-bold text-xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-300 to-indigo-500">
+                Global Clusters
+              </h3>
+              <p className="text-indigo-200/40 text-sm">
+                Enable low-latency access globally, enhancing application
+                performance.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="whitespace-nowrap font-bold text-xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-300 to-indigo-500">
+                Serverless Triggers
+              </h3>
+              <p className="text-indigo-200/40 text-sm">
+                Trigger functions automatically for dynamic app behavior.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="whitespace-nowrap font-bold text-xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-300 to-indigo-500">
+                Monitoring & Alerts
+              </h3>
+              <p className="text-indigo-200/40 text-sm">
+                Monitor health with key metrics or integrate third-party tools.
+              </p>
+            </div>
           </div>
         </div>
-        <canvas
-          ref={canvasRef}
-          style={{ width: 1200, height: 1200, maxWidth: "100%", aspectRatio: 1 }}
-        />
       </div>
     </section>
   );

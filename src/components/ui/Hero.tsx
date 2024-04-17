@@ -8,11 +8,10 @@ export default function Hero() {
   return (
     <section className="flex flex-col mt-40 justify-center items-center text-center">
       <h1 className="text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-zinc-900 to-zinc-700 p-2 animate-slide-up-fade" style={{animationDuration: "700ms"}}>
-        Save time & <br /> money on AWS
+        The database for <br /> modern applications
       </h1>
       <p className="font-medium mt-6 max-w-sm animate-slide-up-fade" style={{animationDuration: "900ms"}}>
-        Savings, visibility, and infrastructure guardrails. One automated
-        platform.
+      Database is a general purpose, relational database built for modern application developers and for the cloud era. No database makes you more productive.
       </p>
       <div className="flex gap-3 mt-6 animate-slide-up-fade" style={{animationDuration: "1100ms"}}>
         <Button asChild>
