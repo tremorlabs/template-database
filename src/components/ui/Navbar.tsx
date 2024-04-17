@@ -1,0 +1,43 @@
+"use client";
+
+import Link from "next/link";
+import useScroll from "@/lib/use-scroll";
+import { cx } from "@/lib/utils";
+import { siteConfig } from "@/app/siteConfig";
+import { Button } from "../Button";
+
+export function Navigation() {
+  const scrolled = useScroll(30);
+
+  return (
+    <header
+      className={cx(
+        "fixed top-4 inset-x-0 rounded-xl mx-auto max-w-6xl flex justify-center z-10 transition-all duration-500 h-14 border border-transparent ease-[cubic-bezier(0.16,1,0.3,1.03)]",
+        scrolled
+          ? "border-gray-100 bg-white shadow-2xl shadow-black/10 max-w-3xl"
+          : "bg-white/0"
+      )}
+    >
+      <div className="flex items-center justify-between w-full px-2">
+        <div>Icon</div>
+        <nav className="flex space-x-6">
+          <ul className="items-center gap-8 lg:flex">
+            <li>
+              <Link href={siteConfig.baseLinks.docs}>About</Link>
+            </li>
+            <li>
+              <Link href={siteConfig.externalLinks.raw}>Features</Link>
+            </li>
+            <li>
+              <Link href={siteConfig.baseLinks.components}>Pricing</Link>
+            </li>
+            <li>
+              <Link href={siteConfig.externalLinks.blocks}>Blog</Link>
+            </li>
+          </ul>
+        </nav>
+        <Button>Join</Button>
+      </div>
+    </header>
+  );
+}
