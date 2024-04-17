@@ -2,18 +2,19 @@ import React from "react";
 import { Button } from "../Button";
 import Link from "next/link";
 import { RiPlayCircleFill } from "@remixicon/react";
+import HeroImage from "./HeroImage";
 
 export default function Hero() {
   return (
     <section className="flex flex-col mt-40 justify-center items-center text-center">
-      <h1 className="text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-zinc-900 to-zinc-700 p-2">
+      <h1 className="text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-zinc-900 to-zinc-700 p-2 animate-slide-up-fade" style={{animationDuration: "700ms"}}>
         Save time & <br /> money on AWS
       </h1>
-      <p className="font-medium mt-6 max-w-sm">
+      <p className="font-medium mt-6 max-w-sm animate-slide-up-fade" style={{animationDuration: "900ms"}}>
         Savings, visibility, and infrastructure guardrails. One automated
         platform.
       </p>
-      <div className="flex gap-3 mt-6">
+      <div className="flex gap-3 mt-6 animate-slide-up-fade" style={{animationDuration: "1100ms"}}>
         <Button asChild>
           <Link href="https://cal.com">Book an enterprise demo</Link>
         </Button>
@@ -29,6 +30,10 @@ export default function Hero() {
             Watch video
           </a>
         </Button>
+      </div>
+      <div className="relative max-w-6xl mt-16 h-[30rem] overflow-hidden animate-slide-up-fade" style={{animationDuration: "1400ms"}}>
+      <HeroImage />
+        <div className="absolute bg-gradient-to-b from-transparent to-white bottom-0 w-full h-2/3"></div>
       </div>
     </section>
   );

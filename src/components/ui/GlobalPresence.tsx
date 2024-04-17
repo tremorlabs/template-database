@@ -46,7 +46,7 @@ export const GlobalPresence: FunctionComponent = () => {
       </h2>
       <div className="relative h-[36rem] overflow-hidden -mt-36">
         <div className="absolute bottom-0 bg-gradient-to-b from-transparent via-black/80 to-black w-full h-3/5" />
-        <div className="absolute backdrop-blur-[3px] top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-x-20 px-10 py-6 rounded-lg bg-white/[4%] border border-white/5 shadow-xl">
+        <div className="absolute backdrop-blur top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-x-20 px-10 py-6 rounded-lg bg-white/[4%] border border-white/5 shadow-xl">
           <div className="flex flex-col gap-2">
             <p className="text-indigo-500 font-bold text-3xl">15B</p>
             <p className="whitespace-nowrap text-indigo-100">Reads per week</p>

@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -51,6 +51,34 @@ const config: Config = {
           },
           to: { opacity: "1", transform: "translate(-50%, -50%) scale(1)" },
         },
+        "slide-up-fade": {
+          from: {
+            opacity: "0",
+            transform: "translateY(12px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
+        "slide-down-fade": {
+          from: {
+            opacity: "0",
+            transform: "translateY(-26px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0px)",
+          },
+        },
+        "reveal-animation": {
+          "0%": {
+            opacity: "0",
+            clipPath: "inset(5%)",
+            transform: "scale(111.11%)",
+          },
+          "100%": { opacity: "1", clipPath: "inset(0)", transform: "scale(1)" },
+        },
       },
       animation: {
         hide: "hide 150ms cubic-bezier(0.16, 1, 0.3, 1)",
@@ -69,9 +97,17 @@ const config: Config = {
           "dialogOverlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
         dialogContentShow:
           "dialogContentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+          "slide-down-fade": "slide-down-fade ease-in-out",
+        "slide-up-fade": "slide-up-fade ease-in-out",
+        "hero-text-slide-up-fade": "slide-up-fade 900ms ease-in-out",
+        "notification-slide-up-fade": "slide-up-fade 500ms ease-in-out",
+        "hero-button1-slide-up-fade": "slide-up-fade 1200ms ease-in-out",
+        "hero-button2-slide-up-fade": "slide-up-fade 1400ms ease-in-out",
+        "hero-brow-slide-down-fade": "slide-down-fade 800ms ease-in-out",
+        "reveal-animation": "reveal-animation 1s ease-in-out",
       },
     },
   },
   plugins: [require("@tailwindcss/forms")],
-}
-export default config
+};
+export default config;
