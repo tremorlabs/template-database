@@ -1,5 +1,5 @@
 import React from "react";
-import Ycompany from "../../../public/Ycompany";
+import Ycompany from "../../../public/DatabaseLogo";
 import Link from "next/link";
 import {
   RiArrowDownCircleFill,

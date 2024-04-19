@@ -1,5 +1,5 @@
 import Footer from "@/components/ui/Footer";
-import { GlobalPresence } from "@/components/ui/GlobalPresence";
+import { GlobalDatabase } from "@/components/ui/GlobalDatabase";
 import Hero from "@/components/ui/Hero";
 import LogoCloud from "@/components/ui/LogoCloud";
 import { Navigation } from "@/components/ui/Navbar";
@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div>
       <Navigation />
-      <main className="flex flex-col">
+      <main className="flex flex-col overflow-hidden">
         <Hero />
         <LogoCloud />
-        <GlobalPresence />
+        <GlobalDatabase />
       </main>
       <Footer />
     </div>
