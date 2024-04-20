@@ -46,6 +46,26 @@ CREATE TABLE Order_Items (
     PRIMARY KEY (order_id, item_id)
 );`;
 
+const code2 = `async function fetchCustomerOrders() {
+    const result = await prisma.orders.findMany({
+        where: {
+            customer: {
+                name: 'Jack Beanstalk'
+            }
+        },
+        include: {
+            customer: true,
+            order_items: {
+                include: {
+                    item: true
+                }
+            }
+        }
+    });
+    return result;
+}
+`;
+
 export default function CodeExample() {
   return (
     <section className="mt-28 px-2 max-w-6xl mx-auto w-full">
@@ -56,39 +76,20 @@ export default function CodeExample() {
         Rich and expressive query language that allows you to filter and sort by
         any field, no matter how nested it may be.
       </p>
-      <div className="grid grid-cols-12 gap-8 mt-10 pb-14">
-        <div className="col-span-7 row-span-2">
+
+      <CodeExampleTabs
+        tab1={
           <Code code={code} lang="sql" copy={false} className="h-[24rem]" />
-        </div>
-        <div className="relative border rounded-lg shadow-lg size-full p-6 col-span-5">
-          <div className="absolute -rotate-90 -left-10 top-1/2">
-            <Arrow width={20} height={10} className="fill-gray-900" />
-          </div>
-          <div className="flex gap-4 items-center">
-            <div className="p-2 aspect-square w-fit rounded-lg bg-gray-100 border">
-              <RiShapesLine className="size-5" />
-            </div>
-            <p className="font-semibold">Model everything</p>
-          </div>
-          <p className="mt-4">
-            Data integrity and query efficiency for diverse data types including
-            geospatial and time-series, optimized for performance and
-            scalability.
-          </p>
-        </div>
-        <div className="border rounded-lg shadow-lg size-full p-6 col-span-5">
-          <div className="flex gap-4 items-center">
-            <div className="p-2 aspect-square w-fit rounded-lg bg-gray-100 border">
-              <RiArrowDownLine className="size-5" />
-            </div>
-            <p className="font-semibold">No management required</p>
-          </div>
-          <p className="mt-4">
-            No setup required. Spend your time building your application.
-          </p>
-        </div>
-      </div>
-      <CodeExampleTabs />
+        }
+        tab2={
+          <Code
+            code={code2}
+            lang="javascript"
+            copy={false}
+            className="h-[24rem]"
+          />
+        }
+      />
     </section>
   );
 }
