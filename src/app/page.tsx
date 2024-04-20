@@ -1,3 +1,4 @@
+import CodeExample from "@/components/ui/CodeExample";
 import Footer from "@/components/ui/Footer";
 import { GlobalDatabase } from "@/components/ui/GlobalDatabase";
 import Hero from "@/components/ui/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <LogoCloud />
         <GlobalDatabase />
+        <CodeExample />
       </main>
       <Footer />
     </div>
