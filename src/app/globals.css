@@ -19,14 +19,14 @@
     @apply border-l-4 border-transparent;
     &::before {
       counter-increment: step;
-      @apply mr-6 inline-block w-4 border-transparent text-right text-neutral-600 content-[counter(step)];
+      @apply mr-6 inline-block w-4 border-transparent text-right text-gray-600 content-[counter(step)];
     }
     &.highlighted,
     &.diff {
       @apply -ml-4 -mr-5 inline-block w-[calc(100%+(theme(spacing.5)+theme(spacing.4)))] pl-4 pr-5;
     }
     &.highlighted {
-      @apply border-neutral-500 bg-neutral-800;
+      @apply border-gray-500 bg-gray-800;
     }
     &.diff {
       &.add,
@@ -42,7 +42,7 @@
         }
       }
       &.remove {
-        @apply border-orange-500 bg-orange-500/30 opacity-70 *:!text-neutral-400 before:text-orange-500;
+        @apply border-orange-500 bg-orange-500/30 opacity-70 *:!text-gray-400 before:text-orange-500;
         span:first-child::before {
           @apply text-orange-500 content-["-"];
         }
