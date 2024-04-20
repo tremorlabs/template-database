@@ -41,9 +41,9 @@ export const GlobalDatabase: FunctionComponent = () => {
 
   return (
     <div className="px-2">
-    <section className="relative flex flex-col mt-28 md:mt-40 justify-center items-center bg-gray-950 overflow-hidden pt-24 rounded-3xl max-w-6xl w-full mx-auto">
+    <section className="relative shadow-xl shadow-black/30 flex flex-col mt-28 md:mt-40 justify-center items-center bg-gray-950 overflow-hidden pt-24 rounded-3xl max-w-6xl w-full mx-auto">
       <div className="absolute top-[17rem] md:top-[20rem] bg-indigo-800 blur-3xl rounded-full size-[40rem]" />
-      <div className="inline-block px-3 uppercase border rounded-xl sm:text-sm font-semibold py-1.5 border-indigo-400/20 bg-indigo-800/20 tracking-tight leading-4 z-10">
+      <div className="inline-block px-3 uppercase border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-400/20 bg-indigo-800/20 tracking-tight leading-4 z-10">
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-200 to-indigo-400">
           Made for the cloud
         </span>

@@ -55,7 +55,7 @@ export default function Footer() {
             <Ycompany className="w-40" />
             <div>
               <span className="text-gray-500 text-sm">
-                123 Market Street <br /> #1334 <br />
+                80 Hollow Alley <br /> #1291 <br />
                 New York, NY <br />
                 United States{" "}
               </span>

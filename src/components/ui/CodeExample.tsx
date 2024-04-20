@@ -69,7 +69,12 @@ const code2 = `async function fetchCustomerOrders() {
 export default function CodeExample() {
   return (
     <section className="mt-28 px-2 max-w-6xl mx-auto w-full">
-      <h2 className="text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2">
+       <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-00/20 bg-indigo-50/50 tracking-tighter leading-4 z-10">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600">
+          Developer-first
+        </span>
+      </div>
+      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2">
         Built by developers, <br /> for developers
       </h2>
       <p className="mt-6 text-lg max-w-2xl text-gray-700">
