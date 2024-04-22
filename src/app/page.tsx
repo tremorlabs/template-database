@@ -4,6 +4,7 @@ import { GlobalDatabase } from "@/components/ui/GlobalDatabase";
 import Hero from "@/components/ui/Hero";
 import LogoCloud from "@/components/ui/LogoCloud";
 import { Navigation } from "@/components/ui/Navbar";
+import Cta from "@/components/ui/Cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <LogoCloud />
         <GlobalDatabase />
         <CodeExample />
+        <Cta />
       </main>
       <Footer />
     </div>

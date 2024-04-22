@@ -50,3 +50,7 @@
     }
   }
 }
+
+.mask {
+  mask-image: radial-gradient(rgba(0, 0, 0, 1) 0%, transparent 80%);
+}
