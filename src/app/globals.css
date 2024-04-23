@@ -11,8 +11,18 @@
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
+code {
+  counter-reset: step;
+  counter-increment: step 0;
+}
 
-.shiki {
+code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  @apply mr-8 inline-block w-4 text-right text-gray-600;
+}
+
+/* .shiki {
   counter-reset: step;
   counter-increment: step 0;
   .line {
@@ -21,8 +31,9 @@
       counter-increment: step;
       @apply mr-6 inline-block w-4 border-transparent text-right text-gray-600 content-[counter(step)];
     }
+
   }
-}
+} */
 
 .mask {
   mask-image: radial-gradient(rgba(0, 0, 0, 1) 0%, transparent 80%);
