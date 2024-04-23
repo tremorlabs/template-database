@@ -1,8 +1,4 @@
 import { codeToHtml } from "shiki";
-import {
-  transformerNotationHighlight,
-  transformerNotationDiff,
-} from "@shikijs/transformers";
 import type { BundledLanguage, BundledTheme } from "shiki";
 import CopyToClipboard from "./CopyToClipboard";
 import { cx } from "@/lib/utils";
@@ -34,7 +30,6 @@ export default async function Code({
   const html = await codeToHtml(code, {
     lang,
     theme,
-    transformers: [transformerNotationHighlight(), transformerNotationDiff()],
   });
 
   return (

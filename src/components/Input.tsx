@@ -61,7 +61,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const isSearch = type === "search"
 
     return (
-      <div className="relative">
+      <div className="relative w-full">
         <input
           ref={forwardedRef}
           type={isPassword ? typeState : type}
