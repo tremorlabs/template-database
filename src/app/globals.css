@@ -21,20 +21,6 @@ code .line::before {
   counter-increment: step;
   @apply mr-8 inline-block w-4 text-right text-gray-600;
 }
-
-/* .shiki {
-  counter-reset: step;
-  counter-increment: step 0;
-  .line {
-    @apply border-l-4 border-transparent;
-    &::before {
-      counter-increment: step;
-      @apply mr-6 inline-block w-4 border-transparent text-right text-gray-600 content-[counter(step)];
-    }
-
-  }
-} */
-
 .mask {
   mask-image: radial-gradient(rgba(0, 0, 0, 1) 0%, transparent 80%);
 }

@@ -33,7 +33,7 @@ export default function CodeExampleTabs({
             <Arrow width={20} height={10} className="fill-gray-900" />
           </div>
           <div className="flex gap-4 items-center">
-            <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-gray-50 ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
+            <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-white ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
               <RiShapesLine className="size-5" />
             </div>
             <p className="font-semibold tracking-tight sm:text-lg transition-all group-data-[state=active]:text-indigo-600">
@@ -53,7 +53,7 @@ export default function CodeExampleTabs({
             <Arrow width={20} height={10} className="fill-gray-900" />
           </div>
           <div className="flex gap-4 items-center">
-            <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-gray-50 ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
+            <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-white ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
               <RiCodeSSlashLine className="size-5" />
             </div>
             <p className="font-semibold tracking-tight sm:text-lg transition-all group-data-[state=active]:text-indigo-600">

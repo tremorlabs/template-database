@@ -5,6 +5,7 @@ import Hero from "@/components/ui/Hero";
 import LogoCloud from "@/components/ui/LogoCloud";
 import { Navigation } from "@/components/ui/Navbar";
 import Cta from "@/components/ui/Cta";
+import Features from "@/components/ui/Features";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <LogoCloud />
         <GlobalDatabase />
         <CodeExample />
+        <Features />
         <Cta />
       </main>
       <Footer />

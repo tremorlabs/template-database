@@ -28,7 +28,7 @@ export default function Cta() {
                 <h3 className="text-4xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 p-2">
                   Ready to get started?
                 </h3>
-                <p className="mx-auto mt-4 max-w-2xl text-slate-00 sm:mt-6 sm:text-lg text-balance">
+                <p className="mx-auto mt-4 max-w-2xl text-slate-00 sm:mt-6 sm:text-lg text-balance text-gray-700">
                   Launch a new cluster or migrate to Database with zero
                   downtime.
                 </p>
