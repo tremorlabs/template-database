@@ -32,13 +32,10 @@ export function Navigation() {
               <Link href={siteConfig.baseLinks.docs}>About</Link>
             </li>
             <li>
-              <Link href={siteConfig.externalLinks.raw}>Features</Link>
-            </li>
-            <li>
               <Link href={siteConfig.baseLinks.components}>Pricing</Link>
             </li>
             <li>
-              <Link href={siteConfig.externalLinks.blocks}>Blog</Link>
+              <Link href={siteConfig.externalLinks.blocks}>Changelog</Link>
             </li>
           </ul>
         </nav>
