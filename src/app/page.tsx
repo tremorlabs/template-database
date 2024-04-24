@@ -10,7 +10,6 @@ import Features from "@/components/ui/Features";
 export default function Home() {
   return (
     <div>
-      <Navigation />
       <main className="flex flex-col overflow-hidden">
         <Hero />
         <LogoCloud />
