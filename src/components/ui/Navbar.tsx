@@ -9,7 +9,7 @@ import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import { MobileNavigation } from "./MobileNavigation";
 
 export function Navigation() {
-  const scrolled = useScroll(30);
+  const scrolled = useScroll(15);
 
   return (
     <header
@@ -29,13 +29,13 @@ export function Navigation() {
         <nav className="hidden md:flex">
           <ul className="items-center gap-8 flex">
             <li>
-              <Link href={siteConfig.baseLinks.docs}>About</Link>
+              <Link href={siteConfig.baseLinks.about}>About</Link>
             </li>
             <li>
-              <Link href={siteConfig.baseLinks.components}>Pricing</Link>
+              <Link href={siteConfig.baseLinks.pricing}>Pricing</Link>
             </li>
             <li>
-              <Link href={siteConfig.externalLinks.blocks}>Changelog</Link>
+              <Link href={siteConfig.baseLinks.changelog}>Changelog</Link>
             </li>
           </ul>
         </nav>
