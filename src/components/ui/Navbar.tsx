@@ -27,7 +27,7 @@ export function Navigation() {
           <DatabaseLogo className="w-28 md:w-32" />
         </Link>
         <nav className="hidden md:flex">
-          <ul className="items-center gap-8 flex">
+          <ul className="items-center font-medium gap-8 flex">
             <li>
               <Link href={siteConfig.baseLinks.about}>About</Link>
             </li>
