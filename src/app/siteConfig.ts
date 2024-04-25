@@ -21,16 +21,11 @@ export const siteConfig = {
   baseLinks: {
     home: "/",
     about: "/about",
-    assets: "/assets",
-    docs: "/docs/getting-started/installation",
-    components: "/components",
     changelog: "/changelog",
-    license: "/license",
+    pricing: "/pricing",
     imprint: "/imprint",
     privacy: "/privacy",
     terms: "/terms",
-    resources: "/resources",
-    contributors: "/contributors",
   },
 };
 

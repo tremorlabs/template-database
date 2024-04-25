@@ -1,5 +1,5 @@
 import React from "react";
-import Ycompany from "../../../public/DatabaseLogo";
+import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import Link from "next/link";
 import {
   RiArrowDownCircleFill,
@@ -52,7 +52,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col gap-12 sm:gap-0 sm:flex-row justify-between mx-auto">
           <div className="flex flex-col gap-12">
-            <Ycompany className="w-40" />
+            <DatabaseLogo className="w-40" />
             <div>
               <span className="text-gray-500 text-sm">
                 Hollow Alley <br /> #1307 <br />

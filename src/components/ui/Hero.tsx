@@ -32,7 +32,10 @@ export default function Hero() {
           variant="secondary"
           className="border-transparent group shadow-none hover:bg-transparent h-10"
         >
-          <a href="https://www.youtube.com/watch?v=QRZ_l7cVzzU" className="sm:ring-0 ring-1 ring-gray-200">
+          <a
+            href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
+            className="sm:ring-0 ring-1 ring-gray-200"
+          >
             <span className=" group-hover:bg-gray-200  transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50">
               <RiPlayCircleFill className="size-5 text-gray-900 shrink-0" />
             </span>
