@@ -5,7 +5,7 @@ import useScroll from "@/lib/use-scroll";
 import { cx } from "@/lib/utils";
 import { siteConfig } from "@/app/siteConfig";
 import { Button } from "../Button";
-import Ycompany from "../../../public/DatabaseLogo";
+import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import { MobileNavigation } from "./MobileNavigation";
 
 export function Navigation() {
@@ -24,7 +24,7 @@ export function Navigation() {
       <div className="pl-3 pr-3 flex items-center justify-between w-full">
         <Link href="/">
           <span className="sr-only">Company logo</span>
-          <Ycompany className="w-28 md:w-32" />
+          <DatabaseLogo className="w-28 md:w-32" />
         </Link>
         <nav className="hidden md:flex">
           <ul className="items-center gap-8 flex">
@@ -39,7 +39,7 @@ export function Navigation() {
             </li>
           </ul>
         </nav>
-          <Button className="hidden md:flex">Join</Button>
+        <Button className="hidden md:flex">Join</Button>
         <div className="flex md:hidden gap-x-2">
           <Button className="">Join</Button>
           <MobileNavigation />
