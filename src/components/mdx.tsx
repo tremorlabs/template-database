@@ -149,7 +149,7 @@ export const ChangelogEntry = ({
     )}
   >
     <div className="w-1/3 mb-10">
-      <span className="sticky top-24 ring-1 ring-indigo-400/20 bg-indigo-50 px-1.5 py-1 text-indigo-600 font-medium rounded-lg text-sm shadow-sm">
+      <span className="sticky top-24 ring-1 ring-indigo-400/20 bg-indigo-50 px-1.5 py-1 text-indigo-600 font-medium rounded-lg text-sm shadow-sm tabular-nums">
         {date}
       </span>
     </div>
