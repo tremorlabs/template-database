@@ -207,7 +207,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex justify-between border-t border-gray-100 pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-16 flex justify-between items-center border-t border-gray-100 pt-8 sm:mt-20 lg:mt-24">
           <div className="border border-gray-100 rounded-full pl-1 pr-2 py-0.5">
             <div className="flex items-center gap-1">
               <div className="relative size-3">
