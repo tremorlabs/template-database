@@ -82,7 +82,7 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Product
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Product">
                   {navigation.product.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -106,7 +106,7 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Resources
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Resources">
                   {navigation.resources.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -132,7 +132,7 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Company
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Company">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -156,7 +156,7 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Legal
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Legal">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -185,7 +185,6 @@ export default function Footer() {
             reserved.
           </p>
         </div>
-      </div>
     </footer>
   );
 }

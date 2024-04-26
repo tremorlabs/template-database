@@ -39,7 +39,7 @@ export function Navigation() {
     >
       <div className="w-full md:my-auto">
         <div className="flex items-center justify-between">
-          <Link href="/">
+          <Link href={siteConfig.baseLinks.home} aria-label="Home">
             <span className="sr-only">Company logo</span>
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
@@ -96,19 +96,13 @@ export function Navigation() {
         >
           <ul className="space-y-4">
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.about} className="">
-                About
-              </Link>
+              <Link href={siteConfig.baseLinks.about}>About</Link>
             </li>
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.pricing} className="">
-                Pricing
-              </Link>
+              <Link href={siteConfig.baseLinks.pricing}>Pricing</Link>
             </li>
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.changelog} className="">
-                Changelog
-              </Link>
+              <Link href={siteConfig.baseLinks.changelog}>Changelog</Link>
             </li>
           </ul>
         </nav>
