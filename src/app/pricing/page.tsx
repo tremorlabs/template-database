@@ -14,8 +14,8 @@ import {
     RiArrowRightSLine,
 } from "@remixicon/react";
 
-import { Navigation } from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
+import { Checkbox } from "@/components/Checkbox";
+
 import Image from "next/image";
 
 import { cx } from "@/lib/utils";
@@ -23,7 +23,6 @@ import { cx } from "@/lib/utils";
 interface Frequency {
     value: string;
     label: string;
-    priceSuffix: string;
 }
 
 interface Price {
@@ -43,9 +42,13 @@ interface Plan {
     buttonLink: string;
 }
 
+interface PlanAvailability {
+    [key: string]: boolean | string;
+}
+
 const frequencies: Frequency[] = [
-    { value: "monthly", label: "Monthly", priceSuffix: "per month" },
-    { value: "annually", label: "Annually", priceSuffix: "per year" },
+    { value: "monthly", label: "Monthly" },
+    { value: "annually", label: "Annually" },
 ];
 
 const plans: Plan[] = [
@@ -53,8 +56,8 @@ const plans: Plan[] = [
         name: "Starter",
         price: "$0",
         description:
-            "For individuals and small teams that need to replace a VPN for remote access.",
-        capacity: ["Up to 5 users, 1 admin", "Up to 10 workspaces"],
+            "For individuals and freelancers that need a scalable database.",
+        capacity: ["Up to 5 users, 1 admin", "1 workspace"],
         features: [
             "Up to 1000/req. per day",
             "5 GB max storage",
@@ -67,9 +70,9 @@ const plans: Plan[] = [
     },
     {
         name: "Teams",
-        price: { monthly: "$49", annually: "$490" },
+        price: { monthly: "$49", annually: "$39" },
         description:
-            "For small teams that need to replace a VPN for remote access.",
+            "For small teams that need a scalable database.",
         capacity: ["Up to 100 users, 3 admins", "Up to 20 workspaces"],
         features: [
             "Unlimited requests",
@@ -84,8 +87,8 @@ const plans: Plan[] = [
     },
     {
         name: "Business",
-        price: { monthly: "$89", annually: "$890" },
-        description: "For larger teams that need more advanced access controls.",
+        price: { monthly: "$89", annually: "$79" },
+        description: "For larger teams that need more advanced controls and features.",
         capacity: ["Up to 500 users, 10 admins", "Unlimited workspaces"],
         features: [
             "Unlimited requests",
@@ -101,51 +104,10 @@ const plans: Plan[] = [
     },
 ];
 
-interface TierAvailability {
-    [key: string]: boolean | string | undefined;
-}
-
-interface Tier {
-    title: string;
-    price: string;
-    id: string;
-    href: string;
-    type: "starter" | "mostPopular" | null;
-}
-
-const tiers: Tier[] = [
-    {
-        title: "Starter",
-        price: "Free",
-        id: "tier-Starter",
-        href: "#",
-        type: "starter",
-    },
-    {
-        title: "Teams",
-        price: "$49 / user",
-        id: "tier-Team",
-        href: "#",
-        type: null,
-    },
-    {
-        title: "Business",
-        price: "$89 / user",
-        id: "tier-Business",
-        href: "#",
-        type: "mostPopular",
-    },
-];
-
-interface TierAvailability {
-    Starter?: boolean | string;
-    Teams?: boolean | string;
-    Business?: boolean | string;
-}
 
 interface Feature {
     name: string;
-    tiers: TierAvailability;
+    plans: PlanAvailability;
 }
 
 interface Section {
@@ -159,23 +121,23 @@ const sections: Section[] = [
         features: [
             {
                 name: "Email notifications & webhooks",
-                tiers: { Starter: true, Teams: true, Business: true },
+                plans: { Starter: true, Teams: true, Business: true },
             },
             {
                 name: "Workspaces",
-                tiers: { Starter: "5", Teams: "10", Business: "Unlimited" },
+                plans: { Starter: "5", Teams: "10", Business: "Unlimited" },
             },
             {
                 name: "Storage",
-                tiers: {
-                    Start: "$0.65 per stored GB",
+                plans: {
+                    Starter: "$0.65 per stored GB",
                     Teams: "$0.34 per stored GB",
                     Business: "Customized¹",
                 },
             },
             {
                 name: "Seats",
-                tiers: {
+                plans: {
                     Starter: "5 users",
                     Teams: "Up to 20 users",
                     Business: "Unlimited",
@@ -188,12 +150,12 @@ const sections: Section[] = [
         features: [
             {
                 name: "Service accounts",
-                tiers: { Start: true, Teams: true, Business: true },
+                plans: { Starter: true, Teams: true, Business: true },
             },
-            { name: "Admin API", tiers: { Teams: true, Business: true } },
+            { name: "Admin API", plans: { Teams: true, Business: true } },
             {
                 name: "No-Code workflow builder",
-                tiers: { Starter: "Limited", Teams: "Standard", Business: "Enhanced" },
+                plans: { Starter: "Limited", Teams: "Standard", Business: "Enhanced" },
             },
         ],
     },
@@ -202,10 +164,10 @@ const sections: Section[] = [
         features: [
             {
                 name: "Analytics retention",
-                tiers: { Starter: "7 days", Teams: "1 year", Business: "Unlimited" },
+                plans: { Starter: "7 days", Teams: "1 year", Business: "Unlimited" },
             },
-            { name: "Anomaly detection", tiers: { Teams: true, Business: true } },
-            { name: "Custom report builder", tiers: { Business: true } },
+            { name: "Anomaly detection", plans: { Teams: true, Business: true } },
+            { name: "Custom report builder", plans: { Business: true } },
         ],
     },
     {
@@ -213,7 +175,7 @@ const sections: Section[] = [
         features: [
             {
                 name: "Slack",
-                tiers: {
+                plans: {
                     Starter: "Community",
                     Teams: "Connect",
                     Business: "Dedicated agent",
@@ -221,7 +183,7 @@ const sections: Section[] = [
             },
             {
                 name: "Email",
-                tiers: { Starter: "2-4 days", Teams: "1-2 days", Business: "Priority" },
+                plans: { Starter: "2-4 days", Teams: "1-2 days", Business: "Priority" },
             },
         ],
     },
@@ -260,10 +222,15 @@ const faqs = [
 ];
 
 export default function Pricing() {
-    const [frequency, setFrequency] = React.useState(frequencies[0]);
+    const [frequency, setFrequency] = React.useState(frequencies[1]);
 
+    // @SEV: simplify + types
     const handleFrequencyChange = (selectedFrequency: any) => {
-        setFrequency(selectedFrequency);
+        if (selectedFrequency.value === frequency.value) {
+            setFrequency(frequencies[0]);
+        } else {
+            setFrequency(selectedFrequency);
+        }
     };
     return (
         <>
@@ -310,17 +277,31 @@ export default function Pricing() {
                             {plan.name}
                         </h3>
                         <div className="mt-3 flex gap-x-3 items-center">
-                            <span className="text-5xl font-semibold text-gray-900">
+                            <span className="text-5xl tabular-nums font-semibold text-gray-900">
+                                {/* @SEV: types */}
                                 {!plan.isStarter
                                     ? (plan.price as any)[frequency.value]
                                     : plan.price}
                             </span>
                             {!plan.isStarter ? (
-                                <div>
-                                    <p className="text-xs text-gray-600">per user</p>
-                                    <p className="text-xs text-gray-600">
-                                        {frequency.priceSuffix}
-                                    </p>
+                                <div className="flex items-center justify-between w-full">
+                                    <div>
+                                        <p className="text-xs text-gray-600">per user</p>
+                                        <p className="text-xs text-gray-600">
+                                            per month
+                                        </p>
+                                    </div>
+                                    <div className="flex items-center gap-x-2">
+                                        {/* @SEV: make it checkable locally not for both simoutanesly */}
+                                        <Checkbox
+                                            id={`discount-${planIdx}`}
+                                            name={`discount-${planIdx}`}
+                                            value={frequency.value}
+                                            checked={frequency.value === frequencies[1].value}
+                                            onCheckedChange={() => handleFrequencyChange(frequencies.find(freq => freq.value === frequencies[1].value))}
+                                        />
+                                        <label htmlFor={`discount-${planIdx}`} className="text-xs font-medium text-gray-600">yearly -15%</label>
+                                    </div>
                                 </div>
                             ) : null}
                         </div>
@@ -332,6 +313,7 @@ export default function Pricing() {
                                 </p>
                             </div>
                             <div>
+                                {/* @SEV: Animated Sev Arrows */}
                                 {plan.isStarter ? (
                                     <a
                                         href={plan.buttonLink}
@@ -361,18 +343,18 @@ export default function Pricing() {
                             {plan.capacity.map((feature, index) => (
                                 <li
                                     key={feature}
-                                    className="flex items-center space-x-2 py-1.5"
+                                    className="flex items-center gap-x-3 py-1.5"
                                 >
                                     {index === 0 && (
                                         <RiUserLine
                                             className="size-4 shrink-0 text-gray-500"
-                                            aria-hidden={true}
+                                            aria-hidden="true"
                                         />
                                     )}
                                     {index === 1 && (
                                         <RiCloudLine
                                             className="size-4 shrink-0 text-gray-500"
-                                            aria-hidden={true}
+                                            aria-hidden="true"
                                         />
                                     )}
                                     <span>{feature}</span>
@@ -383,11 +365,11 @@ export default function Pricing() {
                             {plan.features.map((feature) => (
                                 <li
                                     key={feature}
-                                    className="flex items-center space-x-2 py-1.5"
+                                    className="flex items-center gap-x-3 py-1.5"
                                 >
                                     <RiCheckLine
-                                        className="h-5 w-5 shrink-0 text-indigo-600"
-                                        aria-hidden={true}
+                                        className="size-4 shrink-0 text-indigo-600"
+                                        aria-hidden="true"
                                     />
                                     <span>{feature}</span>
                                 </li>
@@ -399,14 +381,6 @@ export default function Pricing() {
 
             {/* Testimonial */}
             <div className="mt-20 sm:mt-36 mx-auto max-w-xl lg:max-w-6xl space-y-4">
-                {/* <div className="relative">
-                        <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                            <div className="w-full border-t border-gray-900/10" />
-                        </div>
-                        <div className="relative flex">
-                            <span className="bg-white pr-4 text-xs font-semibold uppercase tracking-widest text-gray-400">Trusted by</span>
-                        </div>
-                    </div> */}
                 <figure className="mx-auto max-w-4xl">
                     <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 text-balance max-w-2xl mx-auto">
                         <p>
@@ -431,36 +405,24 @@ export default function Pricing() {
                         </div>
                     </figcaption>
                 </figure>
-
-                {/* <div className="relative">
-                        <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                            <div className="w-full border-t border-gray-900/10" />
-                        </div>
-                        <div className="relative flex justify-end">
-                            <span className="bg-white pr-4 text-xs font-semibold uppercase tracking-widest text-gray-400">And many more</span>
-                        </div>
-                    </div> */}
             </div>
 
             {/* plan details (xs-lg)*/}
             <div className="mx-auto mt-20 sm:max-w-md space-y-8 sm:mt-36 lg:hidden">
-                {tiers.map((tier) => (
-                    <section key={tier.id}>
+                {plans.map((plan) => (
+                    <section key={plan.name}>
                         <div
-                            className={cx(
-                                tier.type === "mostPopular"
-                                    ? "rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200"
-                                    : "rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200",
-                                "p-6"
-                            )}
+                            className="p-6 rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200"
                         >
                             <h3
-                                id={tier.id}
+                                id={plan.name}
                                 className="text-base font-semibold leading-6 text-gray-900"
                             >
-                                {tier.title}
+                                {plan.name}
                             </h3>
-                            <p className="text-sm font-normal text-gray-600">{tier.price}</p>
+                            <p className="text-sm font-normal text-gray-600">
+                                {typeof plan.price === 'string' ? plan.price : `${plan.price.monthly} / per user`}
+                            </p>
                         </div>
                         <ul
                             role="list"
@@ -471,7 +433,7 @@ export default function Pricing() {
                                     <h4 className="font-semibold">{section.name}</h4>
                                     <ul role="list" className="mt-2 divide-y">
                                         {section.features.map((feature) =>
-                                            feature.tiers[tier.title] ? (
+                                            feature.plans[plan.name] ? (
                                                 <li key={feature.name} className="py-2.5 flex gap-x-3">
                                                     <RiCheckLine
                                                         className="h-6 w-5 flex-none text-indigo-600"
@@ -479,9 +441,9 @@ export default function Pricing() {
                                                     />
                                                     <span>
                                                         {feature.name}{" "}
-                                                        {typeof feature.tiers[tier.title] === "string" ? (
+                                                        {typeof feature.plans[plan.name] === "string" ? (
                                                             <span className="text-sm leading-6 text-gray-500">
-                                                                ({feature.tiers[tier.title]})
+                                                                ({feature.plans[plan.name]})
                                                             </span>
                                                         ) : null}
                                                     </span>
@@ -497,9 +459,10 @@ export default function Pricing() {
             </div>
 
             {/* plan details (lg+) */}
-            <div className="isolate mt-20 sm:mt-28 hidden lg:block">
+            <div className="mt-20 sm:mt-28 hidden lg:block">
                 <div className="relative">
-                    <div className="w-full h-28 bg-white sticky top-0 z-10" />
+                    {/* @SEV: how to hide the divider lines in the table in the sticky bar? */}
+                    <div className="w-full h-28 bg-white sticky top-0 z-20" />
                     <table className="w-full table-fixed border-separate border-spacing-0 gap-bo text-left">
                         <caption className="sr-only">Pricing plan comparison</caption>
                         <colgroup>
@@ -518,17 +481,20 @@ export default function Pricing() {
                                         Price per month (billed yearly)
                                     </div>
                                 </th>
-                                {tiers.map((tier) => (
+                                {plans.map((plan) => (
                                     <th
-                                        key={tier.id}
+                                        key={plan.name}
                                         scope="col"
-                                        className="px-6 xl:px-8 pb-8 bg-white border-b"
+                                        className="px-6 lg:px-8 pb-8 bg-white border-b"
                                     >
-                                        <div className="text-sm font-semibold leading-7 text-gray-900">
-                                            {tier.title}
+                                        <div className={cx(
+                                            !plan.isStarter ? 'text-indigo-600' : 'text-gray-900',
+                                            "text-sm font-semibold leading-7"
+                                        )}>
+                                            {plan.name}
                                         </div>
                                         <div className="text-sm font-normal text-gray-600">
-                                            {tier.price}
+                                            {typeof plan.price === 'string' ? plan.price : `${plan.price.monthly} / per user`}
                                         </div>
                                     </th>
                                 ))}
@@ -556,17 +522,18 @@ export default function Pricing() {
                                                 className="py-4 text-sm font-normal leading-6 text-gray-900"
                                             >
                                                 {feature.name}
-                                                <div className="absolute inset-x-0 mt-4 h-px bg-gray-900/5" />
+                                                {/* @SEV: lines are still in front of table header although z is set*/}
+                                                <div className="absolute inset-x-0 mt-4 h-px bg-gray-900/5 z-10" />
                                             </th>
-                                            {tiers.map((tier) => (
-                                                <td key={tier.id} className="px-6 py-4 xl:px-8">
-                                                    {typeof feature.tiers[tier.title] === "string" ? (
+                                            {plans.map((plan) => (
+                                                <td key={plan.name} className="px-6 py-4 lg:px-8">
+                                                    {typeof feature.plans[plan.name] === "string" ? (
                                                         <div className="text-sm leading-6 text-gray-500">
-                                                            {feature.tiers[tier.title]}
+                                                            {feature.plans[plan.name]}
                                                         </div>
                                                     ) : (
                                                         <>
-                                                            {feature.tiers[tier.title] === true ? (
+                                                            {feature.plans[plan.name] === true ? (
                                                                 <RiCheckLine
                                                                     className="h-5 w-5 text-indigo-600"
                                                                     aria-hidden="true"
@@ -579,10 +546,10 @@ export default function Pricing() {
                                                             )}
 
                                                             <span className="sr-only">
-                                                                {feature.tiers[tier.title] === true
+                                                                {feature.plans[plan.name] === true
                                                                     ? "Included"
                                                                     : "Not included"}{" "}
-                                                                in {tier.title}
+                                                                in {plan.name}
                                                             </span>
                                                         </>
                                                     )}
@@ -592,6 +559,47 @@ export default function Pricing() {
                                     ))}
                                 </Fragment>
                             ))}
+                            <tr>
+                                <th
+                                    scope="row"
+                                    className="pt-6 text-sm font-normal leading-6 text-gray-900"
+                                >
+                                    <span className="sr-only">Link to activate plan</span>
+                                </th>
+                                {plans.map((plan) => (
+                                    <td key={plan.name} className="px-6 pt-6 lg:px-8">
+                                        {/* @SEV: Animated Sev Arrows */}
+                                        {plan.isStarter ? (
+                                            <a
+                                                href={plan.buttonLink}
+                                                className="inline-flex items-center gap-x-1 text-sm font-semibold text-gray-900"
+                                                // @SEV: check aria logic
+                                                aria-label={`Activate plan ${plan.name}`}
+
+                                            >
+                                                {plan.buttonText}
+                                                <RiArrowRightSLine
+                                                    className="size-5 shrink-0"
+                                                    aria-hidden="true"
+                                                />
+                                            </a>
+                                        ) : (
+                                            <a
+                                                href={plan.buttonLink}
+                                                className="inline-flex items-center gap-x-1 text-indigo-600 text-sm font-semibold"
+                                                // @SEV: check aria logic
+                                                aria-label={`Activate plan ${plan.name}`}
+                                            >
+                                                {plan.buttonText}
+                                                <RiArrowRightSLine
+                                                    className="size-5 shrink-0"
+                                                    aria-hidden="true"
+                                                />
+                                            </a>
+                                        )}
+                                    </td>
+                                ))}
+                            </tr>
                         </tbody>
                     </table>
                 </div>
