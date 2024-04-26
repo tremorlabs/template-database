@@ -18,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased dark:bg-gray-950 min-h-screen`}>
-      <Navigation />
+      <body
+        className={`${inter.className} antialiased dark:bg-gray-950 min-h-screen selection:bg-indigo-100 selection:text-indigo-700`}
+      >
+        <Navigation />
         {children}
-      <Footer />
+        <Footer />
       </body>
     </html>
   );
