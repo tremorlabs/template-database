@@ -6,7 +6,6 @@ import { cx } from "@/lib/utils";
 import { siteConfig } from "@/app/siteConfig";
 import { Button } from "../Button";
 import { DatabaseLogo } from "../../../public/DatabaseLogo";
-import { MobileNavigation } from "./MobileNavigation";
 import { RiCloseLine, RiMenuLine } from "@remixicon/react";
 import React from "react";
 
@@ -14,17 +13,31 @@ export function Navigation() {
   const scrolled = useScroll(15);
   const [open, setOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    const mediaQuery: MediaQueryList = window.matchMedia("(min-width: 768px)");
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+      setOpen(false);
+    };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    handleMediaQueryChange({
+      matches: mediaQuery.matches,
+    } as MediaQueryListEvent);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <header
       className={cx(
-        "fixed top-4 inset-x-2 rounded-xl mx-auto max-w-6xl flex justify-center z-50 transition-all h-fit border border-transparent ease-[cubic-bezier(0.16,1,0.3,1.03)] animate-slide-down-fade px-3 py-3",
+        "fixed top-4 inset-x-2 rounded-xl mx-auto max-w-6xl flex justify-center z-50 transition-all border duration-500 border-transparent ease-[cubic-bezier(0.16,1,0.3,1.03)] animate-slide-down-fade px-3 py-3 will-change-transform transform-gpu h-[4rem] overflow-hidden",
+        open === true && "h-56",
         scrolled || open === true
-          ? "border-gray-100 bg-white/80 shadow-xl shadow-black/[2%] max-w-3xl backdrop-blur-nav"
-          : "bg-white/0",
+          ? "border-gray-100 bg-white/80 shadow-xl shadow-black/5 max-w-3xl backdrop-blur-nav"
+          : "bg-white/0"
       )}
-      style={{ animationDuration: "700ms" }}
     >
-      <div className="w-full my-auto">
+      <div className="w-full md:my-auto">
         <div className="flex items-center justify-between">
           <Link href="/">
             <span className="sr-only">Company logo</span>
@@ -75,29 +88,30 @@ export function Navigation() {
             </Button>
           </div>
         </div>
-        {open ? (
-          <nav className="text-lg mt-6">
-            <ul className="space-y-4">
-              <li onClick={() => setOpen(false)}>
-                <Link href={siteConfig.baseLinks.about} className="">
-                  About
-                </Link>
-              </li>
-              <li onClick={() => setOpen(false)}>
-                <Link href={siteConfig.baseLinks.pricing} className="">
-                  Pricing
-                </Link>
-              </li>
-              <li onClick={() => setOpen(false)}>
-                <Link href={siteConfig.baseLinks.changelog} className="">
-                  Changelog
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        ) : (
-          <></>
-        )}
+        <nav
+          className={cx(
+            "flex md:hidden text-lg my-6 will-change-transform ease-in-out",
+            open ? "" : "hidden"
+          )}
+        >
+          <ul className="space-y-4">
+            <li onClick={() => setOpen(false)}>
+              <Link href={siteConfig.baseLinks.about} className="">
+                About
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)}>
+              <Link href={siteConfig.baseLinks.pricing} className="">
+                Pricing
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)}>
+              <Link href={siteConfig.baseLinks.changelog} className="">
+                Changelog
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
