@@ -145,10 +145,10 @@ export const ChangelogEntry = ({
   <div
     className={clsx(
       // base
-      "relative flex justify-center my-20 border-b"
+      "relative flex flex-col md:flex-row justify-center my-20 border-b"
     )}
   >
-    <div className="w-1/3 mb-10">
+    <div className="md:w-1/3 md:mb-10 mb-4">
       <span className="sticky top-24 ring-1 ring-indigo-400/20 bg-indigo-50 px-1.5 py-1 text-indigo-600 font-medium rounded-lg text-sm shadow-sm tabular-nums">
         {date}
       </span>

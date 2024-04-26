@@ -8,19 +8,20 @@ export default function Cta() {
       <section className="mb-20 mt-32 sm:mt-40 overflow-hidden p-1 max-w-6xl mx-auto">
         <div className="relative flex items-center justify-center">
           <div className="w-full transform-gpu mask opacity-70" aria-hidden>
-            <div className="size-full flex flex-col gap-2">
-              {Array.from({ length: 20 }, () => (
-                <div key={crypto.randomUUID()}>
-                  <div className="size-full flex gap-2">
-                    {Array.from({ length: 41 }, () => (
-                      <div key={crypto.randomUUID()}>
-                        <div className="rounded-md size-5 ring-1 ring-black/5 shadow shadow-indigo-500/20"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="size-full flex flex-col gap-2">
+  {Array.from({ length: 20 }, (_, idx) => (
+    <div key={`outer-${idx}`}>
+      <div className="size-full flex gap-2">
+        {Array.from({ length: 41 }, (_, idx2) => (
+          <div key={`inner-${idx}-${idx2}`}>
+            <div className="rounded-md size-5 ring-1 ring-black/5 shadow shadow-indigo-500/20"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
           <div className="max-w-4l absolute">
             <div className="flex flex-col items-center justify-center text-center">

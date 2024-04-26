@@ -2,48 +2,29 @@ import { Button } from "@/components/Button";
 import { nanum } from "@/lib/nanum";
 import { cx } from "@/lib/utils";
 import Image from "next/image";
+import Balancer from "react-wrap-balancer";
+
 export default function About() {
   return (
-    <div className="mt-44 flex flex-col justify-center items-center">
+    <div className="mt-44 flex flex-col justify-center items-center px-3 overflow-hidden">
       <section>
-        <h1 className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto">
-          <span
-            className="block animate-slide-up-fade text-transparent bg-clip-text py-2 -my-2 bg-gradient-to-r from-gray-900 to-gray-700"
-            style={{
-              animationDuration: "250ms",
-              animationDelay: "400ms",
-              animationFillMode: "backwards",
-            }}
-          >
-            We are engineers, building{" "}
-          </span>
-          <span
-            className="block animate-slide-up-fade text-transparent bg-clip-text py-2 -my-2 bg-gradient-to-r from-gray-900 to-gray-700"
-            style={{
-              animationDuration: "450ms",
-              animationDelay: "500ms",
-              animationFillMode: "backwards",
-            }}
-          >
-            the database platform{" "}
-          </span>
-          <span
-            className="block animate-slide-up-fade text-transparent bg-clip-text py-2 -my-2 bg-gradient-to-r from-gray-900 to-gray-700"
-            style={{
-              animationDuration: "650ms",
-              animationDelay: "600ms",
-              animationFillMode: "backwards",
-            }}
-          >
-            we always wanted
-          </span>
+        <h1 className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-700 py-2 animate-slide-up-fade"
+          style={{
+            animationDuration: "600ms",
+            animationFillMode: "backwards",
+          }}>
+          <Balancer>
+            We are engineers, building the database platform we always wanted
+          </Balancer>
         </h1>
-        <div className="relative p-12 mt-20 max-w-lg mx-auto bg-gray-50/20 shadow-xl shadow-indigo-500/10 animate-slide-up-fade"
-        style={{
-          animationDuration: "900ms",
-          animationDelay: "900ms",
-          animationFillMode: "backwards",
-        }}>
+        <div
+          className="relative p-6 sm:p-12 mt-20 max-w-lg mx-auto bg-gray-50/20 shadow-xl shadow-indigo-500/10 animate-slide-up-fade"
+          style={{
+            animationDuration: "600ms",
+            animationDelay: "400ms",
+            animationFillMode: "backwards",
+          }}
+        >
           <div className="absolute -inset-y-8 left-0 w-px bg-gray-600/20 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-2.5rem),transparent)]"></div>
           <div className="absolute -inset-y-8 right-0 w-px bg-gray-600/20 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-2.5rem),transparent)]"></div>
           <div className="absolute -inset-x-8 top-0 h-px bg-gray-600/20 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-2.5rem),transparent)]"></div>
@@ -63,12 +44,14 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="max-w-4xl mt-32 animate-slide-up-fade"
+      <section
+        className="max-w-4xl mt-32 animate-slide-up-fade"
         style={{
           animationDuration: "600ms",
-          animationDelay: "1300ms",
+          animationDelay: "900ms",
           animationFillMode: "backwards",
-        }}>
+        }}
+      >
         <h2 className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 p-2">
           Teamwork at Database
         </h2>
@@ -336,7 +319,9 @@ export default function About() {
         </div>
       </section>
       <section className="mt-32">
-        <Button className="shadow-xl shadow-indigo-500/20 w-full">View Open Roles</Button>
+        <Button className="shadow-xl shadow-indigo-500/20 w-full">
+          View Open Roles
+        </Button>
       </section>
     </div>
   );
