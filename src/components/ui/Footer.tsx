@@ -55,7 +55,7 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-white" aria-labelledby="footer-heading">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-6xl px-3 pb-8 pt-16 sm:pt-24 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-20">
           <div className="space-y-8">
             <DatabaseLogo className="w-32 sm:w-40" />
@@ -82,9 +82,13 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Product
                 </h3>
-                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Product">
+                <ul
+                  role="list"
+                  className="mt-6 space-y-4"
+                  aria-label="Quick links Product"
+                >
                   {navigation.product.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="w-fit">
                       <Link
                         className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
                         href={item.href}
@@ -94,7 +98,10 @@ export default function Footer() {
                         <span>{item.name}</span>
                         {item.external && (
                           <div className="bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
-                            <RiArrowRightUpLine className="size-full text-gray-900 shrink-0" />
+                            <RiArrowRightUpLine
+                              aria-hidden="true"
+                              className="size-full text-gray-900 shrink-0"
+                            />
                           </div>
                         )}
                       </Link>
@@ -106,9 +113,13 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Resources
                 </h3>
-                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Resources">
+                <ul
+                  role="list"
+                  className="mt-6 space-y-4"
+                  aria-label="Quick links Resources"
+                >
                   {navigation.resources.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="w-fit">
                       <Link
                         className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
                         href={item.href}
@@ -118,7 +129,10 @@ export default function Footer() {
                         <span>{item.name}</span>
                         {item.external && (
                           <div className="bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
-                            <RiArrowRightUpLine className="size-full text-gray-900 shrink-0" />
+                            <RiArrowRightUpLine
+                              aria-hidden="true"
+                              className="size-full text-gray-900 shrink-0"
+                            />
                           </div>
                         )}
                       </Link>
@@ -132,9 +146,13 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Company
                 </h3>
-                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Company">
+                <ul
+                  role="list"
+                  className="mt-6 space-y-4"
+                  aria-label="Quick links Company"
+                >
                   {navigation.company.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="w-fit">
                       <Link
                         className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
                         href={item.href}
@@ -144,7 +162,10 @@ export default function Footer() {
                         <span>{item.name}</span>
                         {item.external && (
                           <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
-                            <RiArrowRightUpLine className="size-full text-gray-900 shrink-0" />
+                            <RiArrowRightUpLine
+                              aria-hidden="true"
+                              className="size-full text-gray-900 shrink-0"
+                            />
                           </div>
                         )}
                       </Link>
@@ -156,9 +177,13 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
                   Legal
                 </h3>
-                <ul role="list" className="mt-6 space-y-4" aria-label="Quick links Legal">
+                <ul
+                  role="list"
+                  className="mt-6 space-y-4"
+                  aria-label="Quick links Legal"
+                >
                   {navigation.legal.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="w-fit">
                       <Link
                         className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
                         href={item.href}
@@ -168,7 +193,10 @@ export default function Footer() {
                         <span>{item.name}</span>
                         {item.external && (
                           <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
-                            <RiArrowRightUpLine className="size-full text-gray-900 shrink-0" />
+                            <RiArrowRightUpLine
+                              aria-hidden="true"
+                              className="size-full text-gray-900 shrink-0"
+                            />
                           </div>
                         )}
                       </Link>
@@ -179,12 +207,24 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-16 flex justify-between border-t border-gray-100 pt-8 sm:mt-20 lg:mt-24">
+          <div className="border border-gray-100 rounded-full pl-1 pr-2 py-0.5">
+            <div className="flex items-center gap-1">
+              <div className="relative size-3">
+                <div className="absolute rounded-full inset-0 bg-green-400/10" />
+                <div className="absolute rounded-full inset-1 bg-green-700" />
+              </div>
+              <span className="text-xs text-gray-900">
+                All systems operational
+              </span>
+            </div>
+          </div>
           <p className="text-sm leading-5 text-gray-500">
             &copy; {new Date().getFullYear()} Database, Inc. All rights
             reserved.
           </p>
         </div>
+      </div>
     </footer>
   );
 }
