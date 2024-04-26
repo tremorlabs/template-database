@@ -1,4 +1,4 @@
-// Tremor Raw Input [v0.0.0]
+// Tremor Raw Input [v1.0.0]
 
 import React from "react"
 import { RiEyeFill, RiEyeOffFill, RiSearchLine } from "@remixicon/react"
@@ -9,7 +9,7 @@ import { cx, focusInput, focusRing, hasErrorInput } from "@/lib/utils"
 const inputStyles = tv({
   base: [
     // base
-    "relative block w-full appearance-none rounded-lg border px-2.5 py-1.5 shadow-sm outline-none sm:text-sm",
+    "relative block w-full appearance-none rounded-md border px-2.5 py-1.5 shadow-sm outline-none transition sm:text-sm",
     // border color
     "border-gray-300 dark:border-gray-800",
     // text color
@@ -23,7 +23,7 @@ const inputStyles = tv({
     "disabled:dark:border-gray-700 disabled:dark:bg-gray-800 disabled:dark:text-gray-500",
     // file
     [
-      "file:-my-1.5 file:-ml-2.5 file:h-[36px] file:cursor-pointer file:rounded-l-md file:border-0 file:px-3 file:py-1.5 file:outline-none disabled:pointer-events-none file:disabled:pointer-events-none",
+      "file:-my-1.5 file:-ml-2.5 file:h-[36px] file:cursor-pointer file:rounded-l-md file:rounded-r-none file:border-0 file:px-3 file:py-1.5 file:outline-none focus:outline-none disabled:pointer-events-none file:disabled:pointer-events-none",
       "file:border-solid file:border-gray-300 file:bg-gray-50 file:text-gray-500 file:hover:bg-gray-100 file:dark:border-gray-800 file:dark:bg-gray-950 file:hover:dark:bg-gray-900/20 file:disabled:dark:border-gray-700",
       "file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem]",
       "file:disabled:bg-gray-100 file:disabled:text-gray-500 file:disabled:dark:bg-gray-800",
@@ -48,11 +48,20 @@ const inputStyles = tv({
 
 interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
-    VariantProps<typeof inputStyles> {}
+    VariantProps<typeof inputStyles> {
+  inputClassName?: string
+}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { className, hasError, enableStepper, type, ...props }: InputProps,
+    {
+      className,
+      inputClassName,
+      hasError,
+      enableStepper,
+      type,
+      ...props
+    }: InputProps,
     forwardedRef,
   ) => {
     const [typeState, setTypeState] = React.useState(type)
@@ -61,7 +70,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const isSearch = type === "search"
 
     return (
-      <div className="relative w-full">
+      <div className={cx("relative w-full", className)}>
         <input
           ref={forwardedRef}
           type={isPassword ? typeState : type}
@@ -71,7 +80,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               "pl-8": isSearch,
               "pr-10": isPassword,
             },
-            className,
+            inputClassName,
           )}
           {...props}
         />
@@ -130,4 +139,4 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = "Input"
 
-export { Input, inputStyles, type InputProps };
+export { Input, inputStyles, type InputProps }
