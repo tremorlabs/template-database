@@ -1,13 +1,7 @@
 import React from "react";
 import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import Link from "next/link";
-import {
-  RiArrowDownCircleFill,
-  RiArrowRightUpFill,
-  RiArrowRightUpLine,
-} from "@remixicon/react";
-
-const year = new Date().getFullYear();
+import { RiArrowRightUpLine } from "@remixicon/react";
 
 const footerSections = [
   {
@@ -54,10 +48,14 @@ export default function Footer() {
           <div className="flex flex-col gap-12">
             <DatabaseLogo className="w-40" />
             <div>
-              <span className="text-gray-500 text-sm">
-                Hollow Alley <br /> #1307 <br />
-                Kuessnacht, Schwyz <br />
-                Switzerland{" "}
+              <span
+                className="text-gray-500 text-sm flex flex-col"
+                aria-label="Company Address"
+              >
+                <span>Hollow Alley</span>
+                <span>#1307</span>
+                <span>Kuessnacht, Schwyz</span>
+                <span>Switzerland</span>
               </span>
             </div>
           </div>
@@ -67,25 +65,32 @@ export default function Footer() {
                 <h4 className="text-gray-900 text-sm font-medium">
                   {section.title}
                 </h4>
-                <ul className="flex flex-col gap-2 mt-2">
-                  {section.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>
-                      <Link
-                        className="text-gray-500 hover:text-gray-900 transition rounded-md flex"
-                        href={item.href}
-                        target={item.external ? "_blank" : undefined}
-                        rel={item.external ? "noopener noreferrer" : undefined}
-                      >
-                        <span>{item.name}</span>
-                        {item.external && (
-                          <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
-                            <RiArrowRightUpLine className="size-full text-gray-900 shrink-0" />
-                          </div>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <nav aria-label={`Quick links ${section.title}`}>
+                  <ul role="list" className="flex flex-col gap-2 mt-2">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <Link
+                          className="text-gray-500 hover:text-gray-900 transition rounded-md flex"
+                          href={item.href}
+                          target={item.external ? "_blank" : undefined}
+                          rel={
+                            item.external ? "noopener noreferrer" : undefined
+                          }
+                        >
+                          <span>{item.name}</span>
+                          {item.external && (
+                            <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
+                              <RiArrowRightUpLine
+                                aria-hidden="true"
+                                className="size-full text-gray-900 shrink-0"
+                              />
+                            </div>
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
               </div>
             ))}
           </div>
@@ -93,7 +98,7 @@ export default function Footer() {
         <div className="w-full border-b border-dashed my-12" />
 
         <p className="text-xs leading-6 text-gray-400 font-medium ">
-          &copy; {year} Database, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Database, Inc. All rights reserved.
         </p>
       </div>
     </footer>

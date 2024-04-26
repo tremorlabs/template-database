@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 export const DatabaseLogo = (props: SVGProps<SVGSVGElement>) => (
-  <svg fill="none" viewBox="0 0 200 44" {...props}>
+  <svg aria-hidden="true" fill="none" viewBox="0 0 200 44" {...props}>
     <mask
       id="mask0_9418_64"
       width={44}

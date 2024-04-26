@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -97,7 +98,7 @@ const config: Config = {
           "dialogOverlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
         dialogContentShow:
           "dialogContentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-          "slide-down-fade": "slide-down-fade ease-in-out",
+        "slide-down-fade": "slide-down-fade ease-in-out",
         "slide-up-fade": "slide-up-fade ease-in-out",
         "hero-text-slide-up-fade": "slide-up-fade 900ms ease-in-out",
         "notification-slide-up-fade": "slide-up-fade 500ms ease-in-out",
