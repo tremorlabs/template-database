@@ -400,7 +400,7 @@ export default function Pricing() {
               </colgroup>
               <thead className="sticky top-28">
                 <tr>
-                  <th scope="col" className="pb-8 bg-white border-b">
+                  <th scope="col" className="pb-8 bg-white border-b border-gray-100">
                     <div className="text-sm font-semibold leading-7 text-gray-900">
                       Compare prices
                     </div>
@@ -412,7 +412,7 @@ export default function Pricing() {
                     <th
                       key={plan.name}
                       scope="col"
-                      className="px-6 lg:px-8 pb-8 bg-white border-b"
+                      className="px-6 lg:px-8 pb-8 bg-white border-b border-gray-100"
                     >
                       <div
                         className={cx(
@@ -444,24 +444,24 @@ export default function Pricing() {
                         colSpan={4}
                         className={cx(
                           sectionIdx === 0 ? "pt-14" : "pt-10",
-                          "pb-0 text-sm font-semibold leading-6 text-gray-900"
+                          "text-sm font-semibold leading-6 text-gray-900 border-b border-gray-100 pb-4"
                         )}
                       >
                         {section.name}
                       </th>
                     </tr>
                     {section.features.map((feature) => (
-                      <tr key={feature.name}>
+                      <tr key={feature.name} className="hover:bg-indigo-50/30 transition">
                         <th
                           scope="row"
-                          className="py-4 text-sm font-normal leading-6 text-gray-900 border-b"
+                          className="py-4 text-sm font-normal leading-6 text-gray-900 border-b border-gray-100"
                         >
                           {feature.name}
                         </th>
                         {plans.map((plan) => (
                           <td
                             key={plan.name}
-                            className="px-6 py-4 lg:px-8 border-b"
+                            className="px-6 py-4 lg:px-8 border-b border-gray-100"
                           >
                             {typeof feature.plans[plan.name] === "string" ? (
                               <div className="text-sm leading-6 text-gray-500">
