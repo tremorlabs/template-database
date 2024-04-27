@@ -1,14 +1,11 @@
-<ChangelogEntry date="22.04.2024">
+<ChangelogEntry version="v3.17.0" date="Apr 27, 2024">
 ## Safe migrations on development branches
 
-<ChangelogImage src="/changelog/317.png" />
-
-Safe migrations can now be activated on development branches. Activating this
+After months of development, Safe migrations can now be activated on development branches. Activating this
 feature ensures zero-downtime schema migrations, the ability to revert schemas,
-and safeguards against unintended schema modifications. Additionally,
-development branches with safe migrations can now establish a workflow that
-includes a "staging" branch, a capability that was previously exclusive to
-production branches.
+and safeguards against unintended schema modifications.
+
+<ChangelogImage src="/changelog/v317.png" />
 
 ### New & Improved:
 
@@ -43,17 +40,17 @@ For more information, refer to our [the documentation](#).
 
 </ChangelogEntry>
 
-<ChangelogEntry date="04.04.2024">
+<ChangelogEntry version="v3.16.0" date="Apr 10, 2024">
 ## New Regions and Replicas
-
-<ChangelogImage src="/changelog/316.png" />
 
 Database introduces the capability to set up same-region read replicas. These
 replicas are separate, read-only compute units designed to conduct read
 operations on the same dataset as their corresponding read-write compute
 instances.
 
-Use Regions to advance:
+<ChangelogImage src="/changelog/v316.png" />
+
+### Use Regions to advance:
 
 - <strong>Enhanced Throughput:</strong> Spread read operations across several replicas
   to improve throughput for all types of workloads, both read-write and read-only.

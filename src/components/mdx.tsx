@@ -53,7 +53,7 @@ export const H2 = ({ children }: { children: React.ReactNode }) => (
   <CustomHeading
     className={clsx(
       // base
-      "mb-6 text-lg font-semibold normal-case tracking-tight sm:text-2xl",
+      "mb-4 font-semibold normal-case tracking-tight text-lg",
       // light mode
       "text-gray-900",
       // dark mode
@@ -69,7 +69,7 @@ export const H3 = ({ children }: { children: React.ReactNode }) => (
   <CustomHeading
     className={clsx(
       // base
-      "mb-2 text-lg font-semibold normal-case tracking-tight",
+      "mb-2 font-semibold normal-case tracking-tight",
       // light mode
       "text-gray-900",
       // dark mode
@@ -86,11 +86,11 @@ export const P = (props: any) => (
     {...props}
     className={clsx(
       // base
-      "mb-4 text-base/7",
+      "mb-8 leading-7",
       // light mode
-      "text-gray-700",
+      "text-gray-600",
       // dark mode
-      "dark:text-gray-300"
+      "dark:text-gray-400"
     )}
   />
 );
@@ -99,11 +99,27 @@ export const Ul = (props: any) => (
   <ul
     className={clsx(
       // base
-      "list mb-8 ml-8 list-outside list-disc space-y-1 text-base/8",
+      "list mb-10 ml-8 list-outside list-disc space-y-1 leading-8",
       // light mode
-      "text-gray-700",
+      "text-gray-600",
       // light mode
-      "dark:text-gray-300"
+      "dark:text-gray-40"
+    )}
+    {...props}
+  />
+);
+
+// @SEV: make <strong/> less bold
+
+export const Strong = (props: any) => (
+  <strong
+    className={clsx(
+      // base
+      "font-medium",
+      // light mode
+      "text-gray-900",
+      // light mode
+      "dark:text-gray-50"
     )}
     {...props}
   />
@@ -117,7 +133,7 @@ export function CustomLink(props: any) {
   let href = props.href;
   // same dark mode
   const style =
-    "text-blue-600 dark:text-blue-500 font-medium hover:text-blue-500";
+    "text-indigo-600 font-medium hover:text-indigo-500";
   if (href.startsWith("/")) {
     return (
       <Link className={style} href={href} {...props}>
@@ -136,24 +152,31 @@ export function CustomLink(props: any) {
 }
 
 export const ChangelogEntry = ({
+  version,
   date,
   children,
 }: {
-  date: string;
+  version: string;
+  date: string,
   children: any;
 }) => (
   <div
     className={clsx(
       // base
-      "relative flex flex-col md:flex-row justify-center my-20 border-b"
+      "relative flex flex-col md:flex-row justify-center gap-x-10 my-20 border-b"
     )}
   >
     <div className="md:w-1/3 md:mb-10 mb-4">
-      <span className="sticky top-24 ring-1 ring-indigo-400/20 bg-indigo-50 px-1.5 py-1 text-indigo-600 font-medium rounded-lg text-sm shadow-sm tabular-nums">
-        {date}
-      </span>
+      <div className="sticky top-24 flex items-center space-x-2 md:block md:space-x-0 md:space-y-1.5">
+        <span className="inline-flex items-center ring-1 ring-inset ring-indigo-700/10 bg-indigo-50 px-2.5 py-1 text-indigo-700 font-medium rounded-lg text-xs">
+          {version}
+        </span>
+        <span className="whitespace-nowrap block text-xs text-gray-600">
+          {date}
+        </span>
+      </div>
     </div>
-    <div className="max-w-prose mb-12">{children}</div>
+    <div className="mb-12">{children}</div>
   </div>
 );
 
@@ -169,7 +192,7 @@ export const ChangelogImage = ({
     alt={alt}
     width={width}
     height={height}
-    className="overflow-hidden rounded-xl mb-12 shadow-xl shadow-black/15 ring-1 ring-gray-200/50"
+    className="overflow-hidden rounded-xl mb-10 shadow-md shadow-black/15 ring-1 ring-gray-200/50"
     {...props}
   />
 );

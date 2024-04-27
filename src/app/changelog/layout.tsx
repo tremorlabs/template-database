@@ -8,8 +8,8 @@ export default function Layout({
       <h1 className="text-4xl sm:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 py-2">
         Changelog
       </h1>
-      <p className="text-gray-700 mt-4">
-        New updates and improvements to Database.
+      <p className="text-gray-700 leading-7 mt-4">
+        Keep yourself informed about the most recent additions and improvements we&apos;ve made to Database.
       </p>
       <div className="mt-28">{children}</div>
     </main>
