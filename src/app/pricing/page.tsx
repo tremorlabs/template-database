@@ -5,6 +5,7 @@ import {
   RiUserLine,
   RiCloudLine,
   RiSubtractLine,
+  RiInformationLine,
 } from "@remixicon/react";
 
 import { cx } from "@/lib/utils";
@@ -16,6 +17,7 @@ import Testimonial from "@/components/ui/Testimonial";
 import { Switch } from "@/components/Switch";
 import { Badge } from "@/components/Badge";
 import { Label } from "@/components/Label";
+import { Tooltip } from "@/components/Tooltip";
 
 type FixedPrice = string;
 
@@ -92,6 +94,7 @@ const plans: Plan[] = [
 interface Feature {
   name: string;
   plans: Record<string, boolean | string>;
+  tooltip?: string;
 }
 
 interface Section {
@@ -105,14 +108,20 @@ const sections: Section[] = [
     features: [
       {
         name: "Email notifications & webhooks",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: { Starter: true, Teams: true, Business: true },
       },
       {
         name: "Workspaces",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: { Starter: "5", Teams: "10", Business: "Unlimited" },
       },
       {
         name: "Storage",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: {
           Starter: "$0.65 per stored GB",
           Teams: "$0.34 per stored GB",
@@ -121,6 +130,8 @@ const sections: Section[] = [
       },
       {
         name: "Seats",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: {
           Starter: "5 users",
           Teams: "Up to 20 users",
@@ -134,11 +145,20 @@ const sections: Section[] = [
     features: [
       {
         name: "Service accounts",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: { Starter: true, Teams: true, Business: true },
       },
-      { name: "Admin API", plans: { Teams: true, Business: true } },
+      {
+        name: "Admin API",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
+        plans: { Teams: true, Business: true },
+      },
       {
         name: "No-Code workflow builder",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: { Starter: "Limited", Teams: "Standard", Business: "Enhanced" },
       },
     ],
@@ -148,10 +168,22 @@ const sections: Section[] = [
     features: [
       {
         name: "Analytics retention",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
         plans: { Starter: "7 days", Teams: "1 year", Business: "Unlimited" },
       },
-      { name: "Anomaly detection", plans: { Teams: true, Business: true } },
-      { name: "Custom report builder", plans: { Business: true } },
+      {
+        name: "Anomaly detection",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
+        plans: { Teams: true, Business: true },
+      },
+      {
+        name: "Custom report builder",
+        tooltip:
+          "Consectetur qui culpa ipsum in ea irure duis culpa incididunt.",
+        plans: { Business: true },
+      },
     ],
   },
   {
@@ -400,7 +432,10 @@ export default function Pricing() {
               </colgroup>
               <thead className="sticky top-28">
                 <tr>
-                  <th scope="col" className="pb-8 bg-white border-b border-gray-100">
+                  <th
+                    scope="col"
+                    className="pb-8 bg-white border-b border-gray-100"
+                  >
                     <div className="text-sm font-semibold leading-7 text-gray-900">
                       Compare prices
                     </div>
@@ -451,12 +486,20 @@ export default function Pricing() {
                       </th>
                     </tr>
                     {section.features.map((feature) => (
-                      <tr key={feature.name} className="hover:bg-indigo-50/30 transition">
+                      <tr
+                        key={feature.name}
+                        className="hover:bg-indigo-50/30 transition"
+                      >
                         <th
                           scope="row"
-                          className="py-4 text-sm font-normal leading-6 text-gray-900 border-b border-gray-100"
+                          className="py-4 flex gap-2 items-center text-sm font-normal leading-6 text-gray-900 border-b border-gray-100"
                         >
-                          {feature.name}
+                          <span>{feature.name}</span>
+                          {feature.tooltip ? (
+                            <Tooltip side="right" content={feature.tooltip}>
+                              <RiInformationLine className="size-4 text-gray-700 shrink-0" />
+                            </Tooltip>
+                          ) : null}
                         </th>
                         {plans.map((plan) => (
                           <td
