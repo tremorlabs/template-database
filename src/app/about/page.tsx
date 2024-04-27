@@ -8,11 +8,13 @@ export default function About() {
   return (
     <div className="mt-44 flex flex-col justify-center items-center px-3 overflow-hidden">
       <section>
-        <h1 className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-700 py-2 animate-slide-up-fade"
+        <h1
+          className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-700 py-2 animate-slide-up-fade"
           style={{
             animationDuration: "600ms",
             animationFillMode: "backwards",
-          }}>
+          }}
+        >
           <Balancer>
             We are engineers, building the database platform we always wanted
           </Balancer>
@@ -78,7 +80,7 @@ export default function About() {
                 <div className="relative rounded overflow-hidden">
                   <div className="absolute inset-0 shadow-[inset_0px_0px_3px_0px_rgb(0,0,0,1)]"></div>
                   <Image
-                    src="/images/working1.jpg"
+                    src="/images/working.jpg"
                     alt="A scenic view"
                     width={640}
                     height={427}
