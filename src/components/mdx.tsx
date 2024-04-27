@@ -109,13 +109,11 @@ export const Ul = (props: any) => (
   />
 );
 
-// @SEV: make <strong/> less bold
-
-export const Strong = (props: any) => (
-  <strong
+export const Bold = (props: any) => (
+  <span
     className={clsx(
       // base
-      "font-medium",
+      "font-semibold",
       // light mode
       "text-gray-900",
       // light mode
@@ -124,6 +122,7 @@ export const Strong = (props: any) => (
     {...props}
   />
 );
+
 
 // export function Code(props: any) {
 //   return <Codeblock variant="clipboard" source={props.children} {...props} />
@@ -163,7 +162,7 @@ export const ChangelogEntry = ({
   <div
     className={clsx(
       // base
-      "relative flex flex-col md:flex-row justify-center gap-x-10 my-20 border-b"
+      "relative flex flex-col md:flex-row justify-center gap-x-14 my-20 border-b"
     )}
   >
     <div className="md:w-1/3 md:mb-10 mb-4">
@@ -171,7 +170,7 @@ export const ChangelogEntry = ({
         <span className="inline-flex items-center ring-1 ring-inset ring-indigo-700/10 bg-indigo-50 px-2.5 py-1 text-indigo-700 font-medium rounded-lg text-xs">
           {version}
         </span>
-        <span className="whitespace-nowrap block text-xs text-gray-600">
+        <span className="whitespace-nowrap block text-sm text-gray-600">
           {date}
         </span>
       </div>
