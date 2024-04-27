@@ -99,7 +99,7 @@ export const Ul = (props: any) => (
   <ul
     className={clsx(
       // base
-      "list mb-10 ml-8 list-outside list-disc space-y-1 leading-8",
+      "list-['—___'] mb-10 ml-[30px] space-y-1 leading-8",
       // light mode
       "text-gray-600",
       // light mode
