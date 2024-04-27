@@ -33,15 +33,12 @@ function CustomHeading(props: any) {
   );
 }
 
-export const H1 = ({ children }: { children: React.ReactNode }) => (
+export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
     className={clsx(
       // base
       "text-3xl font-bold normal-case tracking-tight sm:text-4xl",
-      // light mode
-      "text-gray-900",
-      // dark mode
-      "dark:text-gray-50"
+      "text-gray-900"
     )}
     level={1}
   >
@@ -49,15 +46,12 @@ export const H1 = ({ children }: { children: React.ReactNode }) => (
   </CustomHeading>
 );
 
-export const H2 = ({ children }: { children: React.ReactNode }) => (
+export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
     className={clsx(
       // base
       "mb-4 font-semibold normal-case tracking-tight text-lg",
-      // light mode
-      "text-gray-900",
-      // dark mode
-      "dark:text-gray-50"
+      "text-gray-900"
     )}
     level={2}
   >
@@ -65,15 +59,12 @@ export const H2 = ({ children }: { children: React.ReactNode }) => (
   </CustomHeading>
 );
 
-export const H3 = ({ children }: { children: React.ReactNode }) => (
+export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
     className={clsx(
       // base
       "mb-2 font-semibold normal-case tracking-tight",
-      // light mode
-      "text-gray-900",
-      // dark mode
-      "dark:text-gray-50"
+      "text-gray-900"
     )}
     level={3}
   >
@@ -81,58 +72,42 @@ export const H3 = ({ children }: { children: React.ReactNode }) => (
   </CustomHeading>
 );
 
-export const P = (props: any) => (
+export const P = (props: React.HTMLProps<HTMLParagraphElement>) => (
   <p
     {...props}
     className={clsx(
       // base
       "mb-8 leading-7",
-      // light mode
-      "text-gray-600",
-      // dark mode
-      "dark:text-gray-400"
+      "text-gray-600"
     )}
   />
 );
 
-export const Ul = (props: any) => (
+export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
   <ul
     className={clsx(
       // base
-      "list-['—___'] mb-10 ml-[30px] space-y-1 leading-8",
-      // light mode
-      "text-gray-600",
-      // light mode
-      "dark:text-gray-40"
+      "list-['–__'] mb-10 ml-[30px] space-y-1 leading-8",
+      "text-gray-600"
     )}
     {...props}
   />
 );
 
-export const Bold = (props: any) => (
+export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <span
     className={clsx(
       // base
       "font-semibold",
-      // light mode
-      "text-gray-900",
-      // light mode
-      "dark:text-gray-50"
+      "text-gray-900"
     )}
     {...props}
   />
 );
 
-
-// export function Code(props: any) {
-//   return <Codeblock variant="clipboard" source={props.children} {...props} />
-// }
-
 export function CustomLink(props: any) {
   let href = props.href;
-  // same dark mode
-  const style =
-    "text-indigo-600 font-medium hover:text-indigo-500";
+  const style = "text-indigo-600 font-medium hover:text-indigo-500";
   if (href.startsWith("/")) {
     return (
       <Link className={style} href={href} {...props}>
@@ -156,7 +131,7 @@ export const ChangelogEntry = ({
   children,
 }: {
   version: string;
-  date: string,
+  date: string;
   children: any;
 }) => (
   <div

@@ -1,3 +1,5 @@
+import Balancer from "react-wrap-balancer";
+
 export default function Layout({
   children,
 }: Readonly<{
@@ -9,7 +11,10 @@ export default function Layout({
         Changelog
       </h1>
       <p className="text-gray-700 leading-7 mt-4">
-        Keep yourself informed about the most recent additions and improvements we&apos;ve made to Database.
+        <Balancer>
+          Keep yourself informed about the most recent additions and
+          improvements we&apos;ve made to Database.
+        </Balancer>
       </p>
       <div className="mt-28">{children}</div>
     </main>
