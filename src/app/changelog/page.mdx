@@ -1,70 +1,67 @@
-<ChangelogEntry date="22.04.2024">
+<ChangelogEntry version="v3.17.0" date="Apr 27, 2024">
 ## Safe migrations on development branches
 
-<ChangelogImage src="/changelog/317.png" />
+After months of development, Safe migrations can now be activated on development
+branches. Activating this feature ensures zero-downtime schema migrations, the
+ability to revert schemas, and safeguards against unintended schema
+modifications.
 
-Safe migrations can now be activated on development branches. Activating this
-feature ensures zero-downtime schema migrations, the ability to revert schemas,
-and safeguards against unintended schema modifications. Additionally,
-development branches with safe migrations can now establish a workflow that
-includes a "staging" branch, a capability that was previously exclusive to
-production branches.
+<ChangelogImage src="/changelog/v317.png" />
 
 ### New & Improved:
 
-- <strong>Filters:</strong> [AI Filters](#) will now enhance your existing compatible
+- <Bold>Filters:</Bold> [AI Filters](#) will now enhance your existing compatible
   filters rather than replacing them.
-- <strong>Comments:</strong> When you open a notification about a comment, the reply
+- <Bold>Comments:</Bold> When you open a notification about a comment, the reply
   input field will now automatically appear.
-- <strong>Editor:</strong> It's now possible to browse through multiple images in
-  the editor without needing to zoom out.
-- <strong>Templates:</strong> When using an existing document to [create a template](#),
+- <Bold>Editor:</Bold> It's now possible to browse through multiple images in the
+  editor without needing to zoom out.
+- <Bold>Templates:</Bold> When using an existing document to [create a template](#),
   users can now choose which team to create it in, rather than it defaulting to the
   first available team.
 
 ### Fixes:
 
-- <strong>Dashboard:</strong> Now, when you move database projects in a list or board
+- <Bold>Dashboard:</Bold> Now, when you move database projects in a list or board
   layout grouped by date within the [dashboard](#), the start and end dates will
   update automatically.
-- <strong>Dashboard:</strong> The sequence of columns on dashboards organized by
-  [database milestones](#) will now match the order of milestones displayed in the
-  sidebar.
-- <strong>Desktop Application:</strong> Fixed a glitch that allowed PDF printing
-  even in the absence of connected printers.
-- <strong>Help Center:</strong> Enhanced the capability for accessing documentation
-  links directly from the in-app help center.
-- <strong>Editor:</strong> The user mention feature in the SQL editor now respects
-  the 'Display full names' setting.
-- <strong>Filters:</strong> Resolved an inconsistency where filter queries with 'includes
+- <Bold>Dashboard:</Bold> The sequence of columns on dashboards organized by [database
+  milestones](#) will now match the order of milestones displayed in the sidebar.
+- <Bold>Desktop Application:</Bold> Fixed a glitch that allowed PDF printing even
+  in the absence of connected printers.
+- <Bold>Help Center:</Bold> Enhanced the capability for accessing documentation links
+  directly from the in-app help center.
+- <Bold>Editor:</Bold> The user mention feature in the SQL editor now respects the
+  'Display full names' setting.
+- <Bold>Filters:</Bold> Resolved an inconsistency where filter queries with 'includes
   any' settings sometimes delivered incorrect results.
 
 For more information, refer to our [the documentation](#).
 
 </ChangelogEntry>
 
-<ChangelogEntry date="04.04.2024">
+<ChangelogEntry version="v3.16.0" date="Apr 10, 2024">
 ## New Regions and Replicas
-
-<ChangelogImage src="/changelog/316.png" />
 
 Database introduces the capability to set up same-region read replicas. These
 replicas are separate, read-only compute units designed to conduct read
 operations on the same dataset as their corresponding read-write compute
 instances.
 
-Use Regions to advance:
+<ChangelogImage src="/changelog/v316.png" />
 
-- <strong>Enhanced Throughput:</strong> Spread read operations across several replicas
+### Use Regions to advance:
+
+- <Bold>Enhanced Throughput:</Bold> Spread read operations across several replicas
   to improve throughput for all types of workloads, both read-write and read-only.
-- <strong>Dedicated Read-only Workloads:</strong> Assign analytical and reporting
-  tasks to a read replica to preserve the performance of your main application workload.
-- <strong>Controlled Data Access:</strong> Grant read-only access to specific applications
+- <Bold>Dedicated Read-only Workloads:</Bold> Assign analytical and reporting tasks
+  to a read replica to preserve the performance of your main application workload.
+- <Bold>Controlled Data Access:</Bold> Grant read-only access to specific applications
   or users who don't require write permissions.
-- <strong>Resource Customization:</strong> Tailor the CPU and memory resources for
-  each read replica according to the specific requirements of different applications
-  or users.
-- <strong>Customization Features:</strong> Instantly create and tailor the resources
+- <Bold>Resource Customization:</Bold> Tailor the CPU and memory resources for each
+  read replica according to the specific requirements of different applications or
+  users.
+- <Bold>Customization Features:</Bold> Instantly create and tailor the resources
   of one or more read replicas for any project branch, adjusting the allocated vCPU
   and memory as needed.
 

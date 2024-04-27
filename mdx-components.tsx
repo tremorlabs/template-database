@@ -8,6 +8,7 @@ import {
   H3,
   P,
   Ul,
+  Bold
 } from "@/components/mdx";
 
 import { ChangelogImage } from "@/components/mdx";
@@ -17,6 +18,7 @@ let customComponents = {
   h2: H2,
   h3: H3,
   p: P,
+  Bold: Bold,
   ul: Ul,
   a: CustomLink,
   ChangelogEntry: ChangelogEntry,
