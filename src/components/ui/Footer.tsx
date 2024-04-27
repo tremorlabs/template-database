@@ -25,7 +25,7 @@ const navigation = {
   ],
   legal: [
     { name: "Imprint", href: "#", external: false },
-    { name: "Privacy", href: "#", external: true },
+    { name: "Privacy", href: "#", external: false },
     { name: "Terms", href: "#", external: false },
   ],
   social: [
