@@ -1,11 +1,11 @@
 // Tremor Raw Button [v0.0.0]
 
-import React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { RiLoader2Fill } from "@remixicon/react"
-import { tv, type VariantProps } from "tailwind-variants"
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { RiLoader2Fill } from "@remixicon/react";
+import { tv, type VariantProps } from "tailwind-variants";
 
-import { cx, focusRing } from "@/lib/utils"
+import { cx, focusRing } from "@/lib/utils";
 
 const buttonVariants = tv({
   base: [
@@ -22,9 +22,9 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // text color
-        "text-white dark:text-gray-900",
+        "text-white dark:text-gray-950",
         // background color
-        "bg-indigo-600 dark:bg-indigo-50",
+        "bg-indigo-600 dark:bg-indigo-500",
         // hover color
         "hover:bg-indigo-700 dark:hover:bg-indigo-200",
         // disabled
@@ -77,14 +77,14 @@ const buttonVariants = tv({
   defaultVariants: {
     variant: "primary",
   },
-})
+});
 
 interface ButtonProps
   extends React.ComponentPropsWithoutRef<"button">,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-  isLoading?: boolean
-  loadingText?: string
+  asChild?: boolean;
+  isLoading?: boolean;
+  loadingText?: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -99,9 +99,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       ...props
     }: ButtonProps,
-    forwardedRef,
+    forwardedRef
   ) => {
-    const Component = asChild ? Slot : "button"
+    const Component = asChild ? Slot : "button";
     return (
       <Component
         ref={forwardedRef}
@@ -124,10 +124,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           children
         )}
       </Component>
-    )
-  },
-)
+    );
+  }
+);
 
-Button.displayName = "Button"
+Button.displayName = "Button";
 
 export { Button, buttonVariants, type ButtonProps };

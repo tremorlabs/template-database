@@ -1,13 +1,9 @@
 import React from "react";
 import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import Link from "next/link";
-import {
-  RiArrowRightUpLine,
-  RiDiscordFill,
-  RiGithubFill,
-  RiTwitterXFill,
-  RiYoutubeFill,
-} from "@remixicon/react";
+import { RiArrowRightUpLine } from "@remixicon/react";
+import ThemeSwitch from "../ThemeSwitch";
+import Balancer from "react-wrap-balancer";
 
 const navigation = {
   product: [
@@ -29,57 +25,32 @@ const navigation = {
     { name: "Terms", href: "#", external: false },
   ],
   social: [
-    {
-      name: "GitHub",
-      href: "#",
-      icon: RiGithubFill,
-    },
-    {
-      name: "Discord",
-      href: "#",
-      icon: RiDiscordFill,
-    },
-    {
-      name: "X",
-      href: "#",
-      icon: RiTwitterXFill,
-    },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: RiYoutubeFill,
-    },
+    { name: "GitHub", href: "#", external: true },
+    { name: "Discord", href: "#", external: true },
+    { name: "X (formerly Twitter)", href: "#", external: true },
+    { name: "YouTube", href: "#", external: true },
   ],
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer aria-labelledby="footer-heading">
       <div className="mx-auto max-w-6xl px-3 pb-8 pt-16 sm:pt-24 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-20">
           <div className="space-y-8">
             <DatabaseLogo className="w-32 sm:w-40" />
-            <p className="text-sm leading-6 text-gray-600">
-              Redefining the way databases are built and managed. Built in
-              Switzerland, made for the world.
+            <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
+              Redefining the way databases are built and managed. Built in Switzerland, made for the world.
             </p>
             <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
+              <ThemeSwitch />
             </div>
+            <div></div>
           </div>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-14 sm:gap-8 xl:col-span-2 xl:mt-0">
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
                   Product
                 </h3>
                 <ul
@@ -90,17 +61,17 @@ export default function Footer() {
                   {navigation.product.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 shrink-0"
+                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
                             />
                           </div>
                         )}
@@ -110,7 +81,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
                   Resources
                 </h3>
                 <ul
@@ -121,17 +92,17 @@ export default function Footer() {
                   {navigation.resources.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 shrink-0"
+                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
                             />
                           </div>
                         )}
@@ -143,7 +114,7 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
                   Company
                 </h3>
                 <ul
@@ -154,17 +125,17 @@ export default function Footer() {
                   {navigation.company.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 shrink-0"
+                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
                             />
                           </div>
                         )}
@@ -174,7 +145,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
                   Legal
                 </h3>
                 <ul
@@ -185,17 +156,17 @@ export default function Footer() {
                   {navigation.legal.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 hover:text-gray-900 transition rounded-md flex"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 shrink-0"
+                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
                             />
                           </div>
                         )}
@@ -207,19 +178,19 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex justify-between items-center border-t border-gray-100 pt-8 sm:mt-20 lg:mt-24">
-          <div className="border border-gray-100 rounded-full pl-1 pr-2 py-0.5">
+        <div className="mt-16 flex justify-between items-center border-t border-gray-100 dark:border-gray-800 pt-8 sm:mt-20 lg:mt-24">
+          <div className="border border-gray-100 dark:border-gray-800 rounded-full pl-1 pr-2 py-0.5">
             <div className="flex items-center gap-1">
               <div className="relative size-3">
-                <div className="absolute rounded-full inset-0 bg-green-400/10" />
-                <div className="absolute rounded-full inset-1 bg-green-700" />
+                <div className="absolute rounded-full inset-0 bg-green-400/10 dark:bg-green-600/20" />
+                <div className="absolute rounded-full inset-1 bg-green-700 dark:bg-green-500" />
               </div>
-              <span className="text-xs text-gray-900">
+              <span className="text-xs text-gray-900 dark:text-gray-50">
                 All systems operational
               </span>
             </div>
           </div>
-          <p className="text-sm leading-5 text-gray-500">
+          <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
             &copy; {new Date().getFullYear()} Database, Inc. All rights
             reserved.
           </p>

@@ -33,8 +33,8 @@ export function Navigation() {
         "fixed top-4 inset-x-2 rounded-xl mx-auto max-w-6xl flex justify-center z-50 transition-all border duration-500 border-transparent ease-[cubic-bezier(0.16,1,0.3,1.03)] animate-slide-down-fade px-3 py-3 will-change-transform transform-gpu h-[4rem] overflow-hidden",
         open === true && "h-56",
         scrolled || open === true
-          ? "border-gray-100 bg-white/80 shadow-xl shadow-black/5 max-w-3xl backdrop-blur-nav"
-          : "bg-white/0"
+          ? "border-gray-100 bg-white/80 dark:border-white/15 dark:bg-black/70 shadow-xl shadow-black/5 max-w-3xl backdrop-blur-nav"
+          : "bg-white/0 dark:bg-gray-950/0"
       )}
     >
       <div className="w-full md:my-auto">
@@ -47,7 +47,7 @@ export function Navigation() {
             <ul className="items-center font-medium gap-4 flex">
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
                   href={siteConfig.baseLinks.about}
                 >
                   About
@@ -55,7 +55,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
                   href={siteConfig.baseLinks.pricing}
                 >
                   Pricing
@@ -63,7 +63,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
                   href={siteConfig.baseLinks.changelog}
                 >
                   Changelog

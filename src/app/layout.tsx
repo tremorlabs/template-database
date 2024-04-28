@@ -4,41 +4,38 @@ import "./globals.css";
 import { Navigation } from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import { siteConfig } from "./siteConfig";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yoururl.com'),
+  metadataBase: new URL("https://yoururl.com"),
   title: siteConfig.name,
   description: siteConfig.description,
-  keywords: [
-    'Marketing',
-    'Database',
-    'Software',
-  ],
+  keywords: ["Marketing", "Database", "Software"],
   authors: [
     {
-      name: 'yourname',
-      url: '',
+      name: "yourname",
+      url: "",
     },
   ],
-  creator: 'yourname',
+  creator: "yourname",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    creator: '@yourname',
+    creator: "@yourname",
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
@@ -48,13 +45,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased dark:bg-gray-950 min-h-screen selection:bg-indigo-100 selection:text-indigo-700`}
       >
-        <Navigation />
-        {children}
-        <Footer />
+        <ThemeProvider defaultTheme="system" attribute="class">
+          <Navigation />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

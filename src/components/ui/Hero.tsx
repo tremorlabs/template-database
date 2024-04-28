@@ -12,13 +12,13 @@ export default function Hero() {
     >
       <h1
         id="hero-title"
-        className="text-4xl sm:text-6xl md:text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 p-2 animate-slide-up-fade"
+        className="text-4xl sm:text-6xl md:text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 p-2 animate-slide-up-fade"
         style={{ animationDuration: "700ms" }}
       >
         The database for <br /> modern applications
       </h1>
       <p
-        className="mt-6 text-lg max-w-lg animate-slide-up-fade"
+        className="mt-6 text-lg text-gray-700 dark:text-gray-400 max-w-lg animate-slide-up-fade"
         style={{ animationDuration: "900ms" }}
       >
         Database is a general purpose, relational database built for modern
@@ -38,12 +38,12 @@ export default function Hero() {
         >
           <a
             href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
-            className="sm:ring-0 ring-1 ring-gray-200"
+            className="sm:ring-0 ring-1 ring-gray-200 dark:ring-gray-900"
           >
-            <span className=" group-hover:bg-gray-200  transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50">
+            <span className=" group-hover:bg-gray-200 dark:group-hover:bg-gray-700  transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800">
               <RiPlayCircleFill
                 aria-hidden="true"
-                className="size-5 text-gray-900 shrink-0"
+                className="size-5 text-gray-900 dark:text-gray-50 shrink-0"
               />
             </span>
             Watch video
@@ -55,7 +55,7 @@ export default function Hero() {
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />
-        <div className="absolute bg-gradient-to-b from-transparent to-white bottom-0 w-full h-2/3"></div>
+        <div className="absolute bg-gradient-to-b from-transparent to-white dark:to-gray-950 bottom-0 w-full h-2/3"></div>
       </div>
     </section>
   );
