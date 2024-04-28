@@ -38,7 +38,7 @@ export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
     className={clsx(
       // base
       "text-3xl font-bold normal-case tracking-tight sm:text-4xl",
-      "text-gray-900"
+      "text-gray-900 dark:text-gray-50"
     )}
     level={1}
   >
@@ -51,7 +51,7 @@ export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
     className={clsx(
       // base
       "mb-4 font-semibold normal-case tracking-tight text-lg",
-      "text-gray-900"
+      "text-gray-900 dark:text-gray-50"
     )}
     level={2}
   >
@@ -64,7 +64,7 @@ export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
     className={clsx(
       // base
       "mb-2 font-semibold normal-case tracking-tight",
-      "text-gray-900"
+      "text-gray-900 dark:text-gray-50"
     )}
     level={3}
   >
@@ -78,7 +78,7 @@ export const P = (props: React.HTMLProps<HTMLParagraphElement>) => (
     className={clsx(
       // base
       "mb-8 leading-7",
-      "text-gray-600"
+      "text-gray-600 dark:text-gray-400"
     )}
   />
 );
@@ -88,7 +88,7 @@ export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
     className={clsx(
       // base
       "list-['–__'] mb-10 ml-[30px] space-y-1 leading-8",
-      "text-gray-600"
+      "text-gray-600 dark:text-gray-400"
     )}
     {...props}
   />
@@ -99,7 +99,7 @@ export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
     className={clsx(
       // base
       "font-semibold",
-      "text-gray-900"
+      "text-gray-900 dark:text-gray-50"
     )}
     {...props}
   />
@@ -107,7 +107,8 @@ export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
 
 export function CustomLink(props: any) {
   let href = props.href;
-  const style = "text-indigo-600 font-medium hover:text-indigo-500";
+  const style =
+    "text-indigo-600 font-medium hover:text-indigo-500 dark:text-indigo-400 hover:dark:text-indigo-300";
   if (href.startsWith("/")) {
     return (
       <Link className={style} href={href} {...props}>
@@ -142,10 +143,10 @@ export const ChangelogEntry = ({
   >
     <div className="md:w-1/3 md:mb-10 mb-4">
       <div className="sticky top-24 flex items-center space-x-2 md:block md:space-x-0 md:space-y-1.5">
-        <span className="inline-flex items-center ring-1 ring-inset ring-indigo-700/10 bg-indigo-50 px-2.5 py-1 text-indigo-700 font-medium rounded-lg text-xs">
+        <span className="inline-flex items-center ring-1 ring-inset ring-indigo-700/10 dark:ring-indigo-400/10 bg-indigo-50 dark:bg-indigo-500/20 px-2.5 py-1 text-indigo-700 dark:text-indigo-400 font-medium rounded-lg text-xs">
           {version}
         </span>
-        <span className="whitespace-nowrap block text-sm text-gray-600">
+        <span className="whitespace-nowrap block text-sm text-gray-600 dark:text-gray-400">
           {date}
         </span>
       </div>
@@ -166,7 +167,7 @@ export const ChangelogImage = ({
     alt={alt}
     width={width}
     height={height}
-    className="overflow-hidden rounded-xl mb-10 shadow-md shadow-black/15 ring-1 ring-gray-200/50"
+    className="overflow-hidden rounded-xl mb-10 shadow-md shadow-black/15 ring-1 ring-gray-200/50 dark:ring-gray-800"
     {...props}
   />
 );
