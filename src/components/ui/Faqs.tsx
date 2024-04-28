@@ -45,16 +45,16 @@ export function Faqs() {
         <div className="col-span-full sm:col-span-5">
           <h2
             id="faq-title"
-            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2 pr-2"
+            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 py-2 pr-2"
           >
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-base leading-7 text-gray-600">
+          <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-400">
             Can&apos;t find the answer you&apos;re looking for? Don&apos;t
             hesitate to get in touch with our{" "}
             <a
               href="#"
-              className="font-semibold text-indigo-600 hover:text-indigo-500"
+              className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-300"
             >
               customer support
             </a>{" "}

@@ -217,15 +217,15 @@ export default function Pricing() {
   >("monthly");
   return (
     <>
-      <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-200/20 bg-indigo-50/50 tracking-tighter leading-4 z-10">
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600">
+      <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-200/20 bg-indigo-50/50 dark:border-indigo-800/30 dark:bg-indigo-900/20 tracking-tighter leading-4 z-10">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600 dark:from-indigo-200 dark:to-indigo-400">
           Pricing
         </span>
       </div>
-      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2">
+      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br dark:from-gray-50 dark:to-gray-500 from-gray-900 to-gray-700 py-2">
         Our plans scale with you
       </h2>
-      <p className="mt-6 text-lg max-w-2xl text-gray-700">
+      <p className="mt-6 text-lg max-w-2xl text-gray-700 dark:text-gray-400">
         Plans that empower you and your team to ship without friction. Our
         flexible pricing models ensure that efficiency doesn&apos;t come at the
         cost of your budget.
@@ -249,7 +249,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, planIdx) => (
-            <div key={planIdx} className="bg-white p-6">
+            <div key={planIdx} className="p-6">
               {plan.isRecommended ? (
                 <div className="h-4 flex items-center">
                   <div className="relative w-full">
@@ -257,10 +257,10 @@ export default function Pricing() {
                       className="absolute inset-0 flex items-center"
                       aria-hidden="true"
                     >
-                      <div className="w-full border-t border-indigo-600" />
+                      <div className="w-full border-t border-indigo-600 dark:border-indigo-400" />
                     </div>
                     <div className="relative flex justify-center">
-                      <span className="bg-white px-3 text-xs font-medium text-indigo-600">
+                      <span className="bg-white dark:bg-gray-950 px-3 text-xs font-medium text-indigo-600 dark:text-indigo-400">
                         Most popular
                       </span>
                     </div>
@@ -272,25 +272,25 @@ export default function Pricing() {
                 </div>
               )}
 
-              <h3 className="mt-6 text-sm font-semibold text-gray-900">
+              <h3 className="mt-6 text-sm font-semibold text-gray-900 dark:text-gray-50">
                 {plan.name}
               </h3>
               <div className="mt-3 flex gap-x-3 items-center">
-                <span className="text-5xl tabular-nums font-semibold text-gray-900">
+                <span className="text-5xl tabular-nums font-semibold text-gray-900 dark:text-gray-50">
                   {isVariablePrice(plan.price)
                     ? billingFrequency === "monthly"
                       ? plan.price.monthly
                       : plan.price.annually
                     : plan.price}
                 </span>
-                <div className="text-xs text-gray-600">
+                <div className="text-xs text-gray-600 dark:text-gray-400">
                   per user <br /> per month
                 </div>
               </div>
               <div className="flex flex-col justify-between">
                 {/* @CHRIS: fix edge case */}
                 <div className="flex flex-col grow">
-                  <p className="mt-6 text-sm text-gray-600 leading-6">
+                  <p className="mt-6 text-sm text-gray-600 dark:text-gray-400 leading-6">
                     {plan.description}
                   </p>
                 </div>
@@ -312,7 +312,10 @@ export default function Pricing() {
                   )}
                 </div>
               </div>
-              <ul role="list" className="mt-8 text-sm text-gray-700">
+              <ul
+                role="list"
+                className="mt-8 text-sm text-gray-700 dark:text-gray-400"
+              >
                 {plan.capacity.map((feature, index) => (
                   <li
                     key={feature}
@@ -334,14 +337,17 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <ul role="list" className="mt-4 text-sm text-gray-700">
+              <ul
+                role="list"
+                className="mt-4 text-sm text-gray-700 dark:text-gray-400"
+              >
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
                     className="flex items-center gap-x-3 py-1.5"
                   >
                     <RiCheckLine
-                      className="size-4 shrink-0 text-indigo-600"
+                      className="size-4 shrink-0 text-indigo-600 dark:text-indigo-400"
                       aria-hidden="true"
                     />
                     <span>{feature}</span>
@@ -365,7 +371,7 @@ export default function Pricing() {
               <div className="p-6 rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200">
                 <h3
                   id={plan.name}
-                  className="text-base font-semibold leading-6 text-gray-900"
+                  className="text-base font-semibold leading-6 text-gray-900 dark:text-gray-50"
                 >
                   {plan.name}
                 </h3>
@@ -381,7 +387,7 @@ export default function Pricing() {
               </div>
               <ul
                 role="list"
-                className="mt-10 space-y-10 text-sm leading-6 text-gray-900"
+                className="mt-10 space-y-10 text-sm leading-6 text-gray-900 dark:text-gray-50"
               >
                 {sections.map((section) => (
                   <li key={section.name}>
@@ -421,7 +427,7 @@ export default function Pricing() {
       <section className="mx-auto mt-20">
         <div className="mt-20 sm:mt-28 hidden lg:block">
           <div className="relative">
-            <div className="w-full h-28 bg-white sticky top-0 z-20" />
+            <div className="w-full h-28 bg-white dark:bg-gray-950 sticky top-0 z-20" />
             <table className="w-full table-fixed border-separate border-spacing-0 text-left">
               <caption className="sr-only">Pricing plan comparison</caption>
               <colgroup>
@@ -434,12 +440,12 @@ export default function Pricing() {
                 <tr>
                   <th
                     scope="col"
-                    className="pb-8 bg-white border-b border-gray-100"
+                    className="pb-8 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800"
                   >
-                    <div className="text-sm font-semibold leading-7 text-gray-900">
+                    <div className="text-sm font-semibold leading-7 text-gray-900 dark:text-gray-50">
                       Compare prices
                     </div>
-                    <div className="text-sm font-normal text-gray-600">
+                    <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                       Price per month (billed yearly)
                     </div>
                   </th>
@@ -447,17 +453,19 @@ export default function Pricing() {
                     <th
                       key={plan.name}
                       scope="col"
-                      className="px-6 lg:px-8 pb-8 bg-white border-b border-gray-100"
+                      className="px-6 lg:px-8 pb-8 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800"
                     >
                       <div
                         className={cx(
-                          !plan.isStarter ? "text-indigo-600" : "text-gray-900",
+                          !plan.isStarter
+                            ? "text-indigo-600 dark:text-indigo-400"
+                            : "text-gray-900 dark:text-gray-50",
                           "text-sm font-semibold leading-7"
                         )}
                       >
                         {plan.name}
                       </div>
-                      <div className="text-sm font-normal text-gray-600">
+                      <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                         {isVariablePrice(plan.price)
                           ? `${
                               billingFrequency === "monthly"
@@ -479,7 +487,7 @@ export default function Pricing() {
                         colSpan={4}
                         className={cx(
                           sectionIdx === 0 ? "pt-14" : "pt-10",
-                          "text-sm font-semibold leading-6 text-gray-900 border-b border-gray-100 pb-4"
+                          "text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50 border-b border-gray-100 dark:border-gray-800 pb-4"
                         )}
                       >
                         {section.name}
@@ -488,38 +496,41 @@ export default function Pricing() {
                     {section.features.map((feature) => (
                       <tr
                         key={feature.name}
-                        className="hover:bg-indigo-50/30 transition"
+                        className="hover:bg-indigo-50/30 dark:hover:bg-indigo-800/5 transition"
                       >
                         <th
                           scope="row"
-                          className="py-4 flex gap-2 items-center text-sm font-normal leading-6 text-gray-900 border-b border-gray-100"
+                          className="py-4 flex gap-2 items-center text-sm font-normal leading-6 text-gray-900 dark:text-gray-50 border-b border-gray-100 dark:border-gray-800"
                         >
                           <span>{feature.name}</span>
                           {feature.tooltip ? (
                             <Tooltip side="right" content={feature.tooltip}>
-                              <RiInformationLine className="size-4 text-gray-700 shrink-0" aria-hidden="true" />
+                              <RiInformationLine
+                                className="size-4 text-gray-700 dark:text-gray-400 shrink-0"
+                                aria-hidden="true"
+                              />
                             </Tooltip>
                           ) : null}
                         </th>
                         {plans.map((plan) => (
                           <td
                             key={plan.name}
-                            className="px-6 py-4 lg:px-8 border-b border-gray-100"
+                            className="px-6 py-4 lg:px-8 border-b border-gray-100 dark:border-gray-800"
                           >
                             {typeof feature.plans[plan.name] === "string" ? (
-                              <div className="text-sm leading-6 text-gray-500">
+                              <div className="text-sm leading-6 text-gray-500 dark:text-gray-400">
                                 {feature.plans[plan.name]}
                               </div>
                             ) : (
                               <>
                                 {feature.plans[plan.name] === true ? (
                                   <RiCheckLine
-                                    className="h-5 w-5 text-indigo-600"
+                                    className="h-5 w-5 text-indigo-600 dark:text-indigo-400"
                                     aria-hidden="true"
                                   />
                                 ) : (
                                   <RiSubtractLine
-                                    className="h-5 w-5 text-gray-400"
+                                    className="h-5 w-5 dark:text-gray-600 text-gray-400"
                                     aria-hidden="true"
                                   />
                                 )}
@@ -541,7 +552,7 @@ export default function Pricing() {
                 <tr>
                   <th
                     scope="row"
-                    className="pt-6 text-sm font-normal leading-6 text-gray-900"
+                    className="pt-6 text-sm font-normal leading-6 text-gray-900 dark:text-gray-50"
                   >
                     <span className="sr-only">Link to activate plan</span>
                   </th>
@@ -562,7 +573,7 @@ export default function Pricing() {
                         <Button
                           variant="light"
                           asChild
-                          className="group px-0 bg-transparent hover:bg-transparent text-indigo-600"
+                          className="group px-0 bg-transparent hover:bg-transparent text-indigo-600 dark:text-indigo-400"
                         >
                           <Link href={plan.buttonLink}>
                             {plan.buttonText}
@@ -578,8 +589,7 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
-        <Faqs />
+      <Faqs />
     </>
   );
 }
