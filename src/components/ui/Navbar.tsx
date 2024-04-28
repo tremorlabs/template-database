@@ -81,9 +81,9 @@ export function Navigation() {
               className="aspect-square p-2"
             >
               {open ? (
-                <RiCloseLine className="size-5" />
+                <RiCloseLine aria-hidden="true" className="size-5" />
               ) : (
-                <RiMenuLine className="size-5" />
+                <RiMenuLine aria-hidden="true" className="size-5" />
               )}
             </Button>
           </div>

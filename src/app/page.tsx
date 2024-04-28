@@ -7,15 +7,13 @@ import Features from "@/components/ui/Features";
 
 export default function Home() {
   return (
-    <div>
-      <main className="flex flex-col overflow-hidden">
-        <Hero />
-        <LogoCloud />
-        <GlobalDatabase />
-        <CodeExample />
-        <Features />
-        <Cta />
-      </main>
-    </div>
+    <main className="flex flex-col overflow-hidden">
+      <Hero />
+      <LogoCloud />
+      <GlobalDatabase />
+      <CodeExample />
+      <Features />
+      <Cta />
+    </main>
   );
 }

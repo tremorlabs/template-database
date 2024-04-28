@@ -4,17 +4,17 @@ import Image from "next/image";
 
 export default function HeroImage() {
   return (
-    <div className="relative flow-root">
+    <section aria-label="Hero Image of the website" className="relative flow-root">
       <div className="relative rounded-2xl bg-slate-50/40 p-2 ring-1 ring-inset ring-slate-200/50">
         <div className="rounded-xl bg-white shadow-3xl shadow-black/10 ring-1 ring-slate-900/5 overflow-hidden">
           <Image
             src="/images/preview.png"
-            alt="App screenshot"
+            alt="A preview of the Database web app"
             width={2400}
             height={1600}
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

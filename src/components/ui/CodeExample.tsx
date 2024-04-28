@@ -87,7 +87,7 @@ export default function CodeExample() {
       <div className="grid grid-cols-4 gap-6 mt-8">
         <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
           <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 shadow-md shadow-indigo-400/30">
-            <RiStackLine className="size-6 text-indigo-600" />
+            <RiStackLine aria-hidden="true" className="size-6 text-indigo-600" />
           </div>
           <div className="mr-3 space-y-1">
             <span className="font-medium text-gray-900 ">
@@ -101,7 +101,7 @@ export default function CodeExample() {
         </div>
         <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
           <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 shadow-md shadow-indigo-400/30">
-            <RiPlugLine className="size-6 text-indigo-600" />
+            <RiPlugLine aria-hidden="true" className="size-6 text-indigo-600" />
           </div>
           <div className="mr-3 space-y-1">
             <span className="font-medium text-gray-900 ">
@@ -115,7 +115,7 @@ export default function CodeExample() {
         </div>
         <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
           <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 shadow-md shadow-indigo-400/30">
-            <RiLinksLine className="size-6 text-indigo-600" />
+            <RiLinksLine aria-hidden="true" className="size-6 text-indigo-600" />
           </div>
           <div className="mr-3 space-y-1">
             <span className="font-medium text-gray-900 ">
@@ -129,7 +129,7 @@ export default function CodeExample() {
         </div>
         <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
           <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 shadow-md shadow-indigo-400/30">
-            <RiShieldKeyholeLine className="size-6 text-indigo-600" />
+            <RiShieldKeyholeLine aria-hidden="true" className="size-6 text-indigo-600" />
           </div>
           <div className="mr-3 space-y-1">
             <span className="font-medium text-gray-900 ">

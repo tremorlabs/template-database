@@ -34,7 +34,7 @@ export default function CodeExampleTabs({
           </div>
           <div className="flex gap-4 items-center">
             <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-white ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
-              <RiShapesLine className="size-5" />
+              <RiShapesLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight sm:text-lg transition-all group-data-[state=active]:text-indigo-600">
               Model everything
@@ -54,7 +54,7 @@ export default function CodeExampleTabs({
           </div>
           <div className="flex gap-4 items-center">
             <div className="data-state p-2 aspect-square group-data-[state=active]:text-indigo-600 w-fit rounded-lg bg-white ring-1 ring-black/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 transition-all">
-              <RiCodeSSlashLine className="size-5" />
+              <RiCodeSSlashLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight sm:text-lg transition-all group-data-[state=active]:text-indigo-600">
               Query efficiently

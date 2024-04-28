@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default function Testimonial() {
   return (
+    <section aria-label="Testimonial">
       <figure className="mx-auto">
         <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 text-balance max-w-2xl mx-auto">
           <p>
@@ -25,5 +26,6 @@ export default function Testimonial() {
           </div>
         </figcaption>
       </figure>
+    </section>
   );
 }

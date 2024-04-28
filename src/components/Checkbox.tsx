@@ -63,6 +63,7 @@ const Checkbox = React.forwardRef<
                         viewBox="0 0 16 16"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
                     >
                         <path
                             d="M11.2 5.59998L6.79999 9.99998L4.79999 7.99998"

@@ -3,13 +3,19 @@ import { Button } from "../Button";
 
 export default function Features() {
   return (
-    <section className="mt-44 px-2 max-w-6xl mx-auto w-full">
+    <section
+      aria-labelledby="features-title"
+      className="mt-44 px-2 max-w-6xl mx-auto w-full"
+    >
       <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-200/20 bg-indigo-50/50 tracking-tighter leading-4 z-10">
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600">
           Security at Scale
         </span>
       </div>
-      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2">
+      <h2
+        id="features-title"
+        className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2"
+      >
         Architected for speed and reliability
       </h2>
       <div className="flex flex-col items-center md:flex-row border-b border-t border-gray-100 justify-between p-6 mt-6">
@@ -40,26 +46,9 @@ export default function Features() {
         high productivity and security, minimizing the risk of service
         disruptions and outages.
       </p>
-      <Button className="mt-8" variant="secondary">Explore Security</Button>
-      {/* <div className="grid grid-cols-2 mt-12 gap-16">
-        <div className="group flex flex-col gap-2 p-1.5 rounded-xl ring-1 ring-black/10 shadow-xl">
-          <div className="shadow-sm rounded-lg overflow-hidden object-cover">
-            <Image
-              src="/images/preview.png"
-              alt="App screenshot"
-              width={240 * 2}
-              height={160 * 2}
-              className="w-full"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-2xl font-semibold">Incorporate your company</h3>
-            <p>
-              Form a legal entity, issue stock, and start accepting payments.
-            </p>
-          </div>
-        </div>
-      </div> */}
+      <Button className="mt-8" variant="secondary">
+        Explore Security
+      </Button>
     </section>
   );
 }

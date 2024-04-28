@@ -40,37 +40,42 @@ const faqs = [
 
 export function Faqs() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-14">
-      <div className="col-span-full sm:col-span-5">
-        <h2 className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2 pr-2">
-          Frequently Asked Questions
-        </h2>
-        <p className="mt-4 text-base leading-7 text-gray-600">
-          Can&apos;t find the answer you&apos;re looking for? Don&apos;t
-          hesitate to get in touch with our{" "}
-          <a
-            href="#"
-            className="font-semibold text-indigo-600 hover:text-indigo-500"
+    <section className="mt-20 sm:mt-36" aria-labelledby="faq-title">
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-14">
+        <div className="col-span-full sm:col-span-5">
+          <h2
+            id="faq-title"
+            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2 pr-2"
           >
-            customer support
-          </a>{" "}
-          team.
-        </p>
-      </div>
-      <div className="mt-6 lg:mt-0 col-span-full lg:col-span-7 ">
-        <Accordion type="multiple" className="mx-auto">
-          {faqs.map((item) => (
-            <AccordionItem
-              value={item.question}
-              key={item.question}
-              className="first:pb-3 first:pt-0 py-3"
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-4 text-base leading-7 text-gray-600">
+            Can&apos;t find the answer you&apos;re looking for? Don&apos;t
+            hesitate to get in touch with our{" "}
+            <a
+              href="#"
+              className="font-semibold text-indigo-600 hover:text-indigo-500"
             >
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+              customer support
+            </a>{" "}
+            team.
+          </p>
+        </div>
+        <div className="mt-6 lg:mt-0 col-span-full lg:col-span-7 ">
+          <Accordion type="multiple" className="mx-auto">
+            {faqs.map((item) => (
+              <AccordionItem
+                value={item.question}
+                key={item.question}
+                className="first:pb-3 first:pt-0 py-3"
+              >
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

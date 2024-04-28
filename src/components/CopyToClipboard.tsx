@@ -24,9 +24,9 @@ export default function CopyToClipboard({ code }: { code: string }) {
       className="rounded select-none p-1.5 bg-white/20 border border-white/10 backdrop-blur-xl"
     >
       {!copied ? (
-        <RiFileCopy2Line className="size-5 text-white" />
+        <RiFileCopy2Line aria-hidden="true" className="size-5 text-white" />
       ) : (
-        <RiCheckLine className="size-5 text-white" />
+        <RiCheckLine aria-hidden="true" className="size-5 text-white" />
       )}
     </button>
   );

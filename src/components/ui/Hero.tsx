@@ -6,8 +6,12 @@ import HeroImage from "./HeroImage";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col mt-32 sm:mt-40 justify-center items-center text-center">
+    <section
+      aria-labelledby="hero-title"
+      className="flex flex-col mt-32 sm:mt-40 justify-center items-center text-center"
+    >
       <h1
+        id="hero-title"
         className="text-4xl sm:text-6xl md:text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 p-2 animate-slide-up-fade"
         style={{ animationDuration: "700ms" }}
       >
@@ -37,7 +41,10 @@ export default function Hero() {
             className="sm:ring-0 ring-1 ring-gray-200"
           >
             <span className=" group-hover:bg-gray-200  transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50">
-              <RiPlayCircleFill className="size-5 text-gray-900 shrink-0" />
+              <RiPlayCircleFill
+                aria-hidden="true"
+                className="size-5 text-gray-900 shrink-0"
+              />
             </span>
             Watch video
           </a>

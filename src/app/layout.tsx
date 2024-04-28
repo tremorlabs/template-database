@@ -8,6 +8,7 @@ import { siteConfig } from "./siteConfig";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yoururl.com'),
   title: siteConfig.name,
   description: siteConfig.description,
   keywords: [

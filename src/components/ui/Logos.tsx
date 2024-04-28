@@ -8,6 +8,7 @@ export const Logos = {
       viewBox="0 0 179 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -83,6 +84,7 @@ export const Logos = {
       viewBox="0 0 218 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -202,6 +204,7 @@ export const Logos = {
       viewBox="0 0 160 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -233,7 +236,10 @@ export const Logos = {
         d="M109.768 34.3082C112.164 34.3082 113.596 33.1846 114.252 31.9019H114.371V34H117.832V23.7784C117.832 19.7414 114.54 18.5284 111.627 18.5284C108.415 18.5284 105.95 19.9602 105.154 22.7443L108.515 23.2215C108.873 22.1775 109.887 21.2826 111.647 21.2826C113.317 21.2826 114.232 22.1377 114.232 23.6392V23.6988C114.232 24.7329 113.148 24.7826 110.454 25.071C107.491 25.3892 104.657 26.2741 104.657 29.7144C104.657 32.7173 106.854 34.3082 109.768 34.3082ZM110.702 31.6633C109.201 31.6633 108.127 30.9772 108.127 29.6548C108.127 28.2727 109.33 27.696 110.941 27.4673C111.886 27.338 113.775 27.0994 114.242 26.7215V28.5213C114.242 30.2215 112.87 31.6633 110.702 31.6633Z"
         fill="currentColor"
       />
-      <path d="M125.05 13.6363H121.451V34H125.05V13.6363Z" fill="currentColor" />
+      <path
+        d="M125.05 13.6363H121.451V34H125.05V13.6363Z"
+        fill="currentColor"
+      />
       <path
         d="M135.414 34.2983C139.888 34.2983 142.732 31.1463 142.732 26.4233C142.732 21.6903 139.888 18.5284 135.414 18.5284C130.939 18.5284 128.095 21.6903 128.095 26.4233C128.095 31.1463 130.939 34.2983 135.414 34.2983ZM135.434 31.4147C132.958 31.4147 131.745 29.2073 131.745 26.4133C131.745 23.6193 132.958 21.3821 135.434 21.3821C137.87 21.3821 139.083 23.6193 139.083 26.4133C139.083 29.2073 137.87 31.4147 135.434 31.4147Z"
         fill="currentColor"
@@ -251,6 +257,7 @@ export const Logos = {
       viewBox="0 0 165 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -308,6 +315,7 @@ export const Logos = {
       viewBox="0 0 202 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -365,6 +373,7 @@ export const Logos = {
       viewBox="0 0 199 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <path
@@ -420,11 +429,15 @@ export const Logos = {
       viewBox="0 0 163 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <circle cx="16" cy="18" r="14" stroke="currentColor" strokeWidth="4" />
       <circle cx="24" cy="30" r="14" stroke="currentColor" strokeWidth="4" />
-      <path d="M51.95 33.9092H56.48V12.9092H51.95V33.9092Z" fill="currentColor" />
+      <path
+        d="M51.95 33.9092H56.48V12.9092H51.95V33.9092Z"
+        fill="currentColor"
+      />
       <path
         d="M58.4675 33.9092H62.6675V25.6292C62.6675 23.6792 63.9575 22.2692 65.7875 22.2692C67.5275 22.2692 68.6975 23.5892 68.6975 25.4192V33.9092H72.8975V24.4892C72.8975 21.0092 70.6775 18.5492 67.2575 18.5492C65.1875 18.5492 63.5075 19.4192 62.6675 20.8892V18.7892H58.4675V33.9092Z"
         fill="currentColor"
@@ -466,6 +479,7 @@ export const Logos = {
       viewBox="0 0 169 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       {...props}
     >
       <rect y="19.2" width="9.59998" height="9.59999" fill="currentColor" />

@@ -497,7 +497,7 @@ export default function Pricing() {
                           <span>{feature.name}</span>
                           {feature.tooltip ? (
                             <Tooltip side="right" content={feature.tooltip}>
-                              <RiInformationLine className="size-4 text-gray-700 shrink-0" />
+                              <RiInformationLine className="size-4 text-gray-700 shrink-0" aria-hidden="true" />
                             </Tooltip>
                           ) : null}
                         </th>
@@ -578,12 +578,8 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-      <section
-        className="
-      mt-20 sm:mt-36 "
-      >
+
         <Faqs />
-      </section>
     </>
   );
 }
