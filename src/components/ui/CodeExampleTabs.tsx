@@ -26,11 +26,16 @@ export default function CodeExampleTabs({
         aria-label="Select code"
       >
         <Tabs.Trigger
-          className="group relative border border-gray-200 dark:border-gray-800 rounded-xl shadow-lg p-6 flex-1 flex flex-col items-start justify-start text-left"
+          className="group relative ring-1 ring-black/10 
+           dark:ring-white/5 rounded-xl shadow-lg p-6 flex-1 flex flex-col items-start justify-start text-left"
           value="tab1"
         >
-          <div className="group-data-[state=active]:flex hidden absolute -rotate-90 -left-10 top-1/2">
-            <Arrow width={20} height={10} className="fill-gray-900" />
+          <div className="group-data-[state=active]:flex hidden absolute -rotate-90 -left-[36px] top-1/2">
+            <Arrow
+              width={18}
+              height={8}
+              className="fill-gray-950 dark:fill-gray-900"
+            />
           </div>
           <div className="flex gap-4 items-center">
             <div className="data-state p-2 aspect-square text-gray-700 dark:text-gray-400 group-data-[state=active]:text-indigo-600 dark:group-data-[state=active]:text-indigo-400 w-fit rounded-lg bg-white ring-1 dark:bg-gray-950 ring-black/10 dark:ring-white/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 dark:group-data-[state=active]:shadow-indigo-600/50 transition-all">
@@ -46,11 +51,16 @@ export default function CodeExampleTabs({
           </p>
         </Tabs.Trigger>
         <Tabs.Trigger
-          className="group relative border border-gray-200 dark:border-gray-800 rounded-xl shadow-lg p-6 flex-1 flex flex-col items-start justify-start text-left"
+          className="group relative ring-1 ring-black/10 
+           dark:ring-white/5 rounded-xl shadow-lg p-6 flex-1 flex flex-col items-start justify-start text-left"
           value="tab2"
         >
-          <div className="sm:group-data-[state=active]:flex hidden absolute -rotate-90 -left-10 top-1/2">
-            <Arrow width={20} height={10} className="fill-gray-900" />
+          <div className="sm:group-data-[state=active]:flex hidden absolute -rotate-90 -left-[36px] top-1/2">
+            <Arrow
+              width={18}
+              height={8}
+              className="fill-gray-950 dark:fill-gray-900"
+            />
           </div>
           <div className="flex gap-4 items-center">
             <div className="data-state p-2 aspect-square text-gray-700 dark:text-gray-400 group-data-[state=active]:text-indigo-600 dark:group-data-[state=active]:text-indigo-400 w-fit rounded-lg bg-white ring-1 dark:bg-gray-950 ring-black/10 dark:ring-white/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 dark:group-data-[state=active]:shadow-indigo-600/50 transition-all">

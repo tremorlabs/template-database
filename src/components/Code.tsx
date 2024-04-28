@@ -35,7 +35,7 @@ export default async function Code({
   return (
     <div
       className={cx(
-        "relative w-full shadow-xl shadow-black/40 rounded-xl overflow-auto bg-gray-900",
+        "relative w-full shadow-xl shadow-black/40 rounded-xl overflow-auto ring-1 ring-black bg-black dark:ring-white/5",
         className
       )}
     >
@@ -48,7 +48,7 @@ export default async function Code({
       )}
 
       <div
-        className="text-sm [&>pre]:overflow-x-auto [&>pre]:!bg-gray-900 [&>pre]:dark:!bg-gray-900 [&>pre]:py-6 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
+        className="text-sm [&>pre]:overflow-x-auto [&>pre]:!bg-gray-950 [&>pre]:dark:!bg-gray-950 [&>pre]:py-6 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
     </div>
