@@ -20,7 +20,7 @@ function CustomHeading(props: any) {
     `h${props.level}`,
     {
       id: slug,
-      className: clsx("scroll-mt-20 md:scroll-mt-24", props.className),
+      className: clsx("scroll-mt-20 md:scroll-mt-24 inline-flex", props.className),
     },
     [
       React.createElement("a", {

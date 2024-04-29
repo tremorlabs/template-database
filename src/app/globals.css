@@ -24,3 +24,24 @@ code .line::before {
 .mask {
   mask-image: radial-gradient(rgba(0, 0, 0, 1) 0%, transparent 80%);
 }
+
+a {
+  @apply scroll-my-24 decoration-gray-400 transition-all;
+}
+
+.anchor-link {
+  @apply invisible absolute no-underline cursor-pointer -ml-4 pr-2 w-3/4 max-w-2xl;
+}
+
+.anchor-link:hover {
+  @apply visible;
+}
+
+.anchor-link:after {
+  @apply text-gray-400 dark:text-gray-600;
+  content: "#";
+}
+
+*:hover > .anchor-link {
+  @apply visible;
+}

@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased dark:bg-gray-950 min-h-screen selection:bg-indigo-100 selection:text-indigo-700`}
+        className={`${inter.className} scroll-auto antialiased dark:bg-gray-950 min-h-screen selection:bg-indigo-100 selection:text-indigo-700`}
       >
         <ThemeProvider defaultTheme="system" attribute="class">
           <Navigation />
