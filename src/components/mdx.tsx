@@ -21,7 +21,7 @@ function CustomHeading(props: any) {
     {
       id: slug,
       className: clsx(
-        "scroll-mt-20 md:scroll-mt-24 inline-flex",
+        "scroll-mt-36 md:scroll-mt-24 inline-flex",
         props.className,
       ),
     },

@@ -50,10 +50,10 @@ export default function About() {
       </section>
       <TeamGallery />
       <Benefits />
-      <section aria-labelledby="vision-title" className="mt-32">
+      <section aria-labelledby="vision-title" className="mt-40">
         <h2
           id="vision-title"
-          className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text p-2 text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
+          className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
         >
           Our Vision
         </h2>
@@ -75,7 +75,7 @@ export default function About() {
           <p
             className={cx(
               nanum.className,
-              "dakr:text-indigo-400 w-fit rotate-3 text-3xl text-indigo-600",
+              "w-fit rotate-3 text-3xl text-indigo-600 dark:text-indigo-400",
             )}
           >
             – Alex and Robin

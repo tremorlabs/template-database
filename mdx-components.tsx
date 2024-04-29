@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types"
 
 import {
+  Bold,
   ChangelogEntry,
   CustomLink,
   H1,
@@ -8,7 +9,6 @@ import {
   H3,
   P,
   Ul,
-  Bold,
 } from "@/components/mdx"
 
 import { ChangelogImage } from "@/components/mdx"

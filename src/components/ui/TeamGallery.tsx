@@ -37,7 +37,7 @@ export default function TeamGallery() {
       <div className="mt-20">
         <div className="flex w-full flex-col items-center justify-between md:flex-row">
           <InstaxImage
-            className="-ml-10 w-[25rem] -rotate-6"
+            className="w-[25rem] -rotate-6 sm:-ml-10"
             src="/images/working.jpg"
             alt="Two employees working with computers"
             width={640}
@@ -84,7 +84,7 @@ export default function TeamGallery() {
             alt="Picture of a party with confetti"
             width={1920}
             height={1281}
-            caption="v1.0 Release party. Our US intern, Mike, had his first alocolh-free beer"
+            caption="v1.0 Release party. Our US intern, Mike, had his first alcohol-free beer"
           />
         </div>
       </div>

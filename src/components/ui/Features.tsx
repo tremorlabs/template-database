@@ -30,9 +30,9 @@ export default function Features() {
         Architected for speed and reliability
       </h2>
       <p className="mt-6 max-w-3xl text-lg text-gray-600 dark:text-gray-400">
-        Database&apos; innovative architecture avoids the central bottlenecks of
-        traditional systems, enhancing system reliability. This design ensures
-        high productivity and security, minimizing the risk of service
+        Database&rsquo; innovative architecture avoids the central bottlenecks
+        of traditional systems, enhancing system reliability. This design
+        ensures high productivity and security, minimizing the risk of service
         disruptions and outages.
       </p>
       <dl className="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800">

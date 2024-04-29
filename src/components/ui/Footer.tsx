@@ -173,10 +173,14 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex items-center justify-between border-t border-gray-100 pt-8 sm:mt-20 lg:mt-24 dark:border-gray-800">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 sm:mt-20 sm:flex-row lg:mt-24 dark:border-gray-800">
+          <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
+            &copy; {new Date().getFullYear()} Database, Inc. All rights
+            reserved.
+          </p>
           <div className="rounded-full border border-gray-100 py-1 pl-1 pr-2 dark:border-gray-800">
             <div className="flex items-center gap-1">
-              <div className="relative size-3">
+              <div className="relative size-3 shrink-0">
                 <div className="absolute inset-0 rounded-full bg-emerald-400/10 dark:bg-emerald-600/20" />
                 <div className="absolute inset-1 rounded-full bg-emerald-600 dark:bg-emerald-500" />
               </div>
@@ -185,10 +189,6 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} Database, Inc. All rights
-            reserved.
-          </p>
         </div>
       </div>
     </footer>

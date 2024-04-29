@@ -3,7 +3,7 @@ import Balancer from "react-wrap-balancer"
 
 export default function Testimonial() {
   return (
-    <section aria-label="Testimonial">
+    <section id="testimonial" aria-label="Testimonial">
       <figure className="mx-auto">
         <blockquote className="mx-auto max-w-2xl text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 dark:text-gray-50">
           <p>

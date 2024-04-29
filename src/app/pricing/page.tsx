@@ -222,7 +222,7 @@ export default function Pricing() {
       </h2>
       <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
         Plans that empower you and your team to ship without friction. Our
-        flexible pricing models ensure that efficiency doesn&apos;t come at the
+        flexible pricing models ensure that efficiency doesn&rsquo;t come at the
         cost of your budget.
       </p>
       <section
@@ -233,7 +233,7 @@ export default function Pricing() {
         <div className="flex items-center justify-center gap-2">
           <Label
             htmlFor="switch"
-            className="text-sm font-medium dark:text-gray-400"
+            className="text-base font-medium sm:text-sm dark:text-gray-400"
           >
             Monthly
           </Label>
@@ -248,14 +248,14 @@ export default function Pricing() {
           />
           <Label
             htmlFor="switch"
-            className="text-sm font-medium dark:text-gray-400"
+            className="text-base font-medium sm:text-sm dark:text-gray-400"
           >
             Yearly (-20%)
           </Label>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, planIdx) => (
-            <div key={planIdx} className="p-6">
+            <div key={planIdx} className="p-2 sm:p-6">
               {plan.isRecommended ? (
                 <div className="flex h-4 items-center">
                   <div className="relative w-full">
@@ -365,9 +365,9 @@ export default function Pricing() {
       </section>
 
       <section
-        id="testimonials"
+        id="testimonial"
         className="mx-auto mt-20 max-w-xl sm:mt-32 lg:max-w-6xl"
-        aria-labelledby="testimonials"
+        aria-labelledby="testimonial"
       >
         <Testimonial />
       </section>

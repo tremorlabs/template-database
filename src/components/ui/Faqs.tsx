@@ -50,7 +50,7 @@ export function Faqs() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-400">
-            Can&apos;t find the answer you&apos;re looking for? Don&apos;t
+            Can&rsquo;t find the answer you&rsquo;re looking for? Don&rsquo;t
             hesitate to get in touch with our{" "}
             <a
               href="#"
