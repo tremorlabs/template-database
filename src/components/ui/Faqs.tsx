@@ -1,10 +1,10 @@
-"use client";
+"use client"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../Accordion";
+} from "../Accordion"
 
 const faqs = [
   {
@@ -36,7 +36,7 @@ const faqs = [
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
   },
-];
+]
 
 export function Faqs() {
   return (
@@ -45,7 +45,7 @@ export function Faqs() {
         <div className="col-span-full sm:col-span-5">
           <h2
             id="faq-title"
-            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2 pr-2"
+            className="inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 pr-2 text-2xl font-bold tracking-tighter text-transparent lg:text-3xl dark:from-gray-50 dark:to-gray-300"
           >
             Frequently Asked Questions
           </h2>
@@ -54,20 +54,20 @@ export function Faqs() {
             hesitate to get in touch with our{" "}
             <a
               href="#"
-              className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-300"
+              className="font-medium text-indigo-600 hover:text-indigo-300 dark:text-indigo-400"
             >
               customer support
             </a>{" "}
             team.
           </p>
         </div>
-        <div className="mt-6 lg:mt-0 col-span-full lg:col-span-7 ">
+        <div className="col-span-full mt-6 lg:col-span-7 lg:mt-0 ">
           <Accordion type="multiple" className="mx-auto">
             {faqs.map((item) => (
               <AccordionItem
                 value={item.question}
                 key={item.question}
-                className="first:pb-3 first:pt-0 py-3"
+                className="py-3 first:pb-3 first:pt-0"
               >
                 <AccordionTrigger>{item.question}</AccordionTrigger>
                 <AccordionContent className="text-gray-600 dark:text-gray-400">
@@ -79,5 +79,5 @@ export function Faqs() {
         </div>
       </div>
     </section>
-  );
+  )
 }

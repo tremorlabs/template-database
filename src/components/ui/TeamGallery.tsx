@@ -1,12 +1,11 @@
-import React from "react";
-import { InstaxImage } from "./InstaxImage";
-import Image from "next/image";
+import Image from "next/image"
+import { InstaxImage } from "./InstaxImage"
 
 export default function TeamGallery() {
   return (
     <section
       aria-labelledby="teamwork-title"
-      className="max-w-4xl mt-32 animate-slide-up-fade"
+      className="mt-32 max-w-4xl animate-slide-up-fade"
       style={{
         animationDuration: "600ms",
         animationDelay: "900ms",
@@ -15,13 +14,13 @@ export default function TeamGallery() {
     >
       <h2
         id="teamwork-title"
-        className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 p-2 dark:from-gray-50 dark:to-gray-300"
+        className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text p-2 text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
       >
         Teamwork at Database
       </h2>
       <figure className="mt-8">
-        <div className="rounded-2xl bg-gray-50/40 dark:bg-gray-900/80 p-2 ring-1 ring-inset ring-black/5 dark:ring-white/10">
-          <div className="rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:ring-white/20 dark:shadow-indigo-600/30 overflow-hidden">
+        <div className="rounded-2xl bg-gray-50/40 p-2 ring-1 ring-inset ring-black/5 dark:bg-gray-900/80 dark:ring-white/10">
+          <div className="overflow-hidden rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:shadow-indigo-600/30 dark:ring-white/20">
             <Image
               src="/images/founders.jpg"
               alt="App screenshot"
@@ -30,15 +29,15 @@ export default function TeamGallery() {
             />
           </div>
         </div>
-        <figcaption className="text-center mt-2 text-sm text-gray-400">
+        <figcaption className="mt-2 text-center text-sm text-gray-400">
           Join Database, be yourself.
         </figcaption>
       </figure>
 
       <div className="mt-20">
-        <div className="flex flex-col md:flex-row w-full justify-between items-center">
+        <div className="flex w-full flex-col items-center justify-between md:flex-row">
           <InstaxImage
-            className="w-[25rem] -rotate-6 -ml-10"
+            className="-ml-10 w-[25rem] -rotate-6"
             src="/images/working.jpg"
             alt="Two employees working with computers"
             width={640}
@@ -54,7 +53,7 @@ export default function TeamGallery() {
             caption="Our phone booths are nuts"
           />
           <InstaxImage
-            className="w-[15rem] rotate-1 -mr-10"
+            className="-mr-10 w-[15rem] rotate-1"
             src="/images/home.jpg"
             alt="Picture of the Fraumunster Zurich"
             width={640}
@@ -62,9 +61,9 @@ export default function TeamGallery() {
             caption="Home sweet home"
           />
         </div>
-        <div className="md:flex gap-4 w-full justify-between hidden mt-8">
+        <div className="mt-8 hidden w-full justify-between gap-4 md:flex">
           <InstaxImage
-            className="w-[25rem] rotate-1 -ml-16"
+            className="-ml-16 w-[25rem] rotate-1"
             src="/images/break.jpg"
             alt="Team having a break in the lunch room"
             width={640}
@@ -72,7 +71,7 @@ export default function TeamGallery() {
             caption="Sometimes we take a break"
           />
           <InstaxImage
-            className="w-[15rem] -rotate-3 -mt-10"
+            className="-mt-10 w-[15rem] -rotate-3"
             src="/images/cool.jpg"
             alt="Personw with headphones"
             width={640}
@@ -80,7 +79,7 @@ export default function TeamGallery() {
             caption="Robin handels the playlist"
           />
           <InstaxImage
-            className="w-[30rem] rotate-[8deg] -mt-2 -mr-20"
+            className="-mr-20 -mt-2 w-[30rem] rotate-[8deg]"
             src="/images/release.jpg"
             alt="Picture of a party with confetti"
             width={1920}
@@ -90,5 +89,5 @@ export default function TeamGallery() {
         </div>
       </div>
     </section>
-  );
+  )
 }

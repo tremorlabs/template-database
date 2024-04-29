@@ -30,7 +30,7 @@ a {
 }
 
 .anchor-link {
-  @apply invisible absolute no-underline cursor-pointer -ml-4 pr-2 w-3/4 max-w-2xl;
+  @apply invisible absolute -ml-4 w-3/4 max-w-2xl cursor-pointer pr-2 no-underline;
 }
 
 .anchor-link:hover {

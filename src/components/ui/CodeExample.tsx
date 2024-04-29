@@ -1,13 +1,12 @@
-import React from "react";
-import Code from "@/components/Code";
-import CodeExampleTabs from "./CodeExampleTabs";
+import Code from "@/components/Code"
 import {
   RiLinksLine,
   RiPlugLine,
   RiShieldKeyholeLine,
   RiStackLine,
-} from "@remixicon/react";
-import { Badge } from "../Badge";
+} from "@remixicon/react"
+import { Badge } from "../Badge"
+import CodeExampleTabs from "./CodeExampleTabs"
 
 const code = `CREATE TABLE Customers (
     customer_id SERIAL PRIMARY KEY,
@@ -31,7 +30,7 @@ CREATE TABLE Items (
 CREATE TABLE Order_Items (
     order_id INT REFERENCES Orders(order_id),
     item_id INT REFERENCES Items(item_id),
-);`;
+);`
 
 const code2 = `async function fetchCustomerOrders() {
     const result = await prisma.orders.findMany({
@@ -55,7 +54,7 @@ const code2 = `async function fetchCustomerOrders() {
         }
     });
     return result;
-}`;
+}`
 
 const features = [
   {
@@ -82,22 +81,22 @@ const features = [
       "Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
     icon: RiShieldKeyholeLine,
   },
-];
+]
 
 export default function CodeExample() {
   return (
     <section
       aria-labelledby="code-example-title"
-      className="mt-28 px-2 max-w-6xl mx-auto w-full"
+      className="mx-auto mt-28 w-full max-w-6xl px-2"
     >
       <Badge>Developer-first</Badge>
       <h2
         id="code-example-title"
-        className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2"
+        className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
       >
         Built by developers, <br /> for developers
       </h2>
-      <p className="mt-6 text-lg max-w-2xl text-gray-600 dark:text-gray-400">
+      <p className="mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
         Rich and expressive query language that allows you to filter and sort by
         any field, no matter how nested it may be.
       </p>
@@ -114,13 +113,13 @@ export default function CodeExample() {
           />
         }
       />
-      <dl className="grid grid-cols-4 gap-10 mt-24">
+      <dl className="mt-24 grid grid-cols-4 gap-10">
         {features.map((item) => (
           <div
             key={item.name}
             className="col-span-full sm:col-span-2 lg:col-span-1"
           >
-            <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
+            <div className="w-fit rounded-lg p-2 shadow-md shadow-indigo-400/30 ring-1 ring-black/5 dark:shadow-indigo-600/30 dark:ring-white/5">
               <item.icon
                 aria-hidden="true"
                 className="size-6 text-indigo-600 dark:text-indigo-400"
@@ -136,5 +135,5 @@ export default function CodeExample() {
         ))}
       </dl>
     </section>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import React from "react";
-import * as AccordionPrimitives from "@radix-ui/react-accordion";
-import { RiArrowRightSLine } from "@remixicon/react";
+import * as AccordionPrimitives from "@radix-ui/react-accordion"
+import { RiArrowRightSLine } from "@remixicon/react"
+import React from "react"
 
-import { cx } from "@/lib/utils";
+import { cx } from "@/lib/utils"
 
-const Accordion = AccordionPrimitives.Root;
+const Accordion = AccordionPrimitives.Root
 
-Accordion.displayName = "AccordionItem";
+Accordion.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Trigger>,
@@ -23,7 +23,7 @@ const AccordionTrigger = React.forwardRef<
         "data-[disabled]:cursor-default data-[disabled]:text-gray-400 dark:data-[disabled]:text-gray-600",
         //focus
         "focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500",
-        className
+        className,
       )}
       {...props}
       ref={forwardedRef}
@@ -35,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
           // text color
           "text-indigo-600 dark:text-indigo-400 ",
           // disabled
-          " group-data-[disabled]:text-indigo-300 group-data-[disabled]:dark:text-indigo-700"
+          " group-data-[disabled]:text-indigo-300 group-data-[disabled]:dark:text-indigo-700",
         )}
         aria-hidden="true"
         focusable="false"
@@ -43,9 +43,9 @@ const AccordionTrigger = React.forwardRef<
       <span className="leading-6">{children}</span>
     </AccordionPrimitives.Trigger>
   </AccordionPrimitives.Header>
-));
+))
 
-AccordionTrigger.displayName = "AccordionTrigger";
+AccordionTrigger.displayName = "AccordionTrigger"
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Content>,
@@ -54,7 +54,7 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitives.Content
     ref={forwardedRef}
     className={cx(
-      "pl-[28px] data-[state=closed]:animate-accordionClose data-[state=open]:animate-accordionOpen"
+      "pl-[28px] data-[state=closed]:animate-accordionClose data-[state=open]:animate-accordionOpen",
     )}
     {...props}
   >
@@ -64,15 +64,15 @@ const AccordionContent = React.forwardRef<
         "overflow-hidden pb-4 leading-7",
         // text color
         "text-gray-700 dark:text-gray-200",
-        className
+        className,
       )}
     >
       {children}
     </p>
   </AccordionPrimitives.Content>
-));
+))
 
-AccordionContent.displayName = "AccordionContent";
+AccordionContent.displayName = "AccordionContent"
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitives.Item>,
@@ -85,12 +85,12 @@ const AccordionItem = React.forwardRef<
       "overflow-hidden border-b first:mt-0",
       // border color
       "border-gray-200 dark:border-gray-800",
-      className
+      className,
     )}
     {...props}
   />
-));
+))
 
-AccordionItem.displayName = "AccordionItem";
+AccordionItem.displayName = "AccordionItem"
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }

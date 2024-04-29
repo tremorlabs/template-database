@@ -1,4 +1,4 @@
-type IconProps = React.HTMLAttributes<SVGElement>;
+type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Logos = {
   AltShift: (props: IconProps) => (
@@ -545,4 +545,4 @@ export const Logos = {
       />
     </svg>
   ),
-};
+}

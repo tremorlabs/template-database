@@ -1,5 +1,3 @@
-import React from "react";
-
 const benefits = [
   {
     title: "Work in Zurich",
@@ -40,18 +38,18 @@ const benefits = [
     description:
       "We really have the best fringe benefits, even a Spotify subscription is included.",
   },
-];
+]
 
 export default function Benefits() {
   return (
     <section aria-labelledby="benefits-title" className="mt-44">
       <h2
         id="benefits-title"
-        className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2"
+        className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
       >
         What&apos;s in for you
       </h2>
-      <dl className="grid grid-cols-4 gap-x-10 gap-y-20 mt-20">
+      <dl className="mt-20 grid grid-cols-4 gap-x-10 gap-y-20">
         {benefits.map((benefit, index) => (
           <div key={index} className="col-span-4 sm:col-span-2 lg:col-span-1">
             <dt className="font-semibold text-gray-900 dark:text-gray-50">
@@ -64,5 +62,5 @@ export default function Benefits() {
         ))}
       </dl>
     </section>
-  );
+  )
 }
