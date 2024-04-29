@@ -35,7 +35,7 @@ export default async function Code({
   return (
     <div
       className={cx(
-        "relative w-full shadow-xl shadow-black/40 rounded-xl overflow-auto ring-1 ring-black bg-black dark:ring-white/5",
+        "relative w-full shadow-xl shadow-black/40 rounded-xl overflow-auto ring-1 ring-black bg-gray-950 dark:ring-white/5",
         className
       )}
     >

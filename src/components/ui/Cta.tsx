@@ -1,4 +1,5 @@
 "use client";
+import Balancer from "react-wrap-balancer";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
@@ -6,11 +7,11 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-title"
-      className="mb-20 mt-32 sm:mt-40 overflow-hidden p-1 max-w-6xl mx-auto px-2"
+      className="mb-20 mt-32 sm:mt-40 p-1 max-w-6xl mx-auto px-2"
     >
       <div className="relative flex items-center justify-center">
         <div
-          className="w-full mask opacity-70 select-none pointer-events-none"
+          className="mask absolute -z-10 opacity-70 select-none pointer-events-none"
           aria-hidden="true"
         >
           <div className="size-full flex flex-col gap-2">
@@ -27,7 +28,7 @@ export default function Cta() {
             ))}
           </div>
         </div>
-        <div className="max-w-4xl absolute">
+        <div className="max-w-4xl">
           <div className="flex flex-col items-center justify-center text-center">
             <div>
               <h3
@@ -36,8 +37,11 @@ export default function Cta() {
               >
                 Ready to get started?
               </h3>
-              <p className="mx-auto mt-4 max-w-2xl sm:mt-6 sm:text-lg text-balance text-gray-600 dark:text-gray-400">
-                Launch a new cluster or migrate to Database with zero downtime.
+              <p className="mx-auto mt-4 max-w-2xl sm:mt-6 sm:text-lg text-gray-600 dark:text-gray-400">
+                
+                <Balancer>
+                  Launch a new cluster or migrate to Database with zero downtime.
+                  </Balancer>
               </p>
             </div>
             <div className="p-1.5 ring-1 ring-black/[3%] dark:ring-white/[3%] rounded-[16px] mt-14 bg-gray-300/5 dark:bg-gray-900/10 backdrop-blur w-full">

@@ -11,7 +11,6 @@ export default function Layout({
         Changelog
       </h1>
       <p className="text-lg text-gray-600 dark:text-gray-400 mt-4">
-        {/* @SEV: text-balance sometimes also used */}
         <Balancer>
           Keep yourself informed about the most recent additions and
           improvements we&apos;ve made to Database.

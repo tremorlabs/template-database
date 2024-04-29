@@ -73,7 +73,7 @@ const plans: Plan[] = [
   },
   {
     name: "Business",
-    price: { monthly: "$89", annually: "$79" },
+    price: { monthly: "$99", annually: "$79" },
     description:
       "For larger teams that need more advanced controls and features.",
     capacity: ["Up to 500 users, 10 admins", "Unlimited workspaces"],
@@ -216,7 +216,7 @@ export default function Pricing() {
     "monthly" | "annually"
   >("monthly");
   return (
-    <main className="px-3">
+    <div className="px-3">
       <Badge>Pricing</Badge>
       <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br dark:from-gray-50 dark:to-gray-300 from-gray-900 to-gray-800 py-2">
         Our plans scale with you
@@ -226,9 +226,16 @@ export default function Pricing() {
         flexible pricing models ensure that efficiency doesn&apos;t come at the
         cost of your budget.
       </p>
-      <section id="pricing-overview" className="mt-20" aria-labelledby="pricing-overview">
+      <section
+        id="pricing-overview"
+        className="mt-20"
+        aria-labelledby="pricing-overview"
+      >
         <div className="flex items-center justify-center gap-2">
-          <Label htmlFor="switch" className="text-sm font-medium dark:text-gray-400">
+          <Label
+            htmlFor="switch"
+            className="text-sm font-medium dark:text-gray-400"
+          >
             Monthly
           </Label>
           <Switch
@@ -240,7 +247,10 @@ export default function Pricing() {
               )
             }
           />
-          <Label htmlFor="switch" className="text-sm font-medium dark:text-gray-400">
+          <Label
+            htmlFor="switch"
+            className="text-sm font-medium dark:text-gray-400"
+          >
             Yearly (-20%)
           </Label>
         </div>
@@ -355,12 +365,20 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section id="testimonials" className="mt-20 sm:mt-32 mx-auto max-w-xl lg:max-w-6xl" aria-labelledby="testimonials">
+      <section
+        id="testimonials"
+        className="mt-20 sm:mt-32 mx-auto max-w-xl lg:max-w-6xl"
+        aria-labelledby="testimonials"
+      >
         <Testimonial />
       </section>
 
       {/* plan details (xs-lg)*/}
-      <section id="pricing-details" className="mx-auto mt-20" aria-labelledby="pricing-details">
+      <section
+        id="pricing-details"
+        className="mx-auto mt-20"
+        aria-labelledby="pricing-details"
+      >
         <div className="sm:max-w-md space-y-8 sm:mt-36 lg:hidden">
           {plans.map((plan) => (
             <div key={plan.name}>
@@ -373,10 +391,11 @@ export default function Pricing() {
                 </h3>
                 <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
                   {isVariablePrice(plan.price)
-                    ? `${billingFrequency === "monthly"
-                      ? plan.price.monthly
-                      : plan.price.annually
-                    } / per user`
+                    ? `${
+                        billingFrequency === "monthly"
+                          ? plan.price.monthly
+                          : plan.price.annually
+                      } / per user`
                     : plan.price}
                 </p>
               </div>
@@ -387,7 +406,10 @@ export default function Pricing() {
                 {sections.map((section) => (
                   <li key={section.name}>
                     <h4 className="font-semibold">{section.name}</h4>
-                    <ul role="list" className="mt-2 divide-y divide-gray-200 dark:divide-gray-800">
+                    <ul
+                      role="list"
+                      className="mt-2 divide-y divide-gray-200 dark:divide-gray-800"
+                    >
                       {section.features.map((feature) =>
                         feature.plans[plan.name] ? (
                           <li
@@ -462,10 +484,11 @@ export default function Pricing() {
                       </div>
                       <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                         {isVariablePrice(plan.price)
-                          ? `${billingFrequency === "monthly"
-                            ? plan.price.monthly
-                            : plan.price.annually
-                          } / per user`
+                          ? `${
+                              billingFrequency === "monthly"
+                                ? plan.price.monthly
+                                : plan.price.annually
+                            } / per user`
                           : plan.price}
                       </div>
                     </th>
@@ -584,6 +607,6 @@ export default function Pricing() {
         </div>
       </section>
       <Faqs />
-    </main>
+    </div>
   );
 }

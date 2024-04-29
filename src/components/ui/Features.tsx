@@ -4,17 +4,17 @@ import { Badge } from "../Badge";
 const stats = [
   {
     name: "Bandwith increase",
-    value: "+162%"
+    value: "+162%",
   },
   {
     name: "Better storage efficiency",
-    value: "2-3x"
+    value: "2-3x",
   },
   {
     name: "Rows ingested / second",
-    value: "Up to 9M"
+    value: "Up to 9M",
   },
-]
+];
 
 export default function Features() {
   return (
@@ -42,7 +42,9 @@ export default function Features() {
               <dd className="text-5xl lg:text-6xl tracking-tight font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-indigo-900 to-indigo-600 dark:from-indigo-700 dark:to-indigo-400">
                 {stat.value}
               </dd>
-              <dt className="mt-1 text-gray-600 dark:text-gray-400">{stat.name}</dt>
+              <dt className="mt-1 text-gray-600 dark:text-gray-400">
+                {stat.name}
+              </dt>
             </div>
           </React.Fragment>
         ))}

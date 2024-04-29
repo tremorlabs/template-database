@@ -3,7 +3,6 @@ import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import Arrow from "../Arrow";
 import {
-  RiArrowDownLine,
   RiCodeSSlashLine,
   RiShapesLine,
 } from "@remixicon/react";
@@ -38,7 +37,7 @@ export default function CodeExampleTabs({
             />
           </div>
           <div className="flex gap-4 items-center">
-            <div className="data-state p-2 aspect-square text-gray-700 dark:text-gray-400 group-data-[state=active]:text-indigo-600 dark:group-data-[state=active]:text-indigo-400 w-fit rounded-lg bg-white ring-1 dark:bg-gray-950 ring-black/10 dark:ring-white/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 dark:group-data-[state=active]:shadow-indigo-600/50 transition-all">
+            <div className="p-2 aspect-square text-gray-700 dark:text-gray-400 group-data-[state=active]:text-indigo-600 dark:group-data-[state=active]:text-indigo-400 w-fit rounded-lg bg-white ring-1 dark:bg-gray-950 ring-black/10 dark:ring-white/10 group-data-[state=active]:shadow-md group-data-[state=active]:shadow-indigo-500/20 dark:group-data-[state=active]:shadow-indigo-600/50 transition-all">
               <RiShapesLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight sm:text-lg transition-all text-gray-700 dark:text-gray-400  group-data-[state=active]:text-indigo-600 dark:group-data-[state=active]:text-indigo-400">
@@ -77,12 +76,8 @@ export default function CodeExampleTabs({
         </Tabs.Trigger>
       </Tabs.List>
       <div className="md:col-span-7 col-span-full">
-        <Tabs.Content value="tab1">
-          {tab1}
-        </Tabs.Content>
-        <Tabs.Content value="tab2">
-          {tab2}
-        </Tabs.Content>
+        <Tabs.Content value="tab1">{tab1}</Tabs.Content>
+        <Tabs.Content value="tab2">{tab2}</Tabs.Content>
       </div>
     </Tabs.Root>
   );
