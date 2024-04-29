@@ -45,7 +45,7 @@ export function Faqs() {
         <div className="col-span-full sm:col-span-5">
           <h2
             id="faq-title"
-            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 py-2 pr-2"
+            className="text-2xl lg:text-3xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2 pr-2"
           >
             Frequently Asked Questions
           </h2>

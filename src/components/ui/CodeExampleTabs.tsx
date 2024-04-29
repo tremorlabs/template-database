@@ -17,7 +17,7 @@ export default function CodeExampleTabs({
 }) {
   return (
     <Tabs.Root
-      className="grid grid-cols-12 gap-8 mt-10 pb-14 h-full"
+      className="grid grid-cols-12 gap-8 mt-10"
       defaultValue="tab1"
       orientation="vertical"
     >
@@ -45,9 +45,9 @@ export default function CodeExampleTabs({
               Model everything
             </p>
           </div>
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 leading-7 text-gray-500">
             Data integrity and query efficiency for diverse data types including
-            geospatial and time-series.
+            geospatial and time-series. Easy to create, effortless to maintain.
           </p>
         </Tabs.Trigger>
         <Tabs.Trigger
@@ -70,17 +70,17 @@ export default function CodeExampleTabs({
               Query efficiently
             </p>
           </div>
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 leading-7 text-gray-500">
             Leverage a developer-native query API to efficiently manage
-            PostgreSQL data.
+            PostgreSQL data. Initialize once, scale infinitely.
           </p>
         </Tabs.Trigger>
       </Tabs.List>
       <div className="md:col-span-7 col-span-full">
-        <Tabs.Content className="" value="tab1">
+        <Tabs.Content value="tab1">
           {tab1}
         </Tabs.Content>
-        <Tabs.Content className="" value="tab2">
+        <Tabs.Content value="tab2">
           {tab2}
         </Tabs.Content>
       </div>

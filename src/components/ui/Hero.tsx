@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <h1
         id="hero-title"
-        className="text-4xl sm:text-6xl md:text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 p-2 animate-slide-up-fade"
+        className="text-4xl sm:text-6xl md:text-7xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 p-2 animate-slide-up-fade"
         style={{ animationDuration: "700ms" }}
       >
         The database for <br /> modern applications
@@ -28,26 +28,27 @@ export default function Hero() {
         className="flex flex-col sm:flex-row gap-3 mt-6 animate-slide-up-fade justify-center w-full px-4"
         style={{ animationDuration: "1100ms" }}
       >
-        <Button asChild className="h-10">
-          <Link href="https://cal.com">Book an enterprise demo</Link>
+        <Button className="h-10">
+          <Link href="https://cal.com">Start 14-day trial</Link>
         </Button>
         <Button
           asChild
-          variant="secondary"
-          className="border-transparent group shadow-none hover:bg-transparent h-10"
+          variant="light"
+          className="bg-transparent dark:bg-transparent hover:dark:bg-transparent hover:bg-transparent gap-x-2 group"
         >
-          <a
+          <Link
             href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
             className="sm:ring-0 ring-1 ring-gray-200 dark:ring-gray-900"
+            target="_blank"
           >
-            <span className=" group-hover:bg-gray-200 dark:group-hover:bg-gray-700  transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800">
+            <span className=" group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-all mr-1 size-6 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800">
               <RiPlayCircleFill
                 aria-hidden="true"
                 className="size-5 text-gray-900 dark:text-gray-50 shrink-0"
               />
             </span>
             Watch video
-          </a>
+          </Link>
         </Button>
       </div>
       <div

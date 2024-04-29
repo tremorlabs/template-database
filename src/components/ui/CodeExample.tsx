@@ -7,6 +7,7 @@ import {
   RiShieldKeyholeLine,
   RiStackLine,
 } from "@remixicon/react";
+import { Badge } from "../Badge";
 
 const code = `CREATE TABLE Customers (
     customer_id SERIAL PRIMARY KEY,
@@ -30,7 +31,6 @@ CREATE TABLE Items (
 CREATE TABLE Order_Items (
     order_id INT REFERENCES Orders(order_id),
     item_id INT REFERENCES Items(item_id),
-    PRIMARY KEY (order_id, item_id)
 );`;
 
 const code2 = `async function fetchCustomerOrders() {
@@ -38,6 +38,11 @@ const code2 = `async function fetchCustomerOrders() {
         where: {
             customer: {
                 name: 'Jack Beanstalk'
+            },
+            segmentation: {
+                type: 'young professional',
+                joinedYear: 2024,
+                region: 'us-west-01',
             }
         },
         include: {
@@ -50,19 +55,36 @@ const code2 = `async function fetchCustomerOrders() {
         }
     });
     return result;
-}
-`;
+}`;
+
+const features = [
+  {
+    name: "Use Database with your stack",
+    description: "We offer client and server libraries in everything from React and Ruby to iOS.",
+    icon: RiStackLine,
+  },
+  {
+    name: "Try plug & play options",
+    description: "Customize and deploy data infrastructure directly from the Database Dashboard.",
+    icon: RiPlugLine,
+  },
+  {
+    name: "Explore pre-built integrations",
+    description: "Connect Database to over a hundred tools including Stripe, Salesforce, or Quickbooks.",
+    icon: RiLinksLine,
+  },
+  {
+    name: "Security & privacy",
+    description: "Database supports PII data encrypted with AES-256 at rest or explicit user consent flows.",
+    icon: RiShieldKeyholeLine,
+  }
+]
 
 export default function CodeExample() {
   return (
     <section className="mt-28 px-2 max-w-6xl mx-auto w-full">
-      <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-200/20 bg-indigo-50/50 dark:border-indigo-800/30 dark:bg-indigo-900/20 tracking-tighter leading-4 z-10">
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600 dark:from-indigo-200 dark:to-indigo-400">
-          Developer-first
-        </span>
-      </div>
-
-      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 py-2">
+      <Badge>Developer-first</Badge>
+      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2">
         Built by developers, <br /> for developers
       </h2>
       <p className="mt-6 text-lg max-w-2xl text-gray-700 dark:text-gray-500">
@@ -72,87 +94,35 @@ export default function CodeExample() {
 
       <CodeExampleTabs
         tab1={
-          <Code code={code} lang="sql" copy={false} className="h-[24rem]" />
+          <Code code={code} lang="sql" copy={false} className="h-[31rem]" />
         }
         tab2={
           <Code
             code={code2}
             lang="javascript"
             copy={false}
-            className="h-[24rem]"
+            className="h-[31rem]"
           />
         }
       />
-      <div className="grid grid-cols-4 gap-6 mt-8">
-        <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
-          <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
-            <RiStackLine
-              aria-hidden="true"
-              className="size-6 text-indigo-600 dark:text-indigo-400"
-            />
+      <dl className="grid grid-cols-4 gap-10 mt-20">
+        {features.map((item) => (
+          <div key={item.name} className="col-span-full sm:col-span-2 lg:col-span-1">
+            <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
+              <item.icon
+                aria-hidden="true"
+                className="size-6 text-indigo-600 dark:text-indigo-400"
+              />
+            </div>
+            <dt className="mt-6 font-semibold text-gray-900 dark:text-gray-50">
+              {item.name}
+            </dt>
+            <dd className="mt-2 leading-7 text-gray-500">
+              {item.description}
+            </dd>
           </div>
-          <div className="mr-3 space-y-1">
-            <span className="font-medium text-gray-900 dark:text-gray-50">
-              Use Database with your stack
-            </span>
-            <p className="text-gray-500">
-              We offer client and server libraries in everything from React and
-              Ruby to iOS.
-            </p>
-          </div>
-        </div>
-        <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
-          <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
-            <RiPlugLine
-              aria-hidden="true"
-              className="size-6 text-indigo-600 dark:text-indigo-400"
-            />
-          </div>
-          <div className="mr-3 space-y-1">
-            <span className="font-medium text-gray-900 dark:text-gray-50">
-              Try plug & play options
-            </span>
-            <p className="text-gray-500">
-              Customize and deploy data infrastructure directly from the
-              Database Dashboard.
-            </p>
-          </div>
-        </div>
-        <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
-          <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
-            <RiLinksLine
-              aria-hidden="true"
-              className="size-6 text-indigo-600 dark:text-indigo-400"
-            />
-          </div>
-          <div className="mr-3 space-y-1">
-            <span className="font-medium text-gray-900 dark:text-gray-50">
-              Explore pre-built integrations
-            </span>
-            <p className="text-gray-500">
-              Connect Database to over a hundred tools including Stripe,
-              Salesforce, or Quickbooks.
-            </p>
-          </div>
-        </div>
-        <div className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1">
-          <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
-            <RiShieldKeyholeLine
-              aria-hidden="true"
-              className="size-6 text-indigo-600 dark:text-indigo-400"
-            />
-          </div>
-          <div className="mr-3 space-y-1">
-            <span className="font-medium text-gray-900 dark:text-gray-50">
-              Security & privacy
-            </span>
-            <p className="text-gray-500">
-              Database supports PII data encrypted with AES-256 at rest or
-              explicit user consent flows
-            </p>
-          </div>
-        </div>
-      </div>
+        ))}
+      </dl>
     </section>
   );
 }

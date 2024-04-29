@@ -222,7 +222,7 @@ export default function Pricing() {
           Pricing
         </span>
       </div>
-      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br dark:from-gray-50 dark:to-gray-500 from-gray-900 to-gray-700 py-2">
+      <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br dark:from-gray-50 dark:to-gray-500 from-gray-900 to-gray-800 py-2">
         Our plans scale with you
       </h2>
       <p className="mt-6 text-lg max-w-2xl text-gray-700 dark:text-gray-400">
@@ -234,7 +234,7 @@ export default function Pricing() {
       <section className="mt-20">
         <div className="flex items-center justify-center gap-2">
           <Label htmlFor="switch" className="text-sm font-medium">
-            Switch to yearly <Badge>-15%</Badge>
+            {/* Switch to yearly <Badge>-15%</Badge> */}
           </Label>
           <Switch
             id="switch"
@@ -377,11 +377,10 @@ export default function Pricing() {
                 </h3>
                 <p className="text-sm font-normal text-gray-600">
                   {isVariablePrice(plan.price)
-                    ? `${
-                        billingFrequency === "monthly"
-                          ? plan.price.monthly
-                          : plan.price.annually
-                      } / per user`
+                    ? `${billingFrequency === "monthly"
+                      ? plan.price.monthly
+                      : plan.price.annually
+                    } / per user`
                     : plan.price}
                 </p>
               </div>
@@ -467,11 +466,10 @@ export default function Pricing() {
                       </div>
                       <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                         {isVariablePrice(plan.price)
-                          ? `${
-                              billingFrequency === "monthly"
-                                ? plan.price.monthly
-                                : plan.price.annually
-                            } / per user`
+                          ? `${billingFrequency === "monthly"
+                            ? plan.price.monthly
+                            : plan.price.annually
+                          } / per user`
                           : plan.price}
                       </div>
                     </th>

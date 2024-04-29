@@ -32,7 +32,7 @@ export default function Cta() {
             <div className="">
               <h3
                 id="cta-title"
-                className="text-4xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 p-2"
+                className="text-4xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 p-2"
               >
                 Ready to get started?
               </h3>

@@ -38,16 +38,16 @@ export function Navigation() {
       )}
     >
       <div className="w-full md:my-auto">
-        <div className="flex items-center justify-between">
+        <div className="relative flex items-center justify-between">
           <Link href={siteConfig.baseLinks.home} aria-label="Home">
             <span className="sr-only">Company logo</span>
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
-          <nav className="hidden md:flex">
+          <nav className="md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 hidden md:block absolute">
             <ul className="items-center font-medium gap-4 flex">
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 px-2 py-1"
                   href={siteConfig.baseLinks.about}
                 >
                   About
@@ -55,7 +55,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 px-2 py-1"
                   href={siteConfig.baseLinks.pricing}
                 >
                   Pricing
@@ -63,7 +63,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="hover:text-gray-900 text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 px-2 py-1"
+                  className="hover:text-gray-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 px-2 py-1"
                   href={siteConfig.baseLinks.changelog}
                 >
                   Changelog
@@ -71,10 +71,9 @@ export function Navigation() {
               </li>
             </ul>
           </nav>
-          <Button className="hidden md:flex">Join</Button>
+          <Button className="hidden md:flex">Book demo</Button>
           <div className="flex md:hidden gap-x-2">
-            <Button className="">Join</Button>
-            {/* <MobileNavigation /> */}
+            <Button>Book demo</Button>
             <Button
               onClick={() => setOpen(!open)}
               variant="light"

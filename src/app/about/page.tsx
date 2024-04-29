@@ -52,7 +52,7 @@ export default function About() {
     <div className="mt-44 flex flex-col justify-center items-center px-3 overflow-hidden">
       <section>
         <h1
-          className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-700 py-2 animate-slide-up-fade dark:from-gray-50 dark:to-gray-300"
+          className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-800 py-2 animate-slide-up-fade dark:from-gray-50 dark:to-gray-300"
           style={{
             animationDuration: "600ms",
             animationFillMode: "backwards",
@@ -100,7 +100,7 @@ export default function About() {
       >
         <h2
           id="teamwork-title"
-          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 p-2 dark:from-gray-50 dark:to-gray-300"
+          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 p-2 dark:from-gray-50 dark:to-gray-300"
         >
           Teamwork at Database
         </h2>
@@ -178,7 +178,7 @@ export default function About() {
       <section aria-labelledby="benefits-title">
         <h2
           id="benefits-title"
-          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 py-2"
+          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2"
         >
           What&apos;s in for you
         </h2>
@@ -203,7 +203,7 @@ export default function About() {
       <section aria-labelledby="vision-title" className="mt-32">
         <h2
           id="vision-title"
-          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 p-2"
+          className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 p-2"
         >
           Our Vision
         </h2>
