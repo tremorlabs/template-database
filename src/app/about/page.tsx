@@ -50,8 +50,9 @@ const benefits = [
 export default function About() {
   return (
     <div className="mt-44 flex flex-col justify-center items-center px-3 overflow-hidden">
-      <section>
+      <section aria-labelledby="about-overview">
         <h1
+          id="about-overview"
           className="text-4xl md:text-6xl tracking-tight font-bold text-center max-w-4xl mx-auto text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-800 py-2 animate-slide-up-fade dark:from-gray-50 dark:to-gray-300"
           style={{
             animationDuration: "600ms",
