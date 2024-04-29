@@ -108,7 +108,7 @@ export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
 export function CustomLink(props: any) {
   let href = props.href;
   const style =
-    "text-indigo-600 font-medium hover:text-indigo-500 dark:text-indigo-400 hover:dark:text-indigo-300";
+    "text-indigo-600 font-medium hover:text-indigo-500 dark:text-indigo-500 hover:dark:text-indigo-400";
   if (href.startsWith("/")) {
     return (
       <Link className={style} href={href} {...props}>
@@ -138,7 +138,7 @@ export const ChangelogEntry = ({
   <div
     className={clsx(
       // base
-      "relative flex flex-col md:flex-row justify-center gap-x-14 my-20 border-b"
+      "relative flex flex-col md:flex-row justify-center gap-x-14 my-20 border-b border-gray-200 dark:border-gray-800"
     )}
   >
     <div className="md:w-1/3 md:mb-10 mb-4">

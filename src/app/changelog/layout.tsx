@@ -10,7 +10,8 @@ export default function Layout({
       <h1 className="text-4xl sm:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2">
         Changelog
       </h1>
-      <p className="text-gray-700 dark:text-gray-500 leading-7 mt-4">
+      <p className="text-lg text-gray-600 dark:text-gray-400 mt-4">
+        {/* @SEV: text-balance sometimes also used */}
         <Balancer>
           Keep yourself informed about the most recent additions and
           improvements we&apos;ve made to Database.

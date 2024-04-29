@@ -27,16 +27,16 @@ export default function Cta() {
             ))}
           </div>
         </div>
-        <div className="max-w-4l absolute">
+        <div className="max-w-4xl absolute">
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="">
+            <div>
               <h3
                 id="cta-title"
                 className="text-4xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 p-2"
               >
                 Ready to get started?
               </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-slate-00 sm:mt-6 sm:text-lg text-balance text-gray-600 dark:text-gray-400">
+              <p className="mx-auto mt-4 max-w-2xl sm:mt-6 sm:text-lg text-balance text-gray-600 dark:text-gray-400">
                 Launch a new cluster or migrate to Database with zero downtime.
               </p>
             </div>
@@ -69,13 +69,13 @@ export default function Cta() {
                 </form>
               </div>
             </div>
-            <p className="text-gray-400 dark:text-gray-600 text-sm sm:text-xs mt-4">
+            <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mt-4">
               Not sure where to start?{" "}
               <a
                 href="#"
-                className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                className="font-semibold text-indigo-600 dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400"
               >
-                Book a guided onboarding
+                Talk to sales
               </a>
             </p>
           </div>

@@ -70,7 +70,7 @@ export function Faqs() {
                 className="first:pb-3 first:pt-0 py-3"
               >
                 <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionContent className="text-gray-600 dark:text-gray-400">{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

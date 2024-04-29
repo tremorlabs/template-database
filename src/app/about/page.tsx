@@ -7,24 +7,24 @@ import { InstaxImage } from "@/components/ui/InstaxImage";
 
 const benefits = [
   {
-    title: "Work in ZRH",
+    title: "Work in Zurich",
     description:
       "We are in-person first and have a fantastic office in Zurich.",
   },
   {
-    title: "Competitive Salary & Equity",
+    title: "Competitive salary & equity",
     description:
-      "We pay competitive salary and option packages to attract and retain the very best talent.",
+      "We pay competitive salary and option packages to attract the very best talent.",
   },
   {
-    title: "Health, Dental, Vision",
+    title: "Health, dental, vision",
     description:
       "Database pays all of your health, dental, and vision insurance.",
   },
   {
-    title: "Yearly Off-sites",
+    title: "Yearly off-sites",
     description:
-      "Once per year, we bring everyone together at an interesting location to discuss the big picture.",
+      "We bring everyone together at an interesting location to discuss the big picture.",
   },
   {
     title: "Book budget",
@@ -32,18 +32,18 @@ const benefits = [
       "We provide every employee with a 350 dollar budget for books.",
   },
   {
-    title: "Tasty Snacks",
+    title: "Tasty snacks",
     description:
       "The fridge and pantry are stocked + free dinner catered every night (incl. weekends).",
   },
   {
-    title: "Unlimited Sick Days",
-    description:
-      "Take the time you need to rest, recover, and get back on track.",
+    title: "20 PTO days per year",
+    description: "Take time off to recharge and come back refreshed.",
   },
   {
-    title: "20 PTO Days per Year",
-    description: "Take time off to recharge and come back refreshed.",
+    title: "Spotify Premium",
+    description:
+      "We really have the best fringe benefits, even a Spotify subscription is included.",
   },
 ];
 
@@ -58,6 +58,7 @@ export default function About() {
             animationFillMode: "backwards",
           }}
         >
+          {/* @SEV: text-balance sometimes used via tailwind */}
           <Balancer>
             We are engineers, building the database platform we always wanted
           </Balancer>
@@ -79,7 +80,7 @@ export default function About() {
           <div className="absolute bottom-0 right-[0.5px] translate-x-1/2 translate-y-1/2 rounded-sm size-2.5 ring-1 ring-black/5 dark:ring-white/5 shadow shadow-indigo-500/40 dark:shadow-indigo-600/30 bg-white dark:bg-gray-950"></div>
           <div className="absolute bottom-0 left-[0.5px] -translate-x-1/2 translate-y-1/2 rounded-sm size-2.5 ring-1 ring-black/5 dark:ring-white/5 shadow shadow-indigo-500/40 dark:shadow-indigo-600/30 bg-white dark:bg-gray-950"></div>
           <div className="font-medium text-lg text-center">
-            <p className=" text-gray-500 dark:text-gray-400">
+            <p className=" text-gray-900 dark:text-gray-50">
               Data is changing every aspect of running a business, and it is
               happening now.{" "}
             </p>
@@ -104,8 +105,8 @@ export default function About() {
         >
           Teamwork at Database
         </h2>
-        <figure className="relative flow-root mt-4">
-          <div className="relative rounded-2xl bg-gray-50/40 dark:bg-gray-900/80 p-2 ring-1 ring-inset ring-black/5 dark:ring-white/10">
+        <figure className="mt-8">
+          <div className="rounded-2xl bg-gray-50/40 dark:bg-gray-900/80 p-2 ring-1 ring-inset ring-black/5 dark:ring-white/10">
             <div className="rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:ring-white/20 dark:shadow-indigo-600/30 overflow-hidden">
               <Image
                 src="/images/founders.jpg"
@@ -120,7 +121,7 @@ export default function About() {
           </figcaption>
         </figure>
 
-        <div className="mb-44 mt-20">
+        <div className="mt-20">
           <div className="flex flex-col md:flex-row w-full justify-between items-center">
             <InstaxImage
               className="w-[25rem] -rotate-6 -ml-10"
@@ -170,35 +171,33 @@ export default function About() {
               alt="Picture of a party with confetti"
               width={1920}
               height={1281}
-              caption="v1.0 Release party<"
+              caption="v1.0 Release party. Our US intern, Mike, had his first alocolh-free beer"
             />
           </div>
         </div>
       </section>
-      <section aria-labelledby="benefits-title">
+      <section aria-labelledby="benefits-title" className="mt-44">
         <h2
           id="benefits-title"
           className="text-4xl md:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2"
         >
           What&apos;s in for you
         </h2>
-        <ul role="list" className="grid grid-cols-4 gap-x-8 gap-y-6 mt-8">
+        <dl className="grid grid-cols-4 gap-x-10 gap-y-20 mt-20">
           {benefits.map((benefit, index) => (
-            <li
+            <div
               key={index}
-              className="col-span-4 space-y-5 sm:col-span-2 lg:col-span-1"
+              className="col-span-4 sm:col-span-2 lg:col-span-1"
             >
-              <div className="mr-3 space-y-1">
-                <span className="font-medium text-gray-900 dark:text-gray-50">
-                  {benefit.title}
-                </span>
-                <p className="text-gray-500 dark:text-gray-400">
-                  {benefit.description}
-                </p>
-              </div>
-            </li>
+              <dt className="font-semibold text-gray-900 dark:text-gray-50">
+                {benefit.title}
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
+                {benefit.description}
+              </dd>
+            </div>
           ))}
-        </ul>
+        </dl>
       </section>
       <section aria-labelledby="vision-title" className="mt-32">
         <h2
@@ -207,15 +206,15 @@ export default function About() {
         >
           Our Vision
         </h2>
-        <div className="px-2 max-w-prose space-y-4 mt-6 text-gray-700 dark:text-gray-500">
-          <p className="text-inherit text-lg/8">
+        <div className="px-2 max-w-prose space-y-4 mt-6 text-gray-600 dark:text-gray-400">
+          <p className="text-lg leading-8">
             We envision a world where data management is no longer a complex
             challenge but a powerful advantage. By integrating cutting-edge AI
             into database solutions, we aim to transform raw data into strategic
             assets, empowering businesses to innovate faster and more
             efficiently.
           </p>
-          <p className="text-inherit text-lg/8">
+          <p className="text-lg leading-8">
             We believe in removing the barriers of data complexity and
             scalability, enabling teams to focus on insights and innovations
             rather than maintenance and management. Our goal is to equip every
@@ -231,7 +230,7 @@ export default function About() {
             – Alex and Robin
           </p>
         </div>
-        <Button className="mt-32 shadow-xl shadow-indigo-500/20 w-full">
+        <Button className="mt-32 shadow-xl shadow-indigo-500/20 w-full h-10">
           View Open Roles
         </Button>
       </section>

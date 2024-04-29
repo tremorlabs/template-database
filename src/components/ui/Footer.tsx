@@ -3,16 +3,17 @@ import { DatabaseLogo } from "../../../public/DatabaseLogo";
 import Link from "next/link";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import ThemeSwitch from "../ThemeSwitch";
-import Balancer from "react-wrap-balancer";
 
 const navigation = {
   product: [
     { name: "Enterprise", href: "#", external: false },
     { name: "Pricing", href: "#", external: false },
+    { name: "Docs", href: "#", external: false },
   ],
   resources: [
-    { name: "Docs", href: "#", external: false },
     { name: "FAQs", href: "#", external: false },
+    { name: "GitHub", href: "#", external: true },
+    { name: "Discord", href: "#", external: true },
   ],
   company: [
     { name: "About", href: "#", external: false },
@@ -23,12 +24,6 @@ const navigation = {
     { name: "Imprint", href: "#", external: false },
     { name: "Privacy", href: "#", external: false },
     { name: "Terms", href: "#", external: false },
-  ],
-  social: [
-    { name: "GitHub", href: "#", external: true },
-    { name: "Discord", href: "#", external: true },
-    { name: "X (formerly Twitter)", href: "#", external: true },
-    { name: "YouTube", href: "#", external: true },
   ],
 };
 
@@ -68,7 +63,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="bg-gray-100 dark:bg-gray-500/20 size-3 p-px ml-1 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full text-gray-900 dark:text-gray-300 shrink-0"
@@ -99,7 +94,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="bg-gray-100 dark:bg-gray-500/20 size-3 p-px ml-0.5 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full text-gray-900 dark:text-gray-300 shrink-0"
@@ -132,7 +127,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" bg-gray-100 dark:bg-gray-500/20 size-3 p-px ml-1 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full text-gray-900 dark:text-gray-300 shrink-0"
@@ -163,7 +158,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" bg-gray-100 dark:bg-gray-500/20 size-3 p-px ml-1 rounded-full aspect-square">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full text-gray-900 dark:text-gray-300 shrink-0"
@@ -179,13 +174,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 flex justify-between items-center border-t border-gray-100 dark:border-gray-800 pt-8 sm:mt-20 lg:mt-24">
-          <div className="border border-gray-100 dark:border-gray-800 rounded-full pl-1 pr-2 py-0.5">
+          <div className="border border-gray-100 dark:border-gray-800 rounded-full pl-1 pr-2 py-1">
             <div className="flex items-center gap-1">
               <div className="relative size-3">
-                <div className="absolute rounded-full inset-0 bg-green-400/10 dark:bg-green-600/20" />
-                <div className="absolute rounded-full inset-1 bg-green-700 dark:bg-green-500" />
+                <div className="absolute rounded-full inset-0 bg-emerald-400/10 dark:bg-emerald-600/20" />
+                <div className="absolute rounded-full inset-1 bg-emerald-600 dark:bg-emerald-500" />
               </div>
-              <span className="text-xs text-gray-900 dark:text-gray-50">
+              <span className="text-xs text-gray-700 dark:text-gray-50">
                 All systems operational
               </span>
             </div>

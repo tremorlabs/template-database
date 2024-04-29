@@ -87,11 +87,10 @@ export default function CodeExample() {
       <h2 className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-50 dark:to-gray-300 py-2">
         Built by developers, <br /> for developers
       </h2>
-      <p className="mt-6 text-lg max-w-2xl text-gray-700 dark:text-gray-500">
+      <p className="mt-6 text-lg max-w-2xl text-gray-600 dark:text-gray-400">
         Rich and expressive query language that allows you to filter and sort by
         any field, no matter how nested it may be.
       </p>
-
       <CodeExampleTabs
         tab1={
           <Code code={code} lang="sql" copy={false} className="h-[31rem]" />
@@ -105,7 +104,7 @@ export default function CodeExample() {
           />
         }
       />
-      <dl className="grid grid-cols-4 gap-10 mt-20">
+      <dl className="grid grid-cols-4 gap-10 mt-24">
         {features.map((item) => (
           <div key={item.name} className="col-span-full sm:col-span-2 lg:col-span-1">
             <div className="rounded-lg p-2 w-fit ring-1 ring-black/5 dark:ring-white/5 shadow-md shadow-indigo-400/30 dark:shadow-indigo-600/30">
@@ -117,7 +116,7 @@ export default function CodeExample() {
             <dt className="mt-6 font-semibold text-gray-900 dark:text-gray-50">
               {item.name}
             </dt>
-            <dd className="mt-2 leading-7 text-gray-500">
+            <dd className="mt-2 leading-7 text-gray-600 dark:text-gray-400">
               {item.description}
             </dd>
           </div>
