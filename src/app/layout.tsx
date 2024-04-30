@@ -1,12 +1,16 @@
+import Footer from "@/components/ui/Footer"
+import { Navigation } from "@/components/ui/Navbar"
 import type { Metadata } from "next"
+import { ThemeProvider } from "next-themes"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Navigation } from "@/components/ui/Navbar"
-import Footer from "@/components/ui/Footer"
 import { siteConfig } from "./siteConfig"
-import { ThemeProvider } from "next-themes"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yoururl.com"),

@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        handwriting: ["NanumPenScript"],
+      },
       keyframes: {
         hide: {
           from: { opacity: "1" },

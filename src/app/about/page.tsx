@@ -1,7 +1,6 @@
 import { Button } from "@/components/Button"
 import Benefits from "@/components/ui/Benefits"
 import TeamGallery from "@/components/ui/TeamGallery"
-import { nanum } from "@/lib/nanum"
 import { cx } from "@/lib/utils"
 import Balancer from "react-wrap-balancer"
 
@@ -74,8 +73,7 @@ export default function About() {
           </p>
           <p
             className={cx(
-              nanum.className,
-              "w-fit rotate-3 text-3xl text-indigo-600 dark:text-indigo-400",
+              "w-fit rotate-3 font-handwriting text-3xl text-indigo-600 dark:text-indigo-400",
             )}
           >
             – Alex and Robin

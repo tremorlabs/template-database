@@ -1,5 +1,4 @@
 "use client"
-import { nanum } from "@/lib/nanum"
 import { cx } from "@/lib/utils"
 import Image from "next/image"
 
@@ -33,8 +32,7 @@ export function InstaxImage({
       </div>
       <div
         className={cx(
-          nanum.className,
-          "px-2 pb-1 pt-2 text-xl text-gray-700 dark:text-gray-300",
+          "font-handwriting px-2 pb-1 pt-2 text-xl text-gray-700 dark:text-gray-300",
         )}
       >
         <figcaption>{caption}</figcaption>
