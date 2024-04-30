@@ -1,12 +1,13 @@
-import React from "react";
-
-import Image from "next/image";
+import Image from "next/image"
 
 export default function HeroImage() {
   return (
-    <section aria-label="Hero Image of the website" className="relative flow-root">
+    <section
+      aria-label="Hero Image of the website"
+      className="relative flow-root"
+    >
       <div className="relative rounded-2xl bg-slate-50/40 p-2 ring-1 ring-inset ring-slate-200/50">
-        <div className="rounded-xl bg-white shadow-3xl shadow-black/10 ring-1 ring-slate-900/5 overflow-hidden">
+        <div className="shadow-3xl overflow-hidden rounded-xl bg-white shadow-black/10 ring-1 ring-slate-900/5">
           <Image
             src="/images/preview.png"
             alt="A preview of the Database web app"
@@ -16,5 +17,5 @@ export default function HeroImage() {
         </div>
       </div>
     </section>
-  );
+  )
 }

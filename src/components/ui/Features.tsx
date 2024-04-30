@@ -1,58 +1,54 @@
-import React from "react";
-import { Button } from "../Button";
+import React from "react"
+import { Badge } from "../Badge"
+
+const stats = [
+  {
+    name: "Bandwith increase",
+    value: "+162%",
+  },
+  {
+    name: "Better storage efficiency",
+    value: "2-3x",
+  },
+  {
+    name: "Rows ingested / second",
+    value: "Up to 9M",
+  },
+]
 
 export default function Features() {
   return (
     <section
       aria-labelledby="features-title"
-      className="mt-44 px-2 max-w-6xl mx-auto w-full"
+      className="mx-auto mt-44 w-full max-w-6xl px-2"
     >
-      <div className="w-fit uppercase px-3 border rounded-lg sm:text-sm font-semibold py-1.5 border-indigo-200/20 bg-indigo-50/50 dark:border-indigo-800/30 dark:bg-indigo-900/20 tracking-tighter leading-4 z-10">
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-indigo-600 dark:from-indigo-200 dark:to-indigo-400">
-          Security at Scale
-        </span>
-      </div>
+      <Badge>Security at Scale</Badge>
       <h2
         id="features-title"
-        className="mt-2 text-4xl sm:text-6xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-br from-gray-900 to-gray-700 py-2 dark:from-gray-50 dark:to-gray-300"
+        className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
       >
         Architected for speed and reliability
       </h2>
-      <div className="flex flex-col items-center md:flex-row border-b border-t border-gray-100 dark:border-gray-900 justify-between p-6 mt-6">
-        <div className="space-y-1">
-          <span className="text-5xl font-semibold text-transparent bg-clip-text inline-block bg-gradient-to-t from-indigo-900 to-indigo-600 dark:from-indigo-700 dark:to-indigo-400">
-            +162%
-          </span>
-          <p className="text-gray-700 dark:text-gray-500">Bandwith increase</p>
-        </div>
-        <div className="h-px my-6 md:my-0 md:h-16 md:w-px md:mx-6 bg-gray-100 dark:bg-gray-900" />
-        <div className="space-y-1">
-          <span className="text-5xl font-semibold text-transparent bg-clip-text inline-block bg-gradient-to-t from-indigo-900 to-indigo-600 dark:from-indigo-700 dark:to-indigo-400">
-            2-3x
-          </span>
-          <p className="text-gray-700 dark:text-gray-500">
-            Better storage efficiency
-          </p>
-        </div>
-        <div className="h-px my-6 md:my-0 md:h-16 md:w-px md:mx-6 bg-gray-100 dark:bg-gray-900" />
-        <div className="space-y-1">
-          <span className="text-5xl font-semibold text-transparent bg-clip-text inline-block bg-gradient-to-t from-indigo-900 to-indigo-600 dark:from-indigo-700 dark:to-indigo-400">
-            Up to 9M
-          </span>
-          <p className="text-gray-700 dark:text-gray-500">
-            Rows ingested / second
-          </p>
-        </div>
-      </div>
-      <p className="mt-6 text-lg max-w-3xl text-gray-700 dark:text-gray-500">
-        Database&apos; innovative architecture avoids the central bottlenecks of
-        traditional systems, enhancing system reliability. This design ensures
-        high productivity and security, minimizing the risk of service
+      <p className="mt-6 max-w-3xl text-lg text-gray-600 dark:text-gray-400">
+        Database&rsquo; innovative architecture avoids the central bottlenecks
+        of traditional systems, enhancing system reliability. This design
+        ensures high productivity and security, minimizing the risk of service
         disruptions and outages.
       </p>
-      <Button className="mt-8" variant="secondary">
-        Explore Security
-      </Button>
+      <dl className="mt-12 grid grid-cols-1 gap-y-8 md:grid-cols-3 md:border-y md:border-gray-200 md:py-14 dark:border-gray-800">
+        {stats.map((stat, index) => (
+          <React.Fragment key={index}>
+            <div className="border-l-2 border-indigo-100 pl-6 md:border-l md:text-center lg:border-gray-200 lg:first:border-none dark:border-indigo-900 lg:dark:border-gray-800">
+              <dd className="inline-block bg-gradient-to-t from-indigo-900 to-indigo-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent lg:text-6xl dark:from-indigo-700 dark:to-indigo-400">
+                {stat.value}
+              </dd>
+              <dt className="mt-1 text-gray-600 dark:text-gray-400">
+                {stat.name}
+              </dt>
+            </div>
+          </React.Fragment>
+        ))}
+      </dl>
     </section>
-  );
+  )
 }

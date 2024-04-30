@@ -1,25 +1,26 @@
-"use client";
-import { Button } from "../Button";
-import { Input } from "../Input";
+"use client"
+import Balancer from "react-wrap-balancer"
+import { Button } from "../Button"
+import { Input } from "../Input"
 
 export default function Cta() {
   return (
     <section
       aria-labelledby="cta-title"
-      className="mb-20 mt-32 sm:mt-40 overflow-hidden p-1 max-w-6xl mx-auto px-2"
+      className="mx-auto mb-20 mt-32 max-w-6xl p-1 px-2 sm:mt-40"
     >
       <div className="relative flex items-center justify-center">
         <div
-          className="w-full mask opacity-70 select-none pointer-events-none"
+          className="mask pointer-events-none absolute -z-10 select-none opacity-70"
           aria-hidden="true"
         >
-          <div className="size-full flex flex-col gap-2">
+          <div className="flex size-full flex-col gap-2">
             {Array.from({ length: 20 }, (_, idx) => (
               <div key={`outer-${idx}`}>
-                <div className="size-full flex gap-2">
+                <div className="flex size-full gap-2">
                   {Array.from({ length: 41 }, (_, idx2) => (
                     <div key={`inner-${idx}-${idx2}`}>
-                      <div className="rounded-md size-5 ring-1 ring-black/5 dark:ring-white/5 shadow shadow-indigo-500/20 dark:shadow-indigo-500/20"></div>
+                      <div className="size-5 rounded-md shadow shadow-indigo-500/20 ring-1 ring-black/5 dark:shadow-indigo-500/20 dark:ring-white/5"></div>
                     </div>
                   ))}
                 </div>
@@ -27,23 +28,26 @@ export default function Cta() {
             ))}
           </div>
         </div>
-        <div className="max-w-4l absolute">
+        <div className="max-w-4xl">
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="">
+            <div>
               <h3
                 id="cta-title"
-                className="text-4xl md:text-6xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 p-2"
+                className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text p-2 text-4xl font-bold tracking-tighter text-transparent md:text-6xl dark:from-gray-50 dark:to-gray-300"
               >
                 Ready to get started?
               </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-slate-00 sm:mt-6 sm:text-lg text-balance text-gray-600 dark:text-gray-400">
-                Launch a new cluster or migrate to Database with zero downtime.
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600 sm:mt-6 sm:text-lg dark:text-gray-400">
+                <Balancer>
+                  Launch a new cluster or migrate to Database with zero
+                  downtime.
+                </Balancer>
               </p>
             </div>
-            <div className="p-1.5 ring-1 ring-black/[3%] dark:ring-white/[3%] rounded-[16px] mt-14 bg-gray-300/5 dark:bg-gray-900/10 backdrop-blur w-full">
-              <div className="p-4 bg-white dark:bg-gray-950 rounded-xl ring-1 ring-black/5 dark:ring-white/5 shadow-lg shadow-indigo-500/10 dark:shadow-indigo-500/10">
+            <div className="mt-14 w-full rounded-[16px] bg-gray-300/5 p-1.5 ring-1 ring-black/[3%] backdrop-blur dark:bg-gray-900/10 dark:ring-white/[3%]">
+              <div className="rounded-xl bg-white p-4 shadow-lg shadow-indigo-500/10 ring-1 ring-black/5 dark:bg-gray-950 dark:shadow-indigo-500/10 dark:ring-white/5">
                 <form
-                  className="flex flex-col sm:flex-row items-center gap-3"
+                  className="flex flex-col items-center gap-3 sm:flex-row"
                   onSubmit={(e) => e.preventDefault()}
                 >
                   <label htmlFor="email" className="sr-only">
@@ -55,7 +59,7 @@ export default function Cta() {
                     autoComplete="email"
                     required
                     id="email"
-                    className="h-10 min-w-0 flex-auto w-full"
+                    className="h-10 w-full min-w-0 flex-auto"
                     inputClassName="h-full"
                     placeholder="Your Work Email "
                   />
@@ -69,18 +73,18 @@ export default function Cta() {
                 </form>
               </div>
             </div>
-            <p className="text-gray-400 dark:text-gray-600 text-sm sm:text-xs mt-4">
+            <p className="mt-4 text-xs text-gray-600 sm:text-sm dark:text-gray-400">
               Not sure where to start?{" "}
               <a
                 href="#"
-                className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                className="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-500 dark:hover:text-indigo-400"
               >
-                Book a guided onboarding
+                Talk to sales
               </a>
             </p>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

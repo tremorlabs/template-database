@@ -1,18 +1,18 @@
-import React from "react";
-import { DatabaseLogo } from "../../../public/DatabaseLogo";
-import Link from "next/link";
-import { RiArrowRightUpLine } from "@remixicon/react";
-import ThemeSwitch from "../ThemeSwitch";
-import Balancer from "react-wrap-balancer";
+import { RiArrowRightUpLine } from "@remixicon/react"
+import Link from "next/link"
+import { DatabaseLogo } from "../../../public/DatabaseLogo"
+import ThemeSwitch from "../ThemeSwitch"
 
 const navigation = {
   product: [
     { name: "Enterprise", href: "#", external: false },
     { name: "Pricing", href: "#", external: false },
+    { name: "Docs", href: "#", external: false },
   ],
   resources: [
-    { name: "Docs", href: "#", external: false },
     { name: "FAQs", href: "#", external: false },
+    { name: "GitHub", href: "#", external: true },
+    { name: "Discord", href: "#", external: true },
   ],
   company: [
     { name: "About", href: "#", external: false },
@@ -24,13 +24,7 @@ const navigation = {
     { name: "Privacy", href: "#", external: false },
     { name: "Terms", href: "#", external: false },
   ],
-  social: [
-    { name: "GitHub", href: "#", external: true },
-    { name: "Discord", href: "#", external: true },
-    { name: "X (formerly Twitter)", href: "#", external: true },
-    { name: "YouTube", href: "#", external: true },
-  ],
-};
+}
 
 export default function Footer() {
   return (
@@ -40,14 +34,15 @@ export default function Footer() {
           <div className="space-y-8">
             <DatabaseLogo className="w-32 sm:w-40" />
             <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
-              Redefining the way databases are built and managed. Built in Switzerland, made for the world.
+              Redefining the way databases are built and managed. Built in
+              Switzerland, made for the world.
             </p>
             <div className="flex space-x-6">
               <ThemeSwitch />
             </div>
             <div></div>
           </div>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-14 sm:gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-16 grid grid-cols-1 gap-14 sm:gap-8 md:grid-cols-2 xl:col-span-2 xl:mt-0">
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
@@ -61,17 +56,17 @@ export default function Footer() {
                   {navigation.product.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
+                        className="flex rounded-md text-sm text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
+                              className="size-full shrink-0 text-gray-900 dark:text-gray-300"
                             />
                           </div>
                         )}
@@ -92,17 +87,17 @@ export default function Footer() {
                   {navigation.resources.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
+                        className="flex rounded-md text-sm text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className="bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className="ml-0.5 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
+                              className="size-full shrink-0 text-gray-900 dark:text-gray-300"
                             />
                           </div>
                         )}
@@ -125,17 +120,17 @@ export default function Footer() {
                   {navigation.company.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
+                        className="flex rounded-md text-sm text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
+                              className="size-full shrink-0 text-gray-900 dark:text-gray-300"
                             />
                           </div>
                         )}
@@ -156,17 +151,17 @@ export default function Footer() {
                   {navigation.legal.map((item) => (
                     <li key={item.name} className="w-fit">
                       <Link
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition rounded-md flex"
+                        className="flex rounded-md text-sm text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                         href={item.href}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noopener noreferrer" : undefined}
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" bg-gray-100 dark:bg-gray-700 size-3 p-px ml-0.5 rounded-full aspect-square">
+                          <div className=" ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
-                              className="size-full text-gray-900 dark:text-gray-300 shrink-0"
+                              className="size-full shrink-0 text-gray-900 dark:text-gray-300"
                             />
                           </div>
                         )}
@@ -178,24 +173,24 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex justify-between items-center border-t border-gray-100 dark:border-gray-800 pt-8 sm:mt-20 lg:mt-24">
-          <div className="border border-gray-100 dark:border-gray-800 rounded-full pl-1 pr-2 py-0.5">
-            <div className="flex items-center gap-1">
-              <div className="relative size-3">
-                <div className="absolute rounded-full inset-0 bg-green-400/10 dark:bg-green-600/20" />
-                <div className="absolute rounded-full inset-1 bg-green-700 dark:bg-green-500" />
-              </div>
-              <span className="text-xs text-gray-900 dark:text-gray-50">
-                All systems operational
-              </span>
-            </div>
-          </div>
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 sm:mt-20 sm:flex-row lg:mt-24 dark:border-gray-800">
           <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
             &copy; {new Date().getFullYear()} Database, Inc. All rights
             reserved.
           </p>
+          <div className="rounded-full border border-gray-100 py-1 pl-1 pr-2 dark:border-gray-800">
+            <div className="flex items-center gap-1">
+              <div className="relative size-3 shrink-0">
+                <div className="absolute inset-0 rounded-full bg-emerald-400/10 dark:bg-emerald-600/20" />
+                <div className="absolute inset-1 rounded-full bg-emerald-600 dark:bg-emerald-500" />
+              </div>
+              <span className="text-xs text-gray-700 dark:text-gray-50">
+                All systems operational
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }

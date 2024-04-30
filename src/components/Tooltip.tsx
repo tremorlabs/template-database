@@ -1,9 +1,9 @@
 // Tremor Raw Tooltip [v0.0.0]
 
-import React from "react";
-import * as TooltipPrimitives from "@radix-ui/react-tooltip";
+import * as TooltipPrimitives from "@radix-ui/react-tooltip"
+import React from "react"
 
-import { cx } from "@/lib/utils";
+import { cx } from "@/lib/utils"
 
 interface TooltipProps
   extends Omit<TooltipPrimitives.TooltipContentProps, "content" | "onClick">,
@@ -11,11 +11,11 @@ interface TooltipProps
       TooltipPrimitives.TooltipProps,
       "open" | "defaultOpen" | "onOpenChange" | "delayDuration"
     > {
-  content: React.ReactNode;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  side?: "bottom" | "left" | "top" | "right";
-  showArrow?: boolean;
-  triggerAsChild?: boolean;
+  content: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  side?: "bottom" | "left" | "top" | "right"
+  showArrow?: boolean
+  triggerAsChild?: boolean
 }
 
 // eslint-disable-next-line react/display-name
@@ -39,7 +39,7 @@ const Tooltip = React.forwardRef<
       triggerAsChild = false,
       ...props
     }: TooltipProps,
-    forwardedRef
+    forwardedRef,
   ) => {
     return (
       <TooltipPrimitives.Provider delayDuration={150}>
@@ -68,7 +68,7 @@ const Tooltip = React.forwardRef<
                 // transition
                 "will-change-[transform,opacity]",
                 "data-[side=bottom]:animate-slideDownAndFade data-[side=left]:animate-slideLeftAndFade data-[side=right]:animate-slideRightAndFade data-[side=top]:animate-slideUpAndFade data-[state=closed]:animate-hide",
-                className
+                className,
               )}
               {...props}
             >
@@ -85,8 +85,8 @@ const Tooltip = React.forwardRef<
           </TooltipPrimitives.Portal>
         </TooltipPrimitives.Root>
       </TooltipPrimitives.Provider>
-    );
-  }
-);
+    )
+  },
+)
 
-export { Tooltip, type TooltipProps };
+export { Tooltip, type TooltipProps }

@@ -1,15 +1,17 @@
-import React from "react";
-import Image from "next/image";
+import Image from "next/image"
+import Balancer from "react-wrap-balancer"
 
 export default function Testimonial() {
   return (
-    <section aria-label="Testimonial">
+    <section id="testimonial" aria-label="Testimonial">
       <figure className="mx-auto">
-        <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 dark:text-gray-50 sm:text-2xl sm:leading-9 text-balance max-w-2xl mx-auto">
+        <blockquote className="mx-auto max-w-2xl text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 dark:text-gray-50">
           <p>
-            “Thanks to this robust database solution, our organization has
-            streamlined data management processes, leading to increased
-            efficiency and accuracy in our operations.”
+            <Balancer>
+              “Thanks to this robust database solution, our organization has
+              streamlined data management processes, leading to increased
+              efficiency and accuracy in our operations.”
+            </Balancer>
           </p>
         </blockquote>
         <figcaption className="mt-10 flex items-center justify-center gap-x-5">
@@ -31,5 +33,5 @@ export default function Testimonial() {
         </figcaption>
       </figure>
     </section>
-  );
+  )
 }

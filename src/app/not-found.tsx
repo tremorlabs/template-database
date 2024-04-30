@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { siteConfig } from "./siteConfig";
-import { Button } from "@/components/Button";
-import { DatabaseLogo } from "../../public/DatabaseLogo";
-import { ArrowAnimated } from "@/components/ui/ArrowAnimated";
+import Link from "next/link"
+import { siteConfig } from "./siteConfig"
+import { Button } from "@/components/Button"
+import { DatabaseLogo } from "../../public/DatabaseLogo"
+import { ArrowAnimated } from "@/components/ui/ArrowAnimated"
 
 export default function NotFound() {
   return (
@@ -10,7 +10,7 @@ export default function NotFound() {
       <Link href={siteConfig.baseLinks.home}>
         <DatabaseLogo className="mt-6 h-10" />
       </Link>
-      <p className="mt-6 text-4xl font-semibold text-indigo-600 dark:text-indigo-500 sm:text-5xl">
+      <p className="mt-6 text-4xl font-semibold text-indigo-600 sm:text-5xl dark:text-indigo-500">
         404
       </p>
       <h1 className="mt-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">
@@ -29,5 +29,5 @@ export default function NotFound() {
         </Link>
       </Button>
     </div>
-  );
+  )
 }

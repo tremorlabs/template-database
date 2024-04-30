@@ -1,16 +1,16 @@
-import { codeToHtml } from "shiki";
-import type { BundledLanguage, BundledTheme } from "shiki";
-import CopyToClipboard from "./CopyToClipboard";
-import { cx } from "@/lib/utils";
+import { cx } from "@/lib/utils"
+import type { BundledLanguage, BundledTheme } from "shiki"
+import { codeToHtml } from "shiki"
+import CopyToClipboard from "./CopyToClipboard"
 
 type Props = {
-  code: string;
-  lang?: BundledLanguage;
-  theme?: BundledTheme;
-  filename?: string;
-  copy?: boolean;
-  className?: string;
-};
+  code: string
+  lang?: BundledLanguage
+  theme?: BundledTheme
+  filename?: string
+  copy?: boolean
+  className?: string
+}
 
 export default async function Code({
   code,
@@ -30,13 +30,13 @@ export default async function Code({
   const html = await codeToHtml(code, {
     lang,
     theme,
-  });
+  })
 
   return (
     <div
       className={cx(
-        "relative w-full shadow-xl shadow-black/40 rounded-xl overflow-auto ring-1 ring-black bg-black dark:ring-white/5",
-        className
+        "relative w-full overflow-auto rounded-xl bg-gray-950 shadow-xl shadow-black/40 ring-1 ring-black dark:ring-white/5",
+        className,
       )}
     >
       {copy && (
@@ -48,9 +48,9 @@ export default async function Code({
       )}
 
       <div
-        className="text-sm [&>pre]:overflow-x-auto [&>pre]:!bg-gray-950 [&>pre]:dark:!bg-gray-950 [&>pre]:py-6 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
+        className="text-sm [&>pre]:overflow-x-auto [&>pre]:!bg-gray-950 [&>pre]:py-6 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug [&>pre]:dark:!bg-gray-950 [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
     </div>
-  );
+  )
 }

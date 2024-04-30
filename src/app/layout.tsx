@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Navigation } from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
-import { siteConfig } from "./siteConfig";
-import { ThemeProvider } from "next-themes";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { Navigation } from "@/components/ui/Navbar"
+import Footer from "@/components/ui/Footer"
+import { siteConfig } from "./siteConfig"
+import { ThemeProvider } from "next-themes"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yoururl.com"),
@@ -37,17 +37,17 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} scroll-auto antialiased dark:bg-gray-950 min-h-screen selection:bg-indigo-100 selection:text-indigo-700`}
+        className={`${inter.className} min-h-screen scroll-auto antialiased selection:bg-indigo-100 selection:text-indigo-700 dark:bg-gray-950`}
       >
         <ThemeProvider defaultTheme="system" attribute="class">
           <Navigation />
@@ -56,5 +56,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -11,6 +11,6 @@ export const siteConfig = {
     privacy: "/privacy",
     terms: "/terms",
   },
-};
+}
 
-export type siteConfig = typeof siteConfig;
+export type siteConfig = typeof siteConfig

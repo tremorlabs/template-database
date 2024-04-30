@@ -1,22 +1,22 @@
-import Balancer from "react-wrap-balancer";
+import Balancer from "react-wrap-balancer"
 
 export default function Layout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <main className="max-w-3xl mx-auto mt-36 px-3">
-      <h1 className="text-4xl sm:text-5xl tracking-tighter font-bold text-transparent bg-clip-text inline-block bg-gradient-to-t from-gray-900 to-gray-700 dark:from-gray-50 dark:to-gray-300 py-2">
+    <main className="mx-auto mt-36 max-w-3xl px-3">
+      <h1 className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-5xl dark:from-gray-50 dark:to-gray-300">
         Changelog
       </h1>
-      <p className="text-gray-700 dark:text-gray-500 leading-7 mt-4">
+      <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
         <Balancer>
           Keep yourself informed about the most recent additions and
-          improvements we&apos;ve made to Database.
+          improvements we&rsquo;ve made to Database.
         </Balancer>
       </p>
       <div className="mt-28">{children}</div>
     </main>
-  );
+  )
 }

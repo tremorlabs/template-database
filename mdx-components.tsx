@@ -1,6 +1,7 @@
-import type { MDXComponents } from "mdx/types";
+import type { MDXComponents } from "mdx/types"
 
 import {
+  Bold,
   ChangelogEntry,
   CustomLink,
   H1,
@@ -8,10 +9,9 @@ import {
   H3,
   P,
   Ul,
-  Bold
-} from "@/components/mdx";
+} from "@/components/mdx"
 
-import { ChangelogImage } from "@/components/mdx";
+import { ChangelogImage } from "@/components/mdx"
 
 let customComponents = {
   h1: H1,
@@ -23,11 +23,11 @@ let customComponents = {
   a: CustomLink,
   ChangelogEntry: ChangelogEntry,
   ChangelogImage: ChangelogImage,
-};
+}
 
 export function useMDXComponents(components: MDXComponents) {
   return {
     ...customComponents,
     ...components,
-  };
+  }
 }

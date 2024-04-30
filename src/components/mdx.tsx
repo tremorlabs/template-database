@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import clsx from "clsx";
-import Image, { ImageProps } from "next/image";
+import clsx from "clsx"
+import Image, { ImageProps } from "next/image"
+import Link from "next/link"
+import React from "react"
 
 export default function slugify(str: string) {
   return str
@@ -11,16 +11,19 @@ export default function slugify(str: string) {
     .replace(/\s+/g, "-") // Replace spaces with -
     .replace(/&/g, "-and-") // Replace & with 'and'
     .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
 }
 
 function CustomHeading(props: any) {
-  let slug = slugify(props.children);
+  let slug = slugify(props.children)
   return React.createElement(
     `h${props.level}`,
     {
       id: slug,
-      className: clsx("scroll-mt-20 md:scroll-mt-24 inline-flex", props.className),
+      className: clsx(
+        "scroll-mt-36 md:scroll-mt-24 inline-flex",
+        props.className,
+      ),
     },
     [
       React.createElement("a", {
@@ -29,8 +32,8 @@ function CustomHeading(props: any) {
         className: "anchor-link",
       }),
     ],
-    props.children
-  );
+    props.children,
+  )
 }
 
 export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
@@ -38,39 +41,39 @@ export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
     className={clsx(
       // base
       "text-3xl font-bold normal-case tracking-tight sm:text-4xl",
-      "text-gray-900 dark:text-gray-50"
+      "text-gray-900 dark:text-gray-50",
     )}
     level={1}
   >
     {children}
   </CustomHeading>
-);
+)
 
 export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
     className={clsx(
       // base
-      "mb-4 font-semibold normal-case tracking-tight text-lg",
-      "text-gray-900 dark:text-gray-50"
+      "mb-4 text-lg font-semibold normal-case tracking-tight",
+      "text-gray-900 dark:text-gray-50",
     )}
     level={2}
   >
     {children}
   </CustomHeading>
-);
+)
 
 export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
     className={clsx(
       // base
       "mb-2 font-semibold normal-case tracking-tight",
-      "text-gray-900 dark:text-gray-50"
+      "text-gray-900 dark:text-gray-50",
     )}
     level={3}
   >
     {children}
   </CustomHeading>
-);
+)
 
 export const P = (props: React.HTMLProps<HTMLParagraphElement>) => (
   <p
@@ -78,52 +81,52 @@ export const P = (props: React.HTMLProps<HTMLParagraphElement>) => (
     className={clsx(
       // base
       "mb-8 leading-7",
-      "text-gray-600 dark:text-gray-400"
+      "text-gray-600 dark:text-gray-400",
     )}
   />
-);
+)
 
 export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
   <ul
     className={clsx(
       // base
-      "list-['–__'] mb-10 ml-[30px] space-y-1 leading-8",
-      "text-gray-600 dark:text-gray-400"
+      "mb-10 ml-[30px] list-['–__'] space-y-1 leading-8",
+      "text-gray-600 dark:text-gray-400",
     )}
     {...props}
   />
-);
+)
 
 export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <span
     className={clsx(
       // base
       "font-semibold",
-      "text-gray-900 dark:text-gray-50"
+      "text-gray-900 dark:text-gray-50",
     )}
     {...props}
   />
-);
+)
 
 export function CustomLink(props: any) {
-  let href = props.href;
+  let href = props.href
   const style =
-    "text-indigo-600 font-medium hover:text-indigo-500 dark:text-indigo-400 hover:dark:text-indigo-300";
+    "text-indigo-600 font-medium hover:text-indigo-500 dark:text-indigo-500 hover:dark:text-indigo-400"
   if (href.startsWith("/")) {
     return (
       <Link className={style} href={href} {...props}>
         {props.children}
       </Link>
-    );
+    )
   }
 
   if (href.startsWith("#")) {
-    return <a {...props} className={style} />;
+    return <a {...props} className={style} />
   }
 
   return (
     <a className={style} target="_blank" rel="noopener noreferrer" {...props} />
-  );
+  )
 }
 
 export const ChangelogEntry = ({
@@ -131,29 +134,29 @@ export const ChangelogEntry = ({
   date,
   children,
 }: {
-  version: string;
-  date: string;
-  children: any;
+  version: string
+  date: string
+  children: any
 }) => (
   <div
     className={clsx(
       // base
-      "relative flex flex-col md:flex-row justify-center gap-x-14 my-20 border-b"
+      "relative my-20 flex flex-col justify-center gap-x-14 border-b border-gray-200 md:flex-row dark:border-gray-800",
     )}
   >
-    <div className="md:w-1/3 md:mb-10 mb-4">
+    <div className="mb-4 md:mb-10 md:w-1/3">
       <div className="sticky top-24 flex items-center space-x-2 md:block md:space-x-0 md:space-y-1.5">
-        <span className="inline-flex items-center ring-1 ring-inset ring-indigo-700/10 dark:ring-indigo-400/10 bg-indigo-50 dark:bg-indigo-500/20 px-2.5 py-1 text-indigo-700 dark:text-indigo-400 font-medium rounded-lg text-xs">
+        <span className="inline-flex items-center rounded-lg bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 dark:bg-indigo-500/20 dark:text-indigo-400 dark:ring-indigo-400/10">
           {version}
         </span>
-        <span className="whitespace-nowrap block text-sm text-gray-600 dark:text-gray-400">
+        <span className="block whitespace-nowrap text-sm text-gray-600 dark:text-gray-400">
           {date}
         </span>
       </div>
     </div>
     <div className="mb-12">{children}</div>
   </div>
-);
+)
 
 export const ChangelogImage = ({
   alt,
@@ -167,7 +170,7 @@ export const ChangelogImage = ({
     alt={alt}
     width={width}
     height={height}
-    className="overflow-hidden rounded-xl mb-10 shadow-md shadow-black/15 ring-1 ring-gray-200/50 dark:ring-gray-800"
+    className="mb-10 overflow-hidden rounded-xl shadow-md shadow-black/15 ring-1 ring-gray-200/50 dark:ring-gray-800"
     {...props}
   />
-);
+)

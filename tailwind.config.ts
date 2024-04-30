@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: "selector",
@@ -96,5 +96,5 @@ const config: Config = {
     },
   },
   plugins: [require("@tailwindcss/forms")],
-};
-export default config;
+}
+export default config
