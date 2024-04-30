@@ -217,9 +217,9 @@ export default function Pricing() {
   return (
     <div className="px-3">
       <Badge>Pricing</Badge>
-      <h2 className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
+      <h1 className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
         Our plans scale with you
-      </h2>
+      </h1>
       <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
         Plans that empower you and your team to ship without friction. Our
         flexible pricing models ensure that efficiency doesn&rsquo;t come at the
@@ -277,9 +277,9 @@ export default function Pricing() {
                   <div className="h-px w-full bg-gray-200 dark:bg-gray-800" />
                 </div>
               )}
-              <h3 className="mt-6 text-sm font-semibold text-gray-900 dark:text-gray-50">
+              <h2 className="mt-6 text-sm font-semibold text-gray-900 dark:text-gray-50">
                 {plan.name}
-              </h3>
+              </h2>
               <div className="mt-3 flex items-center gap-x-3">
                 <span className="text-5xl font-semibold tabular-nums text-gray-900 dark:text-gray-50">
                   {isVariablePrice(plan.price)
@@ -382,12 +382,12 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div key={plan.name}>
               <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200 dark:ring-gray-800">
-                <h3
+                <h2
                   id={plan.name}
                   className="text-base font-semibold leading-6 text-gray-900 dark:text-gray-50"
                 >
                   {plan.name}
-                </h3>
+                </h2>
                 <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
                   {isVariablePrice(plan.price)
                     ? `${
@@ -404,7 +404,7 @@ export default function Pricing() {
               >
                 {sections.map((section) => (
                   <li key={section.name}>
-                    <h4 className="font-semibold">{section.name}</h4>
+                    <h3 className="font-semibold">{section.name}</h3>
                     <ul
                       role="list"
                       className="mt-2 divide-y divide-gray-200 dark:divide-gray-800"
