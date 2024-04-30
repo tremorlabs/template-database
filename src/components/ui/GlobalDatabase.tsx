@@ -40,7 +40,7 @@ export const GlobalDatabase: FunctionComponent = () => {
   }, [])
 
   return (
-    <div className="px-2">
+    <div className="px-3">
       <section
         aria-labelledby="global-database-title"
         className="relative mx-auto mt-28 flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-3xl bg-gray-950 pt-24 shadow-xl shadow-black/30 md:mt-40"

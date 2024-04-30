@@ -24,7 +24,7 @@ export default function Hero() {
         application developers and for the cloud era.
       </p>
       <div
-        className="mt-6 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-4 sm:flex-row"
+        className="mt-6 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
         style={{ animationDuration: "1100ms" }}
       >
         <Button className="h-10">
@@ -51,7 +51,7 @@ export default function Hero() {
         </Button>
       </div>
       <div
-        className="relative mx-auto ml-2 mt-16 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
+        className="relative mx-auto ml-3 mt-16 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />

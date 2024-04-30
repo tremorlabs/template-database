@@ -20,7 +20,7 @@ export default function Features() {
   return (
     <section
       aria-labelledby="features-title"
-      className="mx-auto mt-44 w-full max-w-6xl px-2"
+      className="mx-auto mt-44 w-full max-w-6xl px-3"
     >
       <Badge>Security at Scale</Badge>
       <h2

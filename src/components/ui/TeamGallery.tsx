@@ -1,38 +1,22 @@
-import Image from "next/image"
 import { InstaxImage } from "./InstaxImage"
 
 export default function TeamGallery() {
   return (
     <section
       aria-labelledby="teamwork-title"
-      className="mt-32 max-w-4xl animate-slide-up-fade"
+      className="mx-auto mt-5 max-w-4xl animate-slide-up-fade"
       style={{
         animationDuration: "600ms",
         animationDelay: "900ms",
         animationFillMode: "backwards",
       }}
     >
-      <h2
+      {/* <h2
         id="teamwork-title"
-        className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text p-2 text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
+        className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
       >
         Teamwork at Database
-      </h2>
-      <figure className="mt-8">
-        <div className="rounded-2xl bg-gray-50/40 p-2 ring-1 ring-inset ring-black/5 dark:bg-gray-900/80 dark:ring-white/10">
-          <div className="overflow-hidden rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:shadow-indigo-600/30 dark:ring-white/20">
-            <Image
-              src="/images/founders.jpg"
-              alt="App screenshot"
-              width={1819}
-              height={998}
-            />
-          </div>
-        </div>
-        <figcaption className="mt-2 text-center text-sm text-gray-400">
-          Join Database, be yourself.
-        </figcaption>
-      </figure>
+      </h2> */}
 
       <div className="mt-20">
         <div className="flex w-full flex-col items-center justify-between md:flex-row">
@@ -88,6 +72,33 @@ export default function TeamGallery() {
           />
         </div>
       </div>
+      <div className="mt-28">
+        <div className="flex w-full flex-col items-center justify-between md:flex-row">
+          <InstaxImage
+            className="w-full rotate-1"
+            src="/images/founders.jpg"
+            alt=" Join Database, be yourself."
+            width={1819}
+            height={998}
+            caption=" Join Database, be yourself."
+          />
+        </div>
+      </div>
+      {/* <figure className="mt-8">
+        <div className="rounded-2xl bg-gray-50/40 p-2 ring-1 ring-inset ring-black/5 dark:bg-gray-900/80 dark:ring-white/10">
+          <div className="overflow-hidden rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:shadow-indigo-600/30 dark:ring-white/20">
+            <Image
+              src="/images/founders.jpg"
+              alt="App screenshot"
+              width={1819}
+              height={998}
+            />
+          </div>
+        </div>
+        <figcaption className="mt-2 text-center text-sm text-gray-400">
+          Join Database, be yourself.
+        </figcaption>
+      </figure> */}
     </section>
   )
 }

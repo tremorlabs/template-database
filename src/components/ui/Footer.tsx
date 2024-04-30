@@ -6,16 +6,16 @@ import ThemeSwitch from "../ThemeSwitch"
 const navigation = {
   product: [
     { name: "Enterprise", href: "#", external: false },
-    { name: "Pricing", href: "#", external: false },
+    { name: "Pricing", href: "/pricing", external: false },
     { name: "Docs", href: "#", external: false },
   ],
   resources: [
-    { name: "FAQs", href: "#", external: false },
+    { name: "FAQs", href: "/pricing#faq-title", external: false },
     { name: "GitHub", href: "#", external: true },
     { name: "Discord", href: "#", external: true },
   ],
   company: [
-    { name: "About", href: "#", external: false },
+    { name: "About", href: "/about", external: false },
     { name: "Careers", href: "#", external: true },
     { name: "Contact", href: "#", external: false },
   ],

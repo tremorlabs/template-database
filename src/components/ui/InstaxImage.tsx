@@ -32,10 +32,10 @@ export function InstaxImage({
       </div>
       <div
         className={cx(
-          "font-handwriting px-2 pb-1 pt-2 text-xl text-gray-700 dark:text-gray-300",
+          "px-2 pb-1 pt-2 font-handwriting text-xl text-gray-700 dark:text-gray-300",
         )}
       >
-        <figcaption>{caption}</figcaption>
+        <figcaption className="text-center">{caption}</figcaption>
       </div>
     </figure>
   )
