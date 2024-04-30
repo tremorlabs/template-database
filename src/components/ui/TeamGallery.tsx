@@ -11,13 +11,6 @@ export default function TeamGallery() {
         animationFillMode: "backwards",
       }}
     >
-      {/* <h2
-        id="teamwork-title"
-        className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text text-4xl font-bold tracking-tighter text-transparent md:text-5xl dark:from-gray-50 dark:to-gray-300"
-      >
-        Teamwork at Database
-      </h2> */}
-
       <div className="mt-20">
         <div className="flex w-full flex-col items-center justify-between md:flex-row">
           <InstaxImage
@@ -84,21 +77,6 @@ export default function TeamGallery() {
           />
         </div>
       </div>
-      {/* <figure className="mt-8">
-        <div className="rounded-2xl bg-gray-50/40 p-2 ring-1 ring-inset ring-black/5 dark:bg-gray-900/80 dark:ring-white/10">
-          <div className="overflow-hidden rounded-xl shadow-xl shadow-indigo-600/20 ring-1 ring-black/20 dark:shadow-indigo-600/30 dark:ring-white/20">
-            <Image
-              src="/images/founders.jpg"
-              alt="App screenshot"
-              width={1819}
-              height={998}
-            />
-          </div>
-        </div>
-        <figcaption className="mt-2 text-center text-sm text-gray-400">
-          Join Database, be yourself.
-        </figcaption>
-      </figure> */}
     </section>
   )
 }
