@@ -7,7 +7,7 @@ import Balancer from "react-wrap-balancer"
 
 export default function About() {
   return (
-    <div className="mt-44 flex flex-col overflow-hidden px-3">
+    <div className="mt-36 flex flex-col overflow-hidden px-3">
       <section
         aria-labelledby="about-overview"
         className="animate-slide-up-fade"

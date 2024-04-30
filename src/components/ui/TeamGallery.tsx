@@ -7,7 +7,7 @@ export default function TeamGallery() {
       className="mx-auto mt-5 max-w-4xl animate-slide-up-fade"
       style={{
         animationDuration: "600ms",
-        animationDelay: "900ms",
+        animationDelay: "200ms",
         animationFillMode: "backwards",
       }}
     >
