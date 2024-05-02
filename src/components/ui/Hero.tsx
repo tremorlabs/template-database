@@ -51,11 +51,11 @@ export default function Hero() {
         </Button>
       </div>
       <div
-        className="relative mx-auto ml-3 mt-20 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
+        className="relative mx-auto ml-3 mt-20 h-fit w-[40rem] max-w-6xl animate-slide-up-fade sm:ml-auto sm:w-full sm:px-2"
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />
-        <div className="absolute bottom-0 h-2/3 w-full bg-gradient-to-b from-transparent to-white dark:to-gray-950"></div>
+        <div className="absolute inset-x-0 -mx-10 -bottom-20 h-2/4 lg:h-1/4 bg-gradient-to-t from-white via-white to-transparent dark:from-gray-950 dark:via-gray-950" aria-hidden="true" />
       </div>
     </section>
   )
