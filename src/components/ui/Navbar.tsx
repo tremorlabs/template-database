@@ -92,8 +92,9 @@ export function Navigation() {
             "my-6 flex text-lg ease-in-out will-change-transform md:hidden",
             open ? "" : "hidden",
           )}
+        // @SEV: little layout shift if button is clicked + animation does not work anymore
         >
-          <ul className="space-y-4">
+          <ul className="space-y-4 font-medium">
             <li onClick={() => setOpen(false)}>
               <Link href={siteConfig.baseLinks.about}>About</Link>
             </li>
