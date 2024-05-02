@@ -28,7 +28,7 @@ export default function Hero() {
         style={{ animationDuration: "1100ms" }}
       >
         <Button className="h-10">
-          <Link href="https://cal.com">Start 14-day trial</Link>
+          <Link href="#">Start 14-day trial</Link>
         </Button>
         <Button
           asChild
@@ -51,7 +51,7 @@ export default function Hero() {
         </Button>
       </div>
       <div
-        className="relative mx-auto ml-3 mt-16 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
+        className="relative mx-auto ml-3 mt-20 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />

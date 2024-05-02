@@ -30,8 +30,8 @@ export function Navigation() {
   return (
     <header
       className={cx(
-        "fixed inset-x-3 top-4 z-50 mx-auto flex h-[4rem] max-w-6xl transform-gpu animate-slide-down-fade justify-center overflow-hidden rounded-xl border border-transparent px-3 py-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1.03)] will-change-transform",
-        open === true && "h-56",
+        "fixed inset-x-3 top-4 z-50 mx-auto flex max-w-6xl transform-gpu animate-slide-down-fade items-center justify-center overflow-hidden rounded-xl border border-transparent px-3 py-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1.03)] will-change-transform",
+        open === true && "h-56", // @SEV: where does h-56 come into play?
         scrolled || open === true
           ? "backdrop-blur-nav max-w-3xl border-gray-100 bg-white/80 shadow-xl shadow-black/5 dark:border-white/15 dark:bg-black/70"
           : "bg-white/0 dark:bg-gray-950/0",
@@ -44,10 +44,10 @@ export function Navigation() {
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
           <nav className="absolute hidden md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
-            <ul className="flex items-center gap-4 font-medium">
+            <ul className="flex items-center gap-10 font-semibold">
               <li>
                 <Link
-                  className="px-2 py-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
                   href={siteConfig.baseLinks.about}
                 >
                   About
@@ -55,7 +55,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="px-2 py-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
                   href={siteConfig.baseLinks.pricing}
                 >
                   Pricing
@@ -63,7 +63,7 @@ export function Navigation() {
               </li>
               <li>
                 <Link
-                  className="px-2 py-1 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
                   href={siteConfig.baseLinks.changelog}
                 >
                   Changelog
@@ -71,7 +71,7 @@ export function Navigation() {
               </li>
             </ul>
           </nav>
-          <Button className="hidden md:flex">Book demo</Button>
+          <Button className="hidden md:flex h-10 font-semibold">Book a demo</Button>
           <div className="flex gap-x-2 md:hidden">
             <Button>Book demo</Button>
             <Button
