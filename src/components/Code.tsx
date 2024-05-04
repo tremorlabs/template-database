@@ -16,14 +16,10 @@ export default async function Code({
   code,
   lang = "typescript",
   copy = false,
-  // catppuccin-macchiato
-  // dark-plus
-  // min-dark
-  // monokai
-  // poimandres
-  // rose-pine
-  // synthwave-84
   // tokyo-night
+  // catppuccin-macchiato
+  // min-dark
+  // poimandres
   theme = "poimandres",
   className,
 }: Props) {
