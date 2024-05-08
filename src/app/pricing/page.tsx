@@ -216,19 +216,33 @@ export default function Pricing() {
   >("monthly")
   return (
     <div className="px-3">
-      <Badge>Pricing</Badge>
-      <h1 className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
-        Our plans scale with you
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
-        Plans that empower you and your team to ship without friction. Our
-        flexible pricing models ensure that efficiency doesn&rsquo;t come at the
-        cost of your budget.
-      </p>
+      <section
+        aria-labelledby="pricing-title"
+        className="animate-slide-up-fade"
+        style={{
+          animationDuration: "600ms",
+          animationFillMode: "backwards",
+        }}
+      >
+        <Badge>Pricing</Badge>
+        <h1 className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
+          Our plans scale with you
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
+          Plans that empower you and your team to ship without friction. Our
+          flexible pricing models ensure that efficiency doesn&rsquo;t come at the
+          cost of your budget.
+        </p>
+      </section>
       <section
         id="pricing-overview"
-        className="mt-20"
+        className="mt-20 animate-slide-up-fade"
         aria-labelledby="pricing-overview"
+        style={{
+          animationDuration: "600ms",
+          animationDelay: "200ms",
+          animationFillMode: "backwards",
+        }}
       >
         <div className="flex items-center justify-center gap-2">
           <Label
@@ -390,11 +404,10 @@ export default function Pricing() {
                 </h2>
                 <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
                   {isVariablePrice(plan.price)
-                    ? `${
-                        billingFrequency === "monthly"
-                          ? plan.price.monthly
-                          : plan.price.annually
-                      } / per user`
+                    ? `${billingFrequency === "monthly"
+                      ? plan.price.monthly
+                      : plan.price.annually
+                    } / per user`
                     : plan.price}
                 </p>
               </div>
@@ -483,11 +496,10 @@ export default function Pricing() {
                       </div>
                       <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                         {isVariablePrice(plan.price)
-                          ? `${
-                              billingFrequency === "monthly"
-                                ? plan.price.monthly
-                                : plan.price.annually
-                            } / per user`
+                          ? `${billingFrequency === "monthly"
+                            ? plan.price.monthly
+                            : plan.price.annually
+                          } / per user`
                           : plan.price}
                       </div>
                     </th>

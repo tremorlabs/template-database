@@ -19,7 +19,7 @@ export default function About() {
         <Badge>about database</Badge>
         <h1
           id="about-overview"
-          className="mt-2 inline-block  bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+          className="mt-2 inline-block bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
         >
           <Balancer>
             We are engineers, building the database platform we always wanted
