@@ -7,7 +7,7 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-title"
-      className="mx-auto mb-20 mt-32 max-w-6xl p-1 px-2 sm:mt-72"
+      className="mx-auto mb-20 mt-32 max-w-6xl p-1 px-2 sm:mt-56"
     >
       <div className="relative flex items-center justify-center">
         <div
