@@ -8,21 +8,25 @@ const navigation = {
     { name: "Enterprise", href: "#", external: false },
     { name: "Pricing", href: "/pricing", external: false },
     { name: "Docs", href: "#", external: false },
+    { name: "Changelog", href: "/changelog", external: false },
   ],
   resources: [
     { name: "FAQs", href: "/pricing#faq-title", external: false },
     { name: "GitHub", href: "#", external: true },
     { name: "Discord", href: "#", external: true },
+    { name: "YouTube", href: "#", external: true },
   ],
   company: [
     { name: "About", href: "/about", external: false },
     { name: "Careers", href: "#", external: true },
     { name: "Contact", href: "#", external: false },
+    { name: "Status", href: "#", external: false },
   ],
   legal: [
     { name: "Imprint", href: "#", external: false },
     { name: "Privacy", href: "#", external: false },
     { name: "Terms", href: "#", external: false },
+    { name: "DPA", href: "#", external: false },
   ],
 }
 

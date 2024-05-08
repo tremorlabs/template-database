@@ -44,32 +44,26 @@ export function Navigation() {
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
           <nav className="absolute hidden md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
-            <ul className="flex items-center gap-10 font-semibold">
-              <li>
-                <Link
-                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
-                  href={siteConfig.baseLinks.about}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
-                  href={siteConfig.baseLinks.pricing}
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="px-2 py-1 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
-                  href={siteConfig.baseLinks.changelog}
-                >
-                  Changelog
-                </Link>
-              </li>
-            </ul>
+            <div className="flex items-center gap-10 font-medium">
+              <Link
+                className="px-2 py-1 text-gray-900 dark:text-gray-50"
+                href={siteConfig.baseLinks.about}
+              >
+                About
+              </Link>
+              <Link
+                className="px-2 py-1 text-gray-900 dark:text-gray-50"
+                href={siteConfig.baseLinks.pricing}
+              >
+                Pricing
+              </Link>
+              <Link
+                className="px-2 py-1 text-gray-900 dark:text-gray-50"
+                href={siteConfig.baseLinks.changelog}
+              >
+                Changelog
+              </Link>
+            </div>
           </nav>
           <Button className="hidden md:flex h-10 font-semibold">Book a demo</Button>
           <div className="flex gap-x-2 md:hidden">

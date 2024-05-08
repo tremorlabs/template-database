@@ -39,6 +39,21 @@ export const GlobalDatabase: FunctionComponent = () => {
     }
   }, [])
 
+  const features = [
+    {
+      name: "Global Clusters",
+      description: "Enable low-latency global access, enhancing performance."
+    },
+    {
+      name: "Serverless Triggers",
+      description: "Trigger functions automatically for dynamic app behavior."
+    },
+    {
+      name: "Monitoring & Alerts",
+      description: "Monitor health with key metrics or integrate third-party tools."
+    },
+  ]
+
   return (
     <div className="px-3">
       <section
@@ -64,34 +79,18 @@ export const GlobalDatabase: FunctionComponent = () => {
         />
         <div className="z-20 -mt-32 h-[36rem] w-full overflow-hidden md:-mt-36">
           <div className="absolute bottom-0 h-3/5 w-full bg-gradient-to-b from-transparent via-gray-950/95 to-gray-950" />
-          <div className="absolute inset-x-6 bottom-12 m-auto max-w-3xl md:top-2/3">
-            <div className="grid grid-cols-1 gap-x-4 gap-y-6 rounded-lg border border-white/[3%] bg-white/[1%] px-6 py-6 shadow-xl backdrop-blur md:grid-cols-3 md:px-10">
-              <div className="flex flex-col gap-2">
-                <h3 className="whitespace-nowrap bg-gradient-to-b from-indigo-300 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
-                  Global Clusters
-                </h3>
-                <p className="text-sm text-indigo-200/40">
-                  Enable low-latency access globally, enhancing application
-                  performance.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="whitespace-nowrap bg-gradient-to-b from-indigo-300 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
-                  Serverless Triggers
-                </h3>
-                <p className="text-sm text-indigo-200/40">
-                  Trigger functions automatically for dynamic app behavior.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="whitespace-nowrap bg-gradient-to-b from-indigo-300 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
-                  Monitoring & Alerts
-                </h3>
-                <p className="text-sm text-indigo-200/40">
-                  Monitor health with key metrics or integrate third-party
-                  tools.
-                </p>
-              </div>
+          <div className="absolute inset-x-6 bottom-12 m-auto max-w-4xl md:top-2/3">
+            <div className="grid grid-cols-1 gap-x-10 gap-y-6 rounded-lg border border-white/[3%] bg-white/[1%] px-6 py-6 shadow-xl backdrop-blur md:grid-cols-3 md:p-8">
+              {features.map((item) => (
+                <div key={item.name} className="flex flex-col gap-2">
+                  <h3 className="whitespace-nowrap bg-gradient-to-b from-indigo-300 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-indigo-200/40 leading-6">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

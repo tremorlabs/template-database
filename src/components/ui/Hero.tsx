@@ -24,16 +24,16 @@ export default function Hero() {
         application developers and for the cloud era.
       </p>
       <div
-        className="mt-6 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
+        className="mt-8 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
         style={{ animationDuration: "1100ms" }}
       >
-        <Button className="h-10">
+        <Button className="h-10 font-semibold">
           <Link href="#">Start 14-day trial</Link>
         </Button>
         <Button
           asChild
           variant="light"
-          className="group gap-x-2 bg-transparent hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
+          className="group gap-x-2 font-semibold bg-transparent hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
         >
           <Link
             href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
