@@ -38,11 +38,7 @@ function CustomHeading(props: any) {
 
 export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className={clsx(
-      // base
-      "text-3xl font-bold normal-case tracking-tight sm:text-4xl",
-      "text-gray-900 dark:text-gray-50",
-    )}
+    className="text-3xl font-bold normal-case tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50"
     level={1}
   >
     {children}
@@ -51,11 +47,7 @@ export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className={clsx(
-      // base
-      "mb-4 text-lg font-semibold normal-case tracking-tight",
-      "text-gray-900 dark:text-gray-50",
-    )}
+    className="mb-4 text-lg font-semibold normal-case tracking-tight text-gray-900 dark:text-gray-50"
     level={2}
   >
     {children}
@@ -64,11 +56,7 @@ export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className={clsx(
-      // base
-      "mb-2 font-semibold normal-case tracking-tight",
-      "text-gray-900 dark:text-gray-50",
-    )}
+    className="mb-2 font-semibold normal-case tracking-tight text-gray-900 dark:text-gray-50"
     level={3}
   >
     {children}
@@ -76,36 +64,18 @@ export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 )
 
 export const P = (props: React.HTMLProps<HTMLParagraphElement>) => (
-  <p
-    {...props}
-    className={clsx(
-      // base
-      "mb-8 leading-7",
-      "text-gray-600 dark:text-gray-400",
-    )}
-  />
+  <p {...props} className="mb-8 leading-7 text-gray-600 dark:text-gray-400" />
 )
 
 export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
   <ul
-    className={clsx(
-      // base
-      "mb-10 ml-[30px] list-['–__'] space-y-1 leading-8",
-      "text-gray-600 dark:text-gray-400",
-    )}
+    className="mb-10 ml-[30px] list-['–__'] space-y-1 leading-8 text-gray-600 dark:text-gray-400"
     {...props}
   />
 )
 
 export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
-  <span
-    className={clsx(
-      // base
-      "font-semibold",
-      "text-gray-900 dark:text-gray-50",
-    )}
-    {...props}
-  />
+  <span className="font-semibold text-gray-900 dark:text-gray-50" {...props} />
 )
 
 export function CustomLink(props: any) {
@@ -138,12 +108,7 @@ export const ChangelogEntry = ({
   date: string
   children: any
 }) => (
-  <div
-    className={clsx(
-      // base
-      "relative my-20 flex flex-col justify-center gap-x-14 border-b border-gray-200 md:flex-row dark:border-gray-800",
-    )}
-  >
+  <div className="relative my-20 flex flex-col justify-center gap-x-14 border-b border-gray-200 md:flex-row dark:border-gray-800">
     <div className="mb-4 md:mb-10 md:w-1/3">
       <div className="sticky top-24 flex items-center space-x-2 md:block md:space-x-0 md:space-y-1.5">
         <span className="inline-flex items-center rounded-lg bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 dark:bg-indigo-500/20 dark:text-indigo-400 dark:ring-indigo-400/10">

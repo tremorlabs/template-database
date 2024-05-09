@@ -6,7 +6,13 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <main className="mx-auto mt-36 max-w-3xl px-3">
+    <main
+      className="mx-auto mt-36 max-w-3xl animate-slide-up-fade px-3"
+      style={{
+        animationDuration: "600ms",
+        animationFillMode: "backwards",
+      }}
+    >
       <div className="text-center">
         <h1 className="inline-block bg-gradient-to-t from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-5xl dark:from-gray-50 dark:to-gray-300">
           Changelog

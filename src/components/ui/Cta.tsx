@@ -7,7 +7,7 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-title"
-      className="mx-auto mb-20 mt-32 max-w-6xl p-1 px-2 sm:mt-40"
+      className="mx-auto mb-20 mt-32 max-w-6xl p-1 px-2 sm:mt-56"
     >
       <div className="relative flex items-center justify-center">
         <div
@@ -37,7 +37,7 @@ export default function Cta() {
               >
                 Ready to get started?
               </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-gray-600 sm:mt-6 sm:text-lg dark:text-gray-400">
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600 sm:text-lg dark:text-gray-400">
                 <Balancer>
                   Launch a new cluster or migrate to Database with zero
                   downtime.

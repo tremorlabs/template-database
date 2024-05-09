@@ -16,14 +16,10 @@ export default async function Code({
   code,
   lang = "typescript",
   copy = false,
-  // catppuccin-macchiato
-  // dark-plus
-  // min-dark
-  // monokai
-  // poimandres
-  // rose-pine
-  // synthwave-84
   // tokyo-night
+  // catppuccin-macchiato
+  // min-dark
+  // poimandres
   theme = "poimandres",
   className,
 }: Props) {
@@ -35,7 +31,7 @@ export default async function Code({
   return (
     <div
       className={cx(
-        "relative w-full overflow-auto rounded-xl bg-gray-950 shadow-xl shadow-black/40 ring-1 ring-black dark:ring-white/5",
+        "relative w-full overflow-auto rounded-xl bg-gray-950 shadow-xl shadow-black/40 ring-1 ring-black dark:shadow-indigo-900/30 dark:ring-white/5",
         className,
       )}
     >

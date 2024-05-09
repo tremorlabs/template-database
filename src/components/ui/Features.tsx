@@ -29,7 +29,7 @@ export default function Features() {
       >
         Architected for speed and reliability
       </h2>
-      <p className="mt-6 max-w-3xl text-lg text-gray-600 dark:text-gray-400">
+      <p className="mt-6 max-w-3xl text-lg leading-7 text-gray-600 dark:text-gray-400">
         Database&rsquo; innovative architecture avoids the central bottlenecks
         of traditional systems, enhancing system reliability. This design
         ensures high productivity and security, minimizing the risk of service

@@ -24,16 +24,16 @@ export default function Hero() {
         application developers and for the cloud era.
       </p>
       <div
-        className="mt-6 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
+        className="mt-8 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
         style={{ animationDuration: "1100ms" }}
       >
-        <Button className="h-10">
-          <Link href="https://cal.com">Start 14-day trial</Link>
+        <Button className="h-10 font-semibold">
+          <Link href="#">Start 14-day trial</Link>
         </Button>
         <Button
           asChild
           variant="light"
-          className="group gap-x-2 bg-transparent hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
+          className="group gap-x-2 bg-transparent font-semibold hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
         >
           <Link
             href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
@@ -51,11 +51,14 @@ export default function Hero() {
         </Button>
       </div>
       <div
-        className="relative mx-auto ml-3 mt-16 h-fit w-[40rem] max-w-6xl animate-slide-up-fade overflow-hidden sm:ml-auto sm:w-full sm:px-2"
+        className="relative mx-auto ml-3 mt-20 h-fit w-[40rem] max-w-6xl animate-slide-up-fade sm:ml-auto sm:w-full sm:px-2"
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />
-        <div className="absolute bottom-0 h-2/3 w-full bg-gradient-to-b from-transparent to-white dark:to-gray-950"></div>
+        <div
+          className="absolute inset-x-0 -bottom-20 -mx-10 h-2/4 bg-gradient-to-t from-white via-white to-transparent lg:h-1/4 dark:from-gray-950 dark:via-gray-950"
+          aria-hidden="true"
+        />
       </div>
     </section>
   )
