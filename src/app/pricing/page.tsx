@@ -230,8 +230,8 @@ export default function Pricing() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-400">
           Plans that empower you and your team to ship without friction. Our
-          flexible pricing models ensure that efficiency doesn&rsquo;t come at the
-          cost of your budget.
+          flexible pricing models ensure that efficiency doesn&rsquo;t come at
+          the cost of your budget.
         </p>
       </section>
       <section
@@ -267,7 +267,7 @@ export default function Pricing() {
             Yearly (-20%)
           </Label>
         </div>
-        <div className="grid grid-cols-1 gap-y-8 gap-x-14 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-14 gap-y-8 lg:grid-cols-3">
           {plans.map((plan, planIdx) => (
             <div key={planIdx} className="mt-6">
               {plan.isRecommended ? (
@@ -392,7 +392,7 @@ export default function Pricing() {
         className="mt-20 sm:mt-36"
         aria-labelledby="pricing-details"
       >
-        <div className="space-y-8 mx-auto sm:max-w-md lg:hidden">
+        <div className="mx-auto space-y-8 sm:max-w-md lg:hidden">
           {plans.map((plan) => (
             <div key={plan.name}>
               <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200 dark:ring-gray-800">
@@ -404,10 +404,11 @@ export default function Pricing() {
                 </h2>
                 <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
                   {isVariablePrice(plan.price)
-                    ? `${billingFrequency === "monthly"
-                      ? plan.price.monthly
-                      : plan.price.annually
-                    } / per user`
+                    ? `${
+                        billingFrequency === "monthly"
+                          ? plan.price.monthly
+                          : plan.price.annually
+                      } / per user`
                     : plan.price}
                 </p>
               </div>
@@ -496,10 +497,11 @@ export default function Pricing() {
                       </div>
                       <div className="text-sm font-normal text-gray-600 dark:text-gray-400">
                         {isVariablePrice(plan.price)
-                          ? `${billingFrequency === "monthly"
-                            ? plan.price.monthly
-                            : plan.price.annually
-                          } / per user`
+                          ? `${
+                              billingFrequency === "monthly"
+                                ? plan.price.monthly
+                                : plan.price.annually
+                            } / per user`
                           : plan.price}
                       </div>
                     </th>

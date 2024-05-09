@@ -33,7 +33,7 @@ export default function Hero() {
         <Button
           asChild
           variant="light"
-          className="group gap-x-2 font-semibold bg-transparent hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
+          className="group gap-x-2 bg-transparent font-semibold hover:bg-transparent dark:bg-transparent hover:dark:bg-transparent"
         >
           <Link
             href="https://www.youtube.com/watch?v=QRZ_l7cVzzU"
@@ -55,7 +55,10 @@ export default function Hero() {
         style={{ animationDuration: "1400ms" }}
       >
         <HeroImage />
-        <div className="absolute inset-x-0 -mx-10 -bottom-20 h-2/4 lg:h-1/4 bg-gradient-to-t from-white via-white to-transparent dark:from-gray-950 dark:via-gray-950" aria-hidden="true" />
+        <div
+          className="absolute inset-x-0 -bottom-20 -mx-10 h-2/4 bg-gradient-to-t from-white via-white to-transparent lg:h-1/4 dark:from-gray-950 dark:via-gray-950"
+          aria-hidden="true"
+        />
       </div>
     </section>
   )

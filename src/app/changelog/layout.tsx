@@ -6,8 +6,8 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <section
-      className="mx-auto mt-36 max-w-3xl px-3 animate-slide-up-fade"
+    <main
+      className="mx-auto mt-36 max-w-3xl animate-slide-up-fade px-3"
       style={{
         animationDuration: "600ms",
         animationFillMode: "backwards",
@@ -25,6 +25,6 @@ export default function Layout({
         </p>
       </div>
       <div className="mt-28">{children}</div>
-    </section>
+    </main>
   )
 }

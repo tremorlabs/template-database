@@ -15,7 +15,7 @@ const ThemedImage = ({
   alt: string
   width: number
   height: number
-  className?: string,
+  className?: string
 }) => {
   const { resolvedTheme } = useTheme()
   let src
@@ -32,7 +32,15 @@ const ThemedImage = ({
       break
   }
 
-  return <Image src={src} alt={alt} width={width} height={height} className={className} />
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+    />
+  )
 }
 
 export default ThemedImage

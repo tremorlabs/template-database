@@ -42,15 +42,16 @@ export const GlobalDatabase: FunctionComponent = () => {
   const features = [
     {
       name: "Global Clusters",
-      description: "Enable low-latency global access, enhancing performance."
+      description: "Enable low-latency global access, enhancing performance.",
     },
     {
       name: "Serverless Triggers",
-      description: "Trigger functions automatically for dynamic app behavior."
+      description: "Trigger functions automatically for dynamic app behavior.",
     },
     {
       name: "Monitoring & Alerts",
-      description: "Monitor health with key metrics or integrate third-party tools."
+      description:
+        "Monitor health with key metrics or integrate third-party tools.",
     },
   ]
 
@@ -86,7 +87,7 @@ export const GlobalDatabase: FunctionComponent = () => {
                   <h3 className="whitespace-nowrap bg-gradient-to-b from-indigo-300 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
                     {item.name}
                   </h3>
-                  <p className="text-sm text-indigo-200/40 leading-6">
+                  <p className="text-sm leading-6 text-indigo-200/40">
                     {item.description}
                   </p>
                 </div>

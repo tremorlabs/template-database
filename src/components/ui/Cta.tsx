@@ -37,7 +37,7 @@ export default function Cta() {
               >
                 Ready to get started?
               </h3>
-              <p className="mx-auto max-w-2xl text-gray-600 mt-4 sm:text-lg dark:text-gray-400">
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600 sm:text-lg dark:text-gray-400">
                 <Balancer>
                   Launch a new cluster or migrate to Database with zero
                   downtime.

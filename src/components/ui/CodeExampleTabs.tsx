@@ -22,7 +22,7 @@ export default function CodeExampleTabs({
       >
         <Tabs.Trigger
           className="group relative flex flex-1 
-           flex-col items-start justify-start rounded-xl p-6 text-left shadow-lg dark:data-[state=active]:shadow-indigo-900/30 ring-1 ring-gray-200 dark:ring-white/5"
+           flex-col items-start justify-start rounded-xl p-6 text-left shadow-lg ring-1 ring-gray-200 dark:ring-white/5 dark:data-[state=active]:shadow-indigo-900/30"
           value="tab1"
         >
           <div className="absolute -left-[36px] top-1/2 hidden -rotate-90 group-data-[state=active]:flex">
@@ -47,7 +47,7 @@ export default function CodeExampleTabs({
         </Tabs.Trigger>
         <Tabs.Trigger
           className="group relative flex flex-1 
-           flex-col items-start justify-start rounded-xl p-6 text-left shadow-lg dark:data-[state=active]:shadow-indigo-900/30 ring-1 ring-gray-200 dark:ring-white/5"
+           flex-col items-start justify-start rounded-xl p-6 text-left shadow-lg ring-1 ring-gray-200 dark:ring-white/5 dark:data-[state=active]:shadow-indigo-900/30"
           value="tab2"
         >
           <div className="absolute -left-[36px] top-1/2 hidden -rotate-90 sm:group-data-[state=active]:flex">
