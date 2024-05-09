@@ -31,7 +31,7 @@ export function Navigation() {
     <header
       className={cx(
         "fixed inset-x-3 top-4 z-50 mx-auto flex max-w-6xl transform-gpu animate-slide-down-fade items-center justify-center overflow-hidden rounded-xl border border-transparent px-3 py-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1.03)] will-change-transform",
-        open === true && "h-56", // @SEV: where does h-56 come into play?
+        open === true && "h-fit",
         scrolled || open === true
           ? "backdrop-blur-nav max-w-3xl border-gray-100 bg-white/80 shadow-xl shadow-black/5 dark:border-white/15 dark:bg-black/70"
           : "bg-white/0 dark:bg-gray-950/0",
@@ -43,7 +43,7 @@ export function Navigation() {
             <span className="sr-only">Company logo</span>
             <DatabaseLogo className="w-28 md:w-32" />
           </Link>
-          <nav className="absolute hidden md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
+          <nav className="md:absolute hidden md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
             <div className="flex items-center gap-10 font-medium">
               <Link
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
@@ -81,12 +81,12 @@ export function Navigation() {
             </Button>
           </div>
         </div>
+        {/* @SEV: will-change-transformation does not work */}
         <nav
           className={cx(
             "my-6 flex text-lg ease-in-out will-change-transform md:hidden",
             open ? "" : "hidden",
           )}
-        // @SEV: little layout shift if button is clicked + animation does not work anymore
         >
           <ul className="space-y-4 font-medium">
             <li onClick={() => setOpen(false)}>

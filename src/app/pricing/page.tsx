@@ -57,7 +57,7 @@ const plans: Plan[] = [
   {
     name: "Teams",
     price: { monthly: "$49", annually: "$39" },
-    description: "For small teams that need a scalable database.",
+    description: "For small teams and start-ups that need a scalable database.",
     capacity: ["Up to 100 users, 3 admins", "Up to 20 workspaces"],
     features: [
       "Unlimited requests",
@@ -267,9 +267,9 @@ export default function Pricing() {
             Yearly (-20%)
           </Label>
         </div>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-y-8 gap-x-14 lg:grid-cols-3">
           {plans.map((plan, planIdx) => (
-            <div key={planIdx} className="p-2 sm:p-6">
+            <div key={planIdx} className="mt-6">
               {plan.isRecommended ? (
                 <div className="flex h-4 items-center">
                   <div className="relative w-full">
@@ -291,88 +291,88 @@ export default function Pricing() {
                   <div className="h-px w-full bg-gray-200 dark:bg-gray-800" />
                 </div>
               )}
-              <h2 className="mt-6 text-sm font-semibold text-gray-900 dark:text-gray-50">
-                {plan.name}
-              </h2>
-              <div className="mt-3 flex items-center gap-x-3">
-                <span className="text-5xl font-semibold tabular-nums text-gray-900 dark:text-gray-50">
-                  {isVariablePrice(plan.price)
-                    ? billingFrequency === "monthly"
-                      ? plan.price.monthly
-                      : plan.price.annually
-                    : plan.price}
-                </span>
-                <div className="text-xs text-gray-600 dark:text-gray-400">
-                  per user <br /> per month
+              <div className="mx-auto max-w-md">
+                <h2 className="mt-6 text-sm font-semibold text-gray-900 dark:text-gray-50">
+                  {plan.name}
+                </h2>
+                <div className="mt-3 flex items-center gap-x-3">
+                  <span className="text-5xl font-semibold tabular-nums text-gray-900 dark:text-gray-50">
+                    {isVariablePrice(plan.price)
+                      ? billingFrequency === "monthly"
+                        ? plan.price.monthly
+                        : plan.price.annually
+                      : plan.price}
+                  </span>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">
+                    per user <br /> per month
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col justify-between">
-                {/* @CHRIS: fix edge case */}
-                <div className="flex grow flex-col">
-                  <p className="mt-6 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                <div className="mt-6 flex flex-col justify-between">
+                  {/* @CHRIS: fix edge case */}
+                  <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
                     {plan.description}
                   </p>
+                  <div className="mt-6">
+                    {plan.isStarter ? (
+                      <Button variant="secondary" asChild className="group">
+                        <Link href={plan.buttonLink}>
+                          {plan.buttonText}
+                          <ArrowAnimated />
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button asChild className="group">
+                        <Link href={plan.buttonLink}>
+                          {plan.buttonText}
+                          <ArrowAnimated />
+                        </Link>
+                      </Button>
+                    )}
+                  </div>
                 </div>
-                <div className="mt-6">
-                  {plan.isStarter ? (
-                    <Button variant="secondary" asChild className="group">
-                      <Link href={plan.buttonLink}>
-                        {plan.buttonText}
-                        <ArrowAnimated />
-                      </Link>
-                    </Button>
-                  ) : (
-                    <Button asChild className="group">
-                      <Link href={plan.buttonLink}>
-                        {plan.buttonText}
-                        <ArrowAnimated />
-                      </Link>
-                    </Button>
-                  )}
-                </div>
+                <ul
+                  role="list"
+                  className="mt-8 text-sm text-gray-700 dark:text-gray-400"
+                >
+                  {plan.capacity.map((feature, index) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-x-3 py-1.5"
+                    >
+                      {index === 0 && (
+                        <RiUserLine
+                          className="size-4 shrink-0 text-gray-500"
+                          aria-hidden="true"
+                        />
+                      )}
+                      {index === 1 && (
+                        <RiCloudLine
+                          className="size-4 shrink-0 text-gray-500"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ul
+                  role="list"
+                  className="mt-4 text-sm text-gray-700 dark:text-gray-400"
+                >
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-x-3 py-1.5"
+                    >
+                      <RiCheckLine
+                        className="size-4 shrink-0 text-indigo-600 dark:text-indigo-400"
+                        aria-hidden="true"
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul
-                role="list"
-                className="mt-8 text-sm text-gray-700 dark:text-gray-400"
-              >
-                {plan.capacity.map((feature, index) => (
-                  <li
-                    key={feature}
-                    className="flex items-center gap-x-3 py-1.5"
-                  >
-                    {index === 0 && (
-                      <RiUserLine
-                        className="size-4 shrink-0 text-gray-500"
-                        aria-hidden="true"
-                      />
-                    )}
-                    {index === 1 && (
-                      <RiCloudLine
-                        className="size-4 shrink-0 text-gray-500"
-                        aria-hidden="true"
-                      />
-                    )}
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <ul
-                role="list"
-                className="mt-4 text-sm text-gray-700 dark:text-gray-400"
-              >
-                {plan.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-center gap-x-3 py-1.5"
-                  >
-                    <RiCheckLine
-                      className="size-4 shrink-0 text-indigo-600 dark:text-indigo-400"
-                      aria-hidden="true"
-                    />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
@@ -389,10 +389,10 @@ export default function Pricing() {
       {/* plan details (xs-lg)*/}
       <section
         id="pricing-details"
-        className="mx-auto mt-20"
+        className="mt-20 sm:mt-36"
         aria-labelledby="pricing-details"
       >
-        <div className="space-y-8 sm:mt-36 sm:max-w-md lg:hidden">
+        <div className="space-y-8 mx-auto sm:max-w-md lg:hidden">
           {plans.map((plan) => (
             <div key={plan.name}>
               <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200 dark:ring-gray-800">
