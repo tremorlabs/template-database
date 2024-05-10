@@ -39,6 +39,7 @@ const ThemedImage = ({
       width={width}
       height={height}
       className={className}
+      priority
     />
   )
 }
