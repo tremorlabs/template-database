@@ -8,8 +8,8 @@ export default function HeroImage() {
       <div className="rounded-2xl bg-slate-50/40 p-2 ring-1 ring-inset ring-slate-200/50 dark:bg-gray-900/70 dark:ring-white/10">
         <div className="rounded-xl bg-white ring-1 ring-slate-900/5 dark:bg-slate-950 dark:ring-white/15">
           <ThemedImage
-            lightSrc="/images/hero-light.png"
-            darkSrc="/images/hero-dark.png"
+            lightSrc="/images/hero-light.webp"
+            darkSrc="/images/hero-dark.webp"
             alt="A preview of the Database web app"
             width={2400}
             height={1600}
