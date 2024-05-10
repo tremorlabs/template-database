@@ -19,7 +19,7 @@ export default function Testimonial() {
             className="h-11 w-11 rounded-full object-cover shadow-lg shadow-indigo-500/50 ring-2 ring-white dark:ring-gray-700"
             width={200}
             height={200}
-            src="/images/testimonial.jpg"
+            src="/images/testimonial.webp"
             alt="Image of Dima Coil"
           />
           <div>
