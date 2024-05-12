@@ -308,7 +308,6 @@ export default function Pricing() {
                   </div>
                 </div>
                 <div className="mt-6 flex flex-col justify-between">
-                  {/* @CHRIS: fix edge case */}
                   <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
                     {plan.description}
                   </p>
