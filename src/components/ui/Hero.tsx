@@ -40,7 +40,7 @@ export default function Hero() {
             className="ring-1 ring-gray-200 sm:ring-0 dark:ring-gray-900"
             target="_blank"
           >
-            <span className=" mr-1 flex size-6 items-center justify-center rounded-full bg-gray-50 transition-all group-hover:bg-gray-200 dark:bg-gray-800 dark:group-hover:bg-gray-700">
+            <span className="mr-1 flex size-6 items-center justify-center rounded-full bg-gray-50 transition-all group-hover:bg-gray-200 dark:bg-gray-800 dark:group-hover:bg-gray-700">
               <RiPlayCircleFill
                 aria-hidden="true"
                 className="size-5 shrink-0 text-gray-900 dark:text-gray-50"

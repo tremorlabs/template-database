@@ -131,7 +131,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
+                          <div className="ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full shrink-0 text-gray-900 dark:text-gray-300"
@@ -162,7 +162,7 @@ export default function Footer() {
                       >
                         <span>{item.name}</span>
                         {item.external && (
-                          <div className=" ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
+                          <div className="ml-1 aspect-square size-3 rounded-full bg-gray-100 p-px dark:bg-gray-500/20">
                             <RiArrowRightUpLine
                               aria-hidden="true"
                               className="size-full shrink-0 text-gray-900 dark:text-gray-300"

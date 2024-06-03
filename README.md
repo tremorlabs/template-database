@@ -45,5 +45,4 @@ the resources listed below:
 - [Tailwind CSS](https://tailwindcss.com) - A utility-first CSS framework
 - [Next.js](https://nextjs.org/docs) - Next.js documentation
 - [Radix UI](https://www.radix-ui.com) - Radix UI Website
-- [Next.js](https://nextjs.org/docs) - Next.js documentation
 - [Shiki](https://shiki.style) - Shiki Website (Syntax highlighter)

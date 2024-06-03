@@ -61,7 +61,7 @@ export function Faqs() {
             team.
           </p>
         </div>
-        <div className="col-span-full mt-6 lg:col-span-7 lg:mt-0 ">
+        <div className="col-span-full mt-6 lg:col-span-7 lg:mt-0">
           <Accordion type="multiple" className="mx-auto">
             {faqs.map((item) => (
               <AccordionItem
