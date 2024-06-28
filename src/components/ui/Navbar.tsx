@@ -15,13 +15,13 @@ export function Navigation() {
 
   React.useEffect(() => {
     const mediaQuery: MediaQueryList = window.matchMedia("(min-width: 768px)")
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+    const handleMediaQueryChange = () => {
       setOpen(false)
     }
+
     mediaQuery.addEventListener("change", handleMediaQueryChange)
-    handleMediaQueryChange({
-      matches: mediaQuery.matches,
-    } as MediaQueryListEvent)
+    handleMediaQueryChange()
+
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange)
     }

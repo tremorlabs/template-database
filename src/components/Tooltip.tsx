@@ -1,4 +1,6 @@
-// Tremor Raw Tooltip [v0.0.0]
+// Tremor Raw Tooltip [v0.0.1]
+
+"use client"
 
 import * as TooltipPrimitives from "@radix-ui/react-tooltip"
 import React from "react"
@@ -18,7 +20,6 @@ interface TooltipProps
   triggerAsChild?: boolean
 }
 
-// eslint-disable-next-line react/display-name
 const Tooltip = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitives.Content>,
   TooltipProps
@@ -88,5 +89,7 @@ const Tooltip = React.forwardRef<
     )
   },
 )
+
+Tooltip.displayName = "Tooltip"
 
 export { Tooltip, type TooltipProps }

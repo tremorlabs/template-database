@@ -1,5 +1,7 @@
+// Tremor Raw Accordion [v0.0.0]
+
 import * as AccordionPrimitives from "@radix-ui/react-accordion"
-import { RiArrowRightSLine } from "@remixicon/react"
+import { RiAddLine } from "@remixicon/react"
 import React from "react"
 
 import { cx } from "@/lib/utils"
@@ -16,7 +18,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitives.Trigger
       className={cx(
         // base
-        "group flex flex-1 cursor-pointer items-start gap-2 py-3 text-left font-medium leading-none",
+        "group flex flex-1 cursor-pointer items-center justify-between py-3 text-left text-sm font-medium leading-none",
         // text color
         "text-gray-900 dark:text-gray-50",
         // disabled
@@ -28,19 +30,19 @@ const AccordionTrigger = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <RiArrowRightSLine
+      {children}
+      <RiAddLine
         className={cx(
           // base
-          "mt-[1px] size-5 shrink-0 transition-transform duration-150 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-90",
+          "size-5 shrink-0 transition-transform duration-150 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:-rotate-45",
           // text color
-          "text-indigo-600 dark:text-indigo-400",
+          "text-gray-400 dark:text-gray-600",
           // disabled
-          "group-data-[disabled]:text-indigo-300 group-data-[disabled]:dark:text-indigo-700",
+          "group-data-[disabled]:text-gray-300 group-data-[disabled]:dark:text-gray-700",
         )}
         aria-hidden="true"
         focusable="false"
       />
-      <span className="leading-6">{children}</span>
     </AccordionPrimitives.Trigger>
   </AccordionPrimitives.Header>
 ))
@@ -54,21 +56,21 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitives.Content
     ref={forwardedRef}
     className={cx(
-      "pl-[28px] data-[state=closed]:animate-accordionClose data-[state=open]:animate-accordionOpen",
+      "transform-gpu data-[state=closed]:animate-accordionClose data-[state=open]:animate-accordionOpen",
     )}
     {...props}
   >
-    <p
+    <div
       className={cx(
         // base
-        "overflow-hidden pb-4 leading-7",
+        "overflow-hidden pb-4 text-sm",
         // text color
         "text-gray-700 dark:text-gray-200",
         className,
       )}
     >
       {children}
-    </p>
+    </div>
   </AccordionPrimitives.Content>
 ))
 
