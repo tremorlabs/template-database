@@ -1,3 +1,4 @@
+import { ArrowAnimated } from "@/components/ui/ArrowAnimated"
 import Footer from "@/components/ui/Footer"
 import { Navigation } from "@/components/ui/Navbar"
 import type { Metadata } from "next"
@@ -45,15 +46,17 @@ export const metadata: Metadata = {
 
 function Banner() {
   return (
-    <div className="fixed bottom-10 left-1/2 z-50 -translate-x-1/2 transition hover:-translate-y-px">
-      <a
-        href="https://blocks.tremor.so/templates"
-        className="rounded-full bg-gray-950 px-6 py-3 shadow-lg shadow-black/20 ring-1 ring-white/10 hover:bg-gray-900"
-      >
-        <span className="font-medium text-white">
-          Get this template for $79
-        </span>
-      </a>
+    <div className="fixed bottom-10 left-1/2 z-50 -translate-x-1/2 transition">
+      <div className="flex items-center gap-x-1 rounded-full bg-gray-950 p-1 text-sm shadow-xl shadow-black/20 ring-1 ring-white/10">
+        <a
+          className="group flex items-center gap-0.5 whitespace-nowrap rounded-[20px] bg-gradient-to-b from-white to-gray-200 px-4 py-2 font-semibold text-gray-900 ring-1 ring-inset ring-indigo-400/30 transition"
+          href="https://blocks.tremor.so/templates#template-database"
+          target="_blank"
+        >
+          Get this template
+          <ArrowAnimated />
+        </a>
+      </div>
     </div>
   )
 }
