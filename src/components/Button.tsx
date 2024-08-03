@@ -1,16 +1,15 @@
-// Tremor Raw Button [v0.0.0]
+// Tremor Raw Button [v0.1.1]
 
+import { cx, focusRing } from "@/lib/utils"
 import { Slot } from "@radix-ui/react-slot"
 import { RiLoader2Fill } from "@remixicon/react"
 import React from "react"
 import { tv, type VariantProps } from "tailwind-variants"
 
-import { cx, focusRing } from "@/lib/utils"
-
 const buttonVariants = tv({
   base: [
     // base
-    "relative inline-flex items-center justify-center rounded-lg border px-3 py-1.5 text-center text-sm font-medium shadow-sm transition-all duration-100 ease-in-out",
+    "relative inline-flex items-center justify-center whitespace-nowrap rounded-lg border px-3 py-2 text-center text-sm font-medium shadow-sm transition-all duration-100 ease-in-out",
     // disabled
     "disabled:pointer-events-none disabled:shadow-none",
     // focus
@@ -58,6 +57,19 @@ const buttonVariants = tv({
         // disabled
         "disabled:bg-gray-100 disabled:text-gray-400",
         "disabled:dark:bg-gray-800 disabled:dark:text-gray-600",
+      ],
+      ghost: [
+        // base
+        "shadow-none",
+        // border
+        "border-transparent",
+        // text color
+        "text-gray-900 dark:text-gray-50",
+        // hover color
+        "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800/80",
+        // disabled
+        "disabled:text-gray-400",
+        "disabled:dark:text-gray-600",
       ],
       destructive: [
         // text color
