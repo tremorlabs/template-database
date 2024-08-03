@@ -50,8 +50,8 @@ export default function About() {
           <p className="text-lg leading-8">
             We believe in removing the barriers of data complexity and
             scalability, enabling teams to focus on insights and innovations
-            rather than maintenance and management. Our goal is to equip every
-            organization with the tools they need to harness the full potential
+            rather than maintenance and management. Our goal is to equip
+            organizations with the tools they need to harness the full potential
             of their data, driving growth and excellence in every interaction.
           </p>
           <p
