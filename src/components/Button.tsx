@@ -1,10 +1,11 @@
-// Tremor Raw Button [v0.1.1]
+// Tremor Button [v0.2.0]
 
-import { cx, focusRing } from "@/lib/utils"
 import { Slot } from "@radix-ui/react-slot"
 import { RiLoader2Fill } from "@remixicon/react"
 import React from "react"
 import { tv, type VariantProps } from "tailwind-variants"
+
+import { cx, focusRing } from "@/lib/utils"
 
 const buttonVariants = tv({
   base: [
@@ -119,6 +120,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={forwardedRef}
         className={cx(buttonVariants({ variant }), className)}
         disabled={disabled || isLoading}
+        tremor-id="tremor-raw"
         {...props}
       >
         {isLoading ? (
