@@ -1,4 +1,4 @@
-// Tremor Raw Input [v1.0.3]
+// Tremor Input [v1.0.5]
 
 import { RiEyeFill, RiEyeOffFill, RiSearchLine } from "@remixicon/react"
 import React from "react"
@@ -33,7 +33,7 @@ const inputStyles = tv({
     // invalid (optional)
     // "aria-[invalid=true]:dark:ring-red-400/20 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-200 aria-[invalid=true]:border-red-500 invalid:ring-2 invalid:ring-red-200 invalid:border-red-500"
     // remove search cancel button (optional)
-    "[&::--webkit-search-cancel-button]:hidden [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden",
+    "[&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden",
   ],
   variants: {
     hasError: {
@@ -71,7 +71,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const isSearch = type === "search"
 
     return (
-      <div className={cx("relative w-full", className)}>
+      <div className={cx("relative w-full", className)} tremor-id="tremor-raw">
         <input
           ref={forwardedRef}
           type={isPassword ? typeState : type}

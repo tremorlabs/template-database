@@ -1,4 +1,4 @@
-// Tremor Raw Label [v0.0.1]
+// Tremor Label [v0.0.2]
 
 import * as LabelPrimitives from "@radix-ui/react-label"
 import React from "react"
@@ -28,9 +28,11 @@ const Label = React.forwardRef<
       className,
     )}
     aria-disabled={disabled}
+    tremor-id="tremor-raw"
     {...props}
   />
 ))
+
 Label.displayName = "Label"
 
 export { Label }
